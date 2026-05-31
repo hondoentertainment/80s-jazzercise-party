@@ -20,9 +20,13 @@ PAGES = [
     "/host.html",
     "/plan.html",
     "/qr.html",
+    "/signs.html",
     "/manifest.json",
     "/assets/poster.webp",
     "/assets/poster-hero.jpg",
+    "/assets/drink-list.webp",
+    "/assets/sign-woodlawn-entrance.webp",
+    "/assets/menu.pdf",
     "/assets/app-icon.png",
 ]
 

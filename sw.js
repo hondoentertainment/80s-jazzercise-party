@@ -1,4 +1,4 @@
-const CACHE = "jjp-v3";
+const CACHE = "jjp-v4";
 const ASSETS = [
   "/",
   "/index.html",
@@ -10,6 +10,15 @@ const ASSETS = [
   "/js/ice-breaker.js",
   "/assets/poster.webp",
   "/assets/poster-hero.jpg",
+  "/assets/drink-list.webp",
+  "/assets/drink-list.jpg",
+  "/assets/sign-woodlawn-entrance.webp",
+  "/assets/sign-woodlawn-entrance.jpg",
+  "/assets/sign-kyles-apartment.webp",
+  "/assets/sign-kyles-apartment.jpg",
+  "/assets/food-labels-sheet.webp",
+  "/assets/food-labels-sheet.jpg",
+  "/assets/menu.pdf",
   "/assets/qr-code.png",
   "/assets/app-icon.png",
   "/gallery.html",
@@ -22,6 +31,7 @@ const ASSETS = [
   "/js/plan-data.js",
   "/poll-results.html",
   "/qr.html",
+  "/signs.html",
   "/numbers.html",
   "/slideshow.html",
   "/admin.html",

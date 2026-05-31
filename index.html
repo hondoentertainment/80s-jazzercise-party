@@ -48,7 +48,9 @@
             <ul class="nav__drop-menu">
               <li><a href="#details">Details</a></li>
               <li><a href="#dress-code">Dress Code</a></li>
+              <li><a href="#menu">Menu &amp; Drinks</a></li>
               <li><a href="#location">Location</a></li>
+              <li><a href="signs.html">Print Signs</a></li>
               <li><a href="#qr">QR Code</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="poll.html">Next Party Poll</a></li>
@@ -68,7 +70,7 @@
             <img
               class="hero__poster"
               src="/assets/poster-hero.jpg"
-              alt="80s Jazzercise Party — Richard Simmons leading an aerobics class in a neon pink studio"
+              alt="80s Jazzercise Party poster — neon boombox and enter on Woodlawn arrow"
               width="1200"
               height="800"
               fetchpriority="high"
@@ -289,30 +291,76 @@
       </div>
     </section>
 
+    <section class="section section--menu" id="menu">
+      <div class="container">
+        <header class="section__header">
+          <h2>Menu &amp; Drinks</h2>
+          <p>Jazzercise fuel and neon cocktails for the workout ahead.</p>
+        </header>
+        <div class="menu-grid">
+          <figure class="menu-card">
+            <picture>
+              <source srcset="/assets/drink-list.webp" type="image/webp">
+              <img
+                class="menu-card__img"
+                src="/assets/drink-list.jpg"
+                alt="80s Jazzercise Party drink menu — Leg Warmer Lemonade, Neon Burn, and Sweatin' to the Schnapps"
+                width="1000"
+                height="750"
+                loading="lazy"
+              >
+            </picture>
+            <figcaption class="menu-card__caption">Themed cocktails for the night</figcaption>
+          </figure>
+          <div class="menu-actions">
+            <h3>Party Menu</h3>
+            <p>
+              Full food spread details — appetizers, mains, and dessert — in the official party menu PDF.
+            </p>
+            <div class="menu-actions__buttons">
+              <a class="btn btn--primary" href="/assets/menu.pdf" target="_blank" rel="noopener noreferrer">Open Menu PDF</a>
+              <a class="btn btn--secondary" href="/assets/menu.pdf" download="80s-jazzercise-party-menu.pdf">Download PDF</a>
+              <a class="btn btn--secondary" href="signs.html#food-labels">Print Food Labels</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--location" id="location">
       <div class="container">
         <header class="section__header">
           <h2>Location</h2>
-          <p>Enter on the Woodlawn side.</p>
+          <p>Enter on the Woodlawn side — apartment 327 on the 5th floor.</p>
         </header>
         <div class="location-banner">
-          <div class="location-arrow" aria-hidden="true">
-            <span class="location-arrow__text">Enter on Woodlawn Side</span>
-          </div>
+          <picture>
+            <source srcset="/assets/poster.webp" type="image/webp">
+            <img
+              class="location-banner__poster"
+              src="/assets/poster-hero.jpg"
+              alt="80s Jazzercise Party poster with enter on Woodlawn arrow"
+              width="1200"
+              height="800"
+              loading="lazy"
+            >
+          </picture>
         </div>
         <div class="location-grid">
           <div class="location-info">
             <h3>Getting There</h3>
             <p>
               <strong>6900 East Greenlake Way N</strong><br>
-              Seattle, WA 98115
+              Seattle, WA 98115 · Apt <strong>327</strong>
             </p>
             <p>
-              Look for the <strong>Woodlawn side</strong> entrance — that's your way in.
+              Use the <strong>Woodlawn entrance</strong> — find <strong>K. Henderson</strong> in the directory,
+              call to get buzzed in, then take the stairs or elevator to the <strong>5th floor</strong>.
             </p>
             <ul class="location-tips">
-              <li>Use the <strong>Woodlawn side</strong> entrance</li>
-              <li>Watch for neon aerobics signage</li>
+              <li>Enter through the gate — door on the left</li>
+              <li>Buzz <strong>Kyle</strong> (apartment <strong>327</strong>) at the Woodlawn entrance</li>
+              <li>Look for the <strong>Kyle's Fitness Studio</strong> sign on the 5th floor</li>
               <li>Rideshare drop-off on Woodlawn recommended</li>
             </ul>
             <a
@@ -321,6 +369,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >Open in Google Maps</a>
+            <a class="btn btn--secondary location-directions" href="signs.html">Print Entrance Signs</a>
           </div>
           <div class="location-map">
             <iframe
@@ -331,6 +380,37 @@
               allowfullscreen
             ></iframe>
           </div>
+        </div>
+
+        <div class="signage-grid" aria-label="Venue signage">
+          <figure class="signage-card">
+            <picture>
+              <source srcset="/assets/sign-woodlawn-entrance.webp" type="image/webp">
+              <img
+                class="signage-card__img"
+                src="/assets/sign-woodlawn-entrance.jpg"
+                alt="Woodlawn entrance sign — find K. Henderson in the directory and call to be buzzed in"
+                width="1200"
+                height="900"
+                loading="lazy"
+              >
+            </picture>
+            <figcaption>Woodlawn entrance — buzz in at the directory</figcaption>
+          </figure>
+          <figure class="signage-card">
+            <picture>
+              <source srcset="/assets/sign-kyles-apartment.webp" type="image/webp">
+              <img
+                class="signage-card__img"
+                src="/assets/sign-kyles-apartment.jpg"
+                alt="Kyle's Fitness Studio sign for apartment 327 on the 5th floor"
+                width="1200"
+                height="900"
+                loading="lazy"
+              >
+            </picture>
+            <figcaption>5th floor — Kyle's Fitness Studio, Apt 327</figcaption>
+          </figure>
         </div>
 
         <aside class="qr-promo qr-block" id="qr" data-qr-block>
@@ -374,7 +454,9 @@
             <summary class="faq-item__question">How do I invite someone up?</summary>
             <div class="faq-item__answer">
               <p>
-                Have your guest buzz <strong>Kyle</strong> (apartment <strong>327</strong>) at the <strong>Woodlawn entrance</strong> and we'll let them in.
+                At the <strong>Woodlawn entrance</strong>, find <strong>K. Henderson</strong> in the directory and call —
+                Kyle will buzz them in. Enter through the gate (door on the left), then take the stairs or elevator to the
+                <strong>5th floor</strong> and look for apartment <strong>327</strong> / <strong>Kyle's Fitness Studio</strong>.
               </p>
             </div>
           </details>
@@ -446,7 +528,7 @@
       <p class="site-footer__title">80s Jazzercise Party</p>
       <p class="site-footer__date">Date TBD · 6:30 PM</p>
       <p class="site-footer__tagline">Leg warmers. Headbands. Maximum sweat. 🎽</p>
-      <p class="site-footer__hosts"><a href="host.html">Party hosts</a> · <a href="plan.html">Planning</a> · <a href="qr.html">Print QR sign</a></p>
+      <p class="site-footer__hosts"><a href="host.html">Party hosts</a> · <a href="plan.html">Planning</a> · <a href="signs.html">Print signs</a> · <a href="qr.html">Print QR sign</a></p>
     </div>
   </footer>
 
