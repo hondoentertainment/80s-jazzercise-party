@@ -19,6 +19,12 @@ Process hero image assets (after replacing the source JPG in project root):
 python scripts/optimize-assets.py
 ```
 
+Regenerate the printable QR code after changing `SITE_URL` in `js/config.js`:
+
+```bash
+python scripts/generate-qr.py
+```
+
 Smoke-test production:
 
 ```bash
@@ -104,7 +110,7 @@ Task status changes on the planning page are saved in the browser only. Re-expor
 
 1. Vercel → **Settings → Domains** → add your domain
 2. Update DNS per Vercel instructions
-3. Change `SITE_URL` and `SHARE_MESSAGE` in `js/config.js`, regenerate QR, and redeploy
+3. Change `SITE_URL` and `SHARE_MESSAGE` in `js/config.js`, run `python scripts/generate-qr.py`, and redeploy
 
 ## Customize
 
