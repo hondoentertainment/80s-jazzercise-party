@@ -14,7 +14,8 @@ export function verifyAdminCode(request) {
 }
 
 export function getVoteCloseTime() {
-  return process.env.VOTE_CLOSE_TIME || "2026-05-30T21:00:00-07:00";
+  const configured = String(process.env.VOTE_CLOSE_TIME || "").trim();
+  return configured || "2099-01-01T21:00:00-08:00";
 }
 
 export function isVoteClosed() {
