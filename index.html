@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="80s Jazzercise Party — date TBD · 6:30 PM. 6900 East Greenlake Way N, Seattle. Enter on the Woodlawn side.">
+  <meta name="theme-color" content="#ff1493">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="80s Jazzercise Party | Date TBD">
+  <meta property="og:description" content="Leg warmers. Headbands. Maximum sweat. Games, photo gallery, and party info — enter on the Woodlawn side.">
+  <meta property="og:url" content="https://80s-jazzercise-party.vercel.app/">
+  <meta property="og:image" content="https://80s-jazzercise-party.vercel.app/assets/poster-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="80s Jazzercise Party | Date TBD">
+  <meta name="twitter:description" content="Leg warmers. Headbands. Maximum sweat. Games, photo gallery, and party info.">
+  <meta name="twitter:image" content="https://80s-jazzercise-party.vercel.app/assets/poster-og.jpg">
+  <title>80s Jazzercise Party | Date TBD</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎽</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="#top">
+        <span class="nav__leaf" aria-hidden="true">🎽</span>
+        <span class="nav__brand-full">80s Jazzercise Party</span>
+        <span class="nav__brand-short">Jazzercise</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="vote.html">Vote</a></li>
+        <li><a href="ice-breaker.html">Ice Breakers</a></li>
+        <li class="nav__group">
+          <details class="nav__drop">
+            <summary>Info</summary>
+            <ul class="nav__drop-menu">
+              <li><a href="#details">Details</a></li>
+              <li><a href="#dress-code">Dress Code</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#qr">QR Code</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="poll.html">Next Party Poll</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__inner">
+        <div class="hero__poster-wrap">
+          <picture>
+            <source srcset="/assets/poster.webp" type="image/webp">
+            <img
+              class="hero__poster"
+              src="/assets/poster-hero.jpg"
+              alt="80s Jazzercise Party — Richard Simmons leading an aerobics class in a neon pink studio"
+              width="1200"
+              height="800"
+              fetchpriority="high"
+            >
+          </picture>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow" id="hero-eyebrow">
+            <span class="star" aria-hidden="true">★</span>
+            You're Invited
+            <span class="star" aria-hidden="true">★</span>
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__title-80s">80s</span>
+            <span class="hero__title-jazzercise">Jazzercise</span>
+            <span class="hero__title-party">Party!</span>
+          </h1>
+          <p class="hero__date">Date TBD · 6:30 PM</p>
+          <p class="hero__dj">Sounds by <strong>80s hits</strong> all night long</p>
+          <p class="hero__tagline" id="hero-tagline">Leg warmers. Headbands. Maximum sweat.</p>
+
+          <div class="post-party is-hidden" id="post-party">
+            <p class="post-party__message">What a workout! Relive the party in the photo gallery — upload any shots you still have on your phone.</p>
+            <div class="post-party__actions">
+              <a class="btn btn--primary" href="gallery.html">View Gallery</a>
+              <a class="btn btn--secondary" href="slideshow.html">TV Slideshow</a>
+              <a class="btn btn--secondary" href="poll.html">Plan the Next One</a>
+            </div>
+          </div>
+
+          <div class="date-tbd is-hidden" id="date-tbd" aria-live="polite">
+            <span class="date-tbd__label">Date Coming Soon</span>
+            <p class="date-tbd__hint">Check back for the official party date — start stretching now.</p>
+          </div>
+
+          <div class="countdown" aria-live="polite" aria-label="Countdown to the party">
+            <div class="countdown__unit">
+              <span class="countdown__value" id="days">--</span>
+              <span class="countdown__label">Days</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="hours">--</span>
+              <span class="countdown__label">Hours</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="minutes">--</span>
+              <span class="countdown__label">Minutes</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="seconds">--</span>
+              <span class="countdown__label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="ice-breaker.html">Ice Breakers</a>
+            <a class="btn btn--secondary" href="gallery.html">Photo Gallery</a>
+            <a class="btn btn--secondary" href="vote.html">Best Outfit Vote</a>
+            <a class="btn btn--secondary" href="#location">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--details" id="details">
+      <div class="container">
+        <header class="section__header">
+          <h2>Party Details</h2>
+          <p>Mark your calendar and break out the leg warmers.</p>
+        </header>
+        <div class="details-grid">
+          <article class="detail-card">
+            <div class="detail-card__icon" aria-hidden="true">📅</div>
+            <h3>When</h3>
+            <p><strong>Date TBD</strong></p>
+            <p>Party starts at <strong>6:30 PM</strong></p>
+          </article>
+          <article class="detail-card">
+            <div class="detail-card__icon" aria-hidden="true">🎽</div>
+            <h3>What</h3>
+            <p><strong>80s Jazzercise Party</strong></p>
+            <p>Drinks, ice breakers, and the finest neon spandex north of the 49th parallel.</p>
+          </article>
+          <article class="detail-card">
+            <div class="detail-card__icon" aria-hidden="true">🎧</div>
+            <h3>Music</h3>
+            <p><strong>80s hits</strong> all night</p>
+            <p>Synths, sweatbands, and serious aerobic energy on the dance floor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--schedule" id="schedule">
+      <div class="container">
+        <header class="section__header">
+          <h2>Evening Schedule</h2>
+          <p>Date TBD — here's how the night unfolds once we set it.</p>
+        </header>
+        <div class="schedule-wrap">
+          <table class="schedule-table">
+            <caption class="schedule-table__caption">Party schedule — date TBD</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TBD</td>
+                <td>6:30 PM</td>
+                <td>Party Start <span class="schedule-table__note">(80s hits on the speakers)</span></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>7:30 PM</td>
+                <td><a href="ice-breaker.html">Ice Breakers</a></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>8:15 PM</td>
+                <td><a href="ice-breaker.html">Warm-Up Round</a> <span class="schedule-table__note">(shuffle the deck)</span></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>8:30 PM</td>
+                <td><a href="vote.html">Outfit Contest</a> <span class="schedule-table__note">(vote by number)</span></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>8:35 PM</td>
+                <td><a href="gallery.html">Group Photo</a></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>8:58 PM</td>
+                <td>Sunset</td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>9:00 PM</td>
+                <td><a href="vote.html">Voting Closes</a> <span class="schedule-table__note">(best outfit)</span></td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>9:05 PM</td>
+                <td><a href="vote.html">Best Outfit Winner</a></td>
+              </tr>
+              <tr class="schedule-table__end">
+                <td>TBD</td>
+                <td>10:00 PM</td>
+                <td>Party Ends</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--party-night" id="party-night">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="party-night__heading">At the Party</h2>
+          <p class="party-night__lead">Browse photos, warm up with ice breakers, vote for best outfit, or open the slideshow on the TV.</p>
+        </header>
+        <div class="party-night-grid">
+          <a class="party-night-card" href="gallery.html">
+            <span class="party-night-card__icon" aria-hidden="true">📷</span>
+            <h3>Photo Gallery</h3>
+            <p>Party photos go live here — upload yours or browse everyone's aerobic looks.</p>
+          </a>
+          <a class="party-night-card" href="ice-breaker.html">
+            <span class="party-night-card__icon" aria-hidden="true">💬</span>
+            <h3>Ice Breakers</h3>
+            <p>Conversation starters for a neon-spandex crowd. Shuffle the deck anytime.</p>
+          </a>
+          <a class="party-night-card" href="vote.html">
+            <span class="party-night-card__icon" aria-hidden="true">👑</span>
+            <h3>Best Outfit Vote</h3>
+            <p>Vote by contestant number for the most aerobic outfit of the night.</p>
+          </a>
+          <a class="party-night-card" href="slideshow.html">
+            <span class="party-night-card__icon" aria-hidden="true">📺</span>
+            <h3>Photo Slideshow</h3>
+            <p>Full-screen gallery rotation for the TV — updates as photos come in.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dress" id="dress-code">
+      <div class="container dress-layout">
+        <div class="dress-copy">
+          <header class="section__header section__header--left">
+            <h2>The Dress Code</h2>
+            <p>What does 80s Jazzercise look like?</p>
+          </header>
+          <p class="dress-lead">
+            Think Richard Simmons energy — hot pink, high energy, and zero shame.
+            Leotards, leg warmers, headbands, and neon everything. If it glows under black light, you're doing it right.
+          </p>
+          <ul class="dress-list">
+            <li>Leg warmers + leotard = chef's kiss</li>
+            <li>Neon spandex in any shade — pink, purple, or highlighter yellow</li>
+            <li>Sweatbands, scrunchies, and oversized graphic tees welcome</li>
+            <li>White sneakers with tall socks — mandatory vibes</li>
+          </ul>
+        </div>
+        <aside class="dress-aside" aria-label="Dress code examples">
+          <div class="aerobics-badge">
+            <span class="aerobics-badge__glow" aria-hidden="true"></span>
+            <p>Sweat<br>is<br>Style</p>
+          </div>
+          <p class="dress-note">When in doubt, add more neon.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--location" id="location">
+      <div class="container">
+        <header class="section__header">
+          <h2>Location</h2>
+          <p>Enter on the Woodlawn side.</p>
+        </header>
+        <div class="location-banner">
+          <div class="location-arrow" aria-hidden="true">
+            <span class="location-arrow__text">Enter on Woodlawn Side</span>
+          </div>
+        </div>
+        <div class="location-grid">
+          <div class="location-info">
+            <h3>Getting There</h3>
+            <p>
+              <strong>6900 East Greenlake Way N</strong><br>
+              Seattle, WA 98115
+            </p>
+            <p>
+              Look for the <strong>Woodlawn side</strong> entrance — that's your way in.
+            </p>
+            <ul class="location-tips">
+              <li>Use the <strong>Woodlawn side</strong> entrance</li>
+              <li>Watch for neon aerobics signage</li>
+              <li>Rideshare drop-off on Woodlawn recommended</li>
+            </ul>
+            <a
+              class="btn btn--secondary location-directions"
+              href="https://www.google.com/maps/dir/?api=1&destination=6900+East+Greenlake+Way+N,+Seattle,+WA+98115"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open in Google Maps</a>
+          </div>
+          <div class="location-map">
+            <iframe
+              title="Map to 6900 East Greenlake Way N, Seattle"
+              src="https://maps.google.com/maps?q=6900+East+Greenlake+Way+N,+Seattle,+WA+98115&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <aside class="qr-promo qr-block" id="qr" data-qr-block>
+          <div class="qr-promo__copy">
+            <h3>Scan at the Door</h3>
+            <p>
+              Point your camera here for ice breakers, photo uploads, best outfit voting, and party FAQ —
+              no app download needed.
+            </p>
+            <ul class="qr-promo__list">
+              <li>Photo gallery &amp; ice breakers</li>
+              <li>Best outfit vote &amp; directions</li>
+              <li>Next-party poll</li>
+            </ul>
+          </div>
+          <div class="qr-promo__code">
+            <div class="qr-share__frame qr-block__frame">
+              <img
+                class="qr-block__img"
+                src="/assets/qr-code.png"
+                width="220"
+                height="220"
+                alt="QR code for the 80s Jazzercise Party website"
+              >
+              <canvas class="qr-block__canvas is-hidden" data-size="220" width="220" height="220" aria-hidden="true"></canvas>
+            </div>
+            <p class="qr-block__url"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--faq" id="faq">
+      <div class="container">
+        <header class="section__header">
+          <h2>FAQ</h2>
+          <p>Quick answers before you break a sweat.</p>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-item__question">How do I invite someone up?</summary>
+            <div class="faq-item__answer">
+              <p>
+                Have your guest buzz <strong>Kyle</strong> (apartment <strong>327</strong>) at the <strong>Woodlawn entrance</strong> and we'll let them in.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Where are the bathrooms?</summary>
+            <div class="faq-item__answer">
+              <p>Bathrooms are located in the <strong>lobby</strong> and in <strong>apartment 327</strong>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">How do I vote for best outfit?</summary>
+            <div class="faq-item__answer">
+              <p>
+                Hosts hand out numbered tags at the door. Enter that contestant number on the
+                <a href="vote.html">Best Outfit Vote</a> page before voting closes.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Are there prizes for best outfit?</summary>
+            <div class="faq-item__answer">
+              <p>Yes — there are prizes for the <strong>best outfit</strong>. <a href="vote.html">Vote by contestant number</a> before voting closes. Bring your A-game spandex.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Can Kyle and Jeremy help plan my next party?</summary>
+            <div class="faq-item__answer">
+              <p>They might! Kyle and Jeremy can help plan your next party — <strong>if you ask them nice</strong>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">What about food allergies?</summary>
+            <div class="faq-item__answer">
+              <p>
+                Just ask! Any of the cooks are happy to tell you what's in the food so you can eat safely.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">When is the next party?</summary>
+            <div class="faq-item__answer">
+              <p>
+                We're still deciding!
+                <a href="poll.html">Visit our poll</a>
+                to vote on when it should be held and give us feedback on how this one went.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-qr qr-block" data-qr-block>
+        <div class="footer-qr__frame qr-block__frame">
+          <img
+            class="qr-block__img"
+            src="/assets/qr-code.png"
+            width="120"
+            height="120"
+            alt="QR code for the 80s Jazzercise Party website"
+          >
+          <canvas class="qr-block__canvas is-hidden" data-size="120" width="120" height="120" aria-hidden="true"></canvas>
+        </div>
+        <p class="footer-qr__label"><a href="#qr">Scan for photos, ice breakers &amp; votes</a></p>
+      </div>
+      <p class="site-footer__title">80s Jazzercise Party</p>
+      <p class="site-footer__date">Date TBD · 6:30 PM</p>
+      <p class="site-footer__tagline">Leg warmers. Headbands. Maximum sweat. 🎽</p>
+      <p class="site-footer__hosts"><a href="host.html">Party hosts</a> · <a href="qr.html">Print QR sign</a></p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/qr.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

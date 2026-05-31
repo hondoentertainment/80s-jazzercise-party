@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vote for best outfit at the 80s Jazzercise Party — most aerobic spandex wins.">
+  <meta name="theme-color" content="#ff1493">
+  <title>Best Outfit Vote | 80s Jazzercise Party</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎽</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__leaf" aria-hidden="true">🎽</span>
+        <span class="nav__brand-full">80s Jazzercise Party</span>
+        <span class="nav__brand-short">Jazzercise</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="vote.html" aria-current="page">Vote</a></li>
+        <li><a href="ice-breaker.html">Ice Breakers</a></li>
+        <li class="nav__group">
+          <details class="nav__drop">
+            <summary>Info</summary>
+            <ul class="nav__drop-menu">
+              <li><a href="index.html#details">Details</a></li>
+              <li><a href="index.html#dress-code">Dress Code</a></li>
+              <li><a href="index.html#location">Location</a></li>
+              <li><a href="index.html#qr">QR Code</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="poll.html">Next Party Poll</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section section--poll-hero">
+      <div class="container">
+        <header class="section__header">
+          <p class="poll-hero__eyebrow">
+            <span class="star" aria-hidden="true">★</span>
+            Party Prize
+            <span class="star" aria-hidden="true">★</span>
+          </p>
+          <h1 class="poll-hero__title">Best Outfit Vote</h1>
+          <p class="poll-hero__lead">
+            Vote for the most aerobic outfit by contestant number — one vote per device.
+          </p>
+          <p class="vote-open-note is-hidden" id="vote-open-note"></p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section section--vote">
+      <div class="container">
+        <div class="vote-winner is-hidden" id="vote-winner" role="status" aria-live="polite">
+          <p class="vote-winner__eyebrow">Best Outfit Winner</p>
+          <p class="vote-winner__name" id="vote-winner-name"></p>
+          <p class="vote-winner__count" id="vote-winner-count"></p>
+        </div>
+
+        <form class="poll-form" id="vote-form" novalidate>
+          <div class="form-row">
+            <label for="vote-voter">Your name</label>
+            <input type="text" id="vote-voter" name="voter" autocomplete="name" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="vote-number">Contestant number</label>
+            <input
+              type="number"
+              id="vote-number"
+              name="number"
+              inputmode="numeric"
+              min="1"
+              max="99"
+              required
+              placeholder="e.g. 7"
+            >
+            <p class="form-hint">Enter the number on their name tag or sticker. Hosts can <a href="numbers.html">print number tags</a>.</p>
+          </div>
+          <button class="btn btn--primary btn--full" type="submit" id="vote-submit">Submit Vote</button>
+          <p class="form-note" id="vote-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="vote-results is-hidden" id="vote-results">
+          <header class="vote-results__header">
+            <h2>Live Results</h2>
+            <p id="vote-results-total">Loading results…</p>
+          </header>
+          <ol class="vote-results__list" id="vote-results-list"></ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__title">80s Jazzercise Party</p>
+      <p class="site-footer__date">Date TBD · 6:30 PM</p>
+      <p class="site-footer__tagline">Leg warmers. Headbands. Maximum sweat. 🎽</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vote.js"></script>
+</body>
+</html>

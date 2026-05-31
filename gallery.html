@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Share and browse party photos from the 80s Jazzercise Party — neon spandex memories.">
+  <meta name="theme-color" content="#ff1493">
+  <title>Photo Gallery | 80s Jazzercise Party</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://esm.sh">
+  <link rel="dns-prefetch" href="https://vercel.com">
+  <link rel="modulepreload" href="https://esm.sh/@vercel/blob@0.27.3/client?target=es2020">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎽</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__leaf" aria-hidden="true">🎽</span>
+        <span class="nav__brand-full">80s Jazzercise Party</span>
+        <span class="nav__brand-short">Jazzercise</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="vote.html">Vote</a></li>
+        <li><a href="ice-breaker.html">Ice Breakers</a></li>
+        <li class="nav__group">
+          <details class="nav__drop">
+            <summary>Info</summary>
+            <ul class="nav__drop-menu">
+              <li><a href="index.html#details">Details</a></li>
+              <li><a href="index.html#dress-code">Dress Code</a></li>
+              <li><a href="index.html#location">Location</a></li>
+              <li><a href="index.html#qr">QR Code</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="poll.html">Next Party Poll</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section section--poll-hero">
+      <div class="container">
+        <header class="section__header">
+          <p class="poll-hero__eyebrow">
+            <span class="star" aria-hidden="true">★</span>
+            Party Memories
+            <span class="star" aria-hidden="true">★</span>
+          </p>
+          <h1 class="poll-hero__title">Photo Gallery</h1>
+          <p class="poll-hero__lead">
+            Party photos are live — upload photos or videos and browse everything everyone shared from the night.
+          </p>
+          <div class="embed-toolbar">
+            <a class="btn btn--secondary" href="slideshow.html">Open TV Slideshow</a>
+          </div>
+        </header>
+      </div>
+    </section>
+
+    <section class="section section--gallery">
+      <div class="container">
+        <form class="gallery-upload poll-form" id="gallery-form" novalidate>
+          <h2 class="gallery-upload__title">Submit a Photo or Video</h2>
+
+          <div class="form-row">
+            <label for="gallery-name">Your name</label>
+            <input type="text" id="gallery-name" name="name" autocomplete="name" placeholder="Who took this?">
+          </div>
+
+          <div class="form-row">
+            <label for="gallery-caption">Caption (optional)</label>
+            <input type="text" id="gallery-caption" name="caption" maxlength="200" placeholder="Best leg warmer combo of the night">
+          </div>
+
+          <div class="form-row">
+            <span class="gallery-upload__label" id="gallery-file-label">Photo or video</span>
+            <div class="gallery-drop" id="gallery-drop">
+              <input
+                class="gallery-drop__input"
+                type="file"
+                id="gallery-file"
+                name="file"
+                accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/heif,video/mp4,video/quicktime,video/webm,video/x-msvideo"
+                aria-labelledby="gallery-file-label"
+              >
+              <div class="gallery-drop__content" id="gallery-drop-content">
+                <span class="gallery-drop__icon" aria-hidden="true">📷</span>
+                <p class="gallery-drop__text">Drag a photo or video here or <span>browse files</span></p>
+                <p class="gallery-drop__hint" id="gallery-upload-hint">Photos or videos · up to 5 GB</p>
+              </div>
+              <div class="gallery-drop__preview is-hidden" id="gallery-preview">
+                <img id="gallery-preview-img" class="is-hidden" alt="">
+                <video id="gallery-preview-video" class="gallery-drop__preview-video is-hidden" controls muted playsinline></video>
+                <button class="gallery-drop__clear" type="button" id="gallery-clear">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit" id="gallery-submit">Add to Gallery</button>
+          <p class="form-note" id="gallery-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="gallery-section">
+          <header class="gallery-section__header">
+            <h2>Party Photos &amp; Videos</h2>
+            <p id="gallery-count">Loading gallery…</p>
+          </header>
+          <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+          <p class="gallery-empty is-hidden" id="gallery-empty">No photos yet — be the first to share one from the party!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="gallery-lightbox" id="gallery-lightbox" aria-labelledby="lightbox-caption">
+    <button class="gallery-lightbox__close" type="button" id="lightbox-close" aria-label="Close photo">×</button>
+    <figure class="gallery-lightbox__figure">
+      <div class="gallery-lightbox__media" id="lightbox-media"></div>
+      <figcaption class="gallery-lightbox__caption" id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__title">80s Jazzercise Party</p>
+      <p class="site-footer__date">Date TBD · 6:30 PM</p>
+      <p class="site-footer__tagline">Leg warmers. Headbands. Maximum sweat. 🎽</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/upload-config.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
