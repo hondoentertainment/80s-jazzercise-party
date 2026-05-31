@@ -18,6 +18,7 @@ PAGES = [
     "/ice-breaker.html",
     "/poll.html",
     "/host.html",
+    "/plan.html",
     "/qr.html",
     "/manifest.json",
     "/assets/poster.webp",

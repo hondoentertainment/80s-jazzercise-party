@@ -75,6 +75,19 @@ npx vercel env add GALLERY_ADMIN_CODE production
 | Print number tags | [/numbers.html](https://80s-jazzercise-party.vercel.app/numbers.html) |
 | Photo slideshow (TV) | [/slideshow.html](https://80s-jazzercise-party.vercel.app/slideshow.html) |
 | Ice breakers | [/ice-breaker.html](https://80s-jazzercise-party.vercel.app/ice-breaker.html) |
+| Party planning (committee) | [/plan.html](https://80s-jazzercise-party.vercel.app/plan.html) |
+
+## Party planning workbook
+
+The committee planning site at `plan.html` is admin-gated (same code as the host dashboard). It is generated from `Project Plan for the 41st Birthday Party.xlsx`.
+
+After editing the Excel workbook, regenerate the embedded data:
+
+```bash
+python scripts/export-plan.py
+```
+
+Task status changes on the planning page are saved in the browser only. Re-export from Excel to refresh task text, schedule, signs, and committee roles.
 
 ## Party-night checklist
 

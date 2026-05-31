@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ff1493">
+  <title>Party Planning | 80s Jazzercise Party</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎽</text></svg>">
+</head>
+<body>
+  <main id="main" class="section section--admin">
+    <div class="container">
+      <header class="section__header">
+        <h1>Party Planning</h1>
+        <p id="plan-subtitle">Committee project plan — synced from the Excel workbook.</p>
+      </header>
+
+      <form class="poll-form admin-code-form" id="plan-code-form">
+        <div class="form-row">
+          <label for="plan-code">Admin code</label>
+          <input type="password" id="plan-code" autocomplete="current-password" placeholder="Same code as the host dashboard">
+        </div>
+        <button class="btn btn--primary btn--full" type="submit">Unlock Planning Site</button>
+        <p class="form-note" id="plan-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="plan-dashboard is-hidden" id="plan-dashboard">
+        <section class="host-block plan-summary" id="plan-summary" aria-live="polite"></section>
+
+        <section class="host-block">
+          <div class="plan-toolbar">
+            <h2>Project Tasks</h2>
+            <label class="plan-filter">
+              <span class="visually-hidden">Filter by category</span>
+              <select id="plan-category-filter">
+                <option value="">All categories</option>
+              </select>
+            </label>
+          </div>
+          <div class="plan-table-wrap">
+            <table class="plan-table" id="plan-tasks-table">
+              <caption class="schedule-table__caption">Party planning tasks from the project workbook</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Task</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Assigned</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody id="plan-tasks-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="host-block">
+          <h2>Prep Schedule</h2>
+          <div class="plan-table-wrap">
+            <table class="plan-table plan-table--schedule">
+              <caption class="schedule-table__caption">Friday and Saturday prep timeline</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody id="plan-schedule-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="host-block plan-grid">
+          <div>
+            <h2>Sign List</h2>
+            <ul class="plan-sign-list" id="plan-signs-list"></ul>
+          </div>
+          <div>
+            <h2>Planning Committee</h2>
+            <ul class="plan-committee-list" id="plan-committee-list"></ul>
+          </div>
+        </section>
+
+        <section class="host-block host-block--note">
+          <h2>Quick Links</h2>
+          <div class="host-links">
+            <a class="btn btn--primary" href="host.html">Host Dashboard</a>
+            <a class="btn btn--secondary" href="index.html">Guest Site</a>
+            <a class="btn btn--secondary" href="qr.html" target="_blank" rel="noopener">Print QR Sign</a>
+            <a class="btn btn--secondary" href="numbers.html" target="_blank" rel="noopener">Print Number Tags</a>
+          </div>
+          <p class="plan-meta" id="plan-meta"></p>
+        </section>
+      </div>
+
+      <p class="admin-back"><a href="index.html">← Back to party site</a></p>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/plan-data.js"></script>
+  <script src="js/plan.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const CACHE = "jjp-v1";
+const CACHE = "jjp-v2";
 const ASSETS = [
   "/",
   "/index.html",
@@ -17,6 +17,9 @@ const ASSETS = [
   "/js/slideshow.js",
   "/vote.html",
   "/host.html",
+  "/plan.html",
+  "/js/plan.js",
+  "/js/plan-data.js",
   "/poll-results.html",
   "/qr.html",
   "/numbers.html",

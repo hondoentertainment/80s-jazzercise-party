@@ -2562,3 +2562,167 @@ a:hover {
   line-height: 1.5;
 }
 
+/* Party planning site */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.plan-dashboard.is-hidden,
+.admin-code-form.is-hidden {
+  display: none;
+}
+
+.plan-summary__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: 0.06em;
+  color: var(--denim-light);
+}
+
+.plan-summary__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  color: var(--text-muted);
+}
+
+.plan-summary__stats strong {
+  color: var(--denim-light);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+
+.plan-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.plan-toolbar h2 {
+  margin: 0;
+}
+
+.plan-filter select {
+  min-width: 12rem;
+  padding: 0.55rem 0.75rem;
+  border: 2px solid var(--denim);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+}
+
+.plan-table-wrap {
+  overflow-x: auto;
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border: 3px solid var(--denim);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.plan-table th,
+.plan-table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 20, 147, 0.15);
+  text-align: left;
+  vertical-align: top;
+}
+
+.plan-table th {
+  background: rgba(255, 20, 147, 0.12);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.plan-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.plan-category {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(155, 48, 255, 0.18);
+  color: var(--stitch-light);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.plan-status-select {
+  min-width: 9rem;
+  padding: 0.4rem 0.55rem;
+  border: 2px solid var(--denim);
+  border-radius: var(--radius);
+  background: var(--cream);
+  color: var(--text);
+  font: inherit;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.plan-sign-list,
+.plan-committee-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-sign-list li,
+.plan-committee-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 20, 147, 0.15);
+}
+
+.plan-sign-list li:last-child,
+.plan-committee-list li:last-child {
+  border-bottom: none;
+}
+
+.plan-qty {
+  color: var(--denim-light);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+.plan-committee-list strong {
+  color: var(--denim-light);
+}
+
+.plan-committee-list span {
+  color: var(--text-muted);
+}
+
+.plan-meta {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
