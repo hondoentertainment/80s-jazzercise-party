@@ -9,7 +9,7 @@ import sys
 import urllib.error
 import urllib.request
 
-BASE = os.environ.get("SITE_URL", "https://80s-jazzercise-party.vercel.app")
+BASE = os.environ.get("SITE_URL", "https://cowboy-disco-party.vercel.app")
 
 PAGES = [
     "/",

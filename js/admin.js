@@ -26,7 +26,7 @@
   var panel = document.getElementById("admin-panel");
   var status = document.getElementById("admin-status");
   var listEl = document.getElementById("admin-pending-list");
-  var adminCode = sessionStorage.getItem("jjp-admin-code") || "";
+  var adminCode = sessionStorage.getItem("cdp-admin-code") || "";
 
   function setStatus(message, type) {
     if (!status) {
@@ -135,7 +135,7 @@
         return;
       }
 
-      sessionStorage.setItem("jjp-admin-code", adminCode);
+      sessionStorage.setItem("cdp-admin-code", adminCode);
       if (panel) {
         panel.classList.remove("is-hidden");
       }

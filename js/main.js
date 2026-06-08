@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const config = window.JJP || {};
+  const config = window.CDP || {};
   const dateTbd = Boolean(config.PARTY_DATE_TBD || !config.PARTY_DATE);
   const PARTY_DATE = config.PARTY_DATE ? new Date(config.PARTY_DATE) : null;
   const PARTY_END = config.PARTY_END ? new Date(config.PARTY_END) : null;
@@ -61,11 +61,11 @@
 
     if (heroEyebrow) {
       heroEyebrow.innerHTML =
-        '<span class="star" aria-hidden="true">★</span> Thanks for Sweating <span class="star" aria-hidden="true">★</span>';
+        '<span class="star" aria-hidden="true">★</span> Thanks for Dancing <span class="star" aria-hidden="true">★</span>';
     }
 
     if (heroTagline) {
-      heroTagline.textContent = "Relive the aerobics, share photos, and help us plan the next one.";
+      heroTagline.textContent = "Relive the two-step, share photos, and help us plan the next one.";
     }
 
     if (countdownEl) {
@@ -101,7 +101,7 @@
 
     if (heroTagline) {
       heroTagline.textContent =
-        "Leg warmers. Headbands. Maximum sweat — scan the QR for photos, ice breakers, and votes.";
+        "Boots. Bling. Line dance till dawn — scan the QR for photos, ice breakers, and votes.";
     }
 
     if (countdownEl) {

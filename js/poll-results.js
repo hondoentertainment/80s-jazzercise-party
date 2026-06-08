@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var adminCode = sessionStorage.getItem("jjp-admin-code") || "";
+  var adminCode = sessionStorage.getItem("cdp-admin-code") || "";
 
   var codeForm = document.getElementById("poll-results-code-form");
   var codeInput = document.getElementById("poll-results-code");
@@ -119,7 +119,7 @@
         return;
       }
 
-      sessionStorage.setItem("jjp-admin-code", adminCode);
+      sessionStorage.setItem("cdp-admin-code", adminCode);
       if (panel) {
         panel.classList.remove("is-hidden");
       }

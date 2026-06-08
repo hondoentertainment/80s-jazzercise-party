@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  var STATUS_KEY = "jjp-plan-status";
-  var adminCode = sessionStorage.getItem("jjp-admin-code") || "";
-  var plan = window.JJP_PLAN || {};
+  var STATUS_KEY = "cdp-plan-status";
+  var adminCode = sessionStorage.getItem("cdp-admin-code") || "";
+  var plan = window.CDP_PLAN || {};
 
   var codeForm = document.getElementById("plan-code-form");
   var codeInput = document.getElementById("plan-code");
@@ -289,7 +289,7 @@
           });
         })
         .then(function () {
-          sessionStorage.setItem("jjp-admin-code", adminCode);
+          sessionStorage.setItem("cdp-admin-code", adminCode);
           setStatus("Planning site unlocked.", "success");
           unlockDashboard();
         })

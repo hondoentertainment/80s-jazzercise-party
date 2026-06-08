@@ -6,12 +6,12 @@ from pathlib import Path
 
 import qrcode
 
-ROOT = Path(r"c:\Users\kyle\OneDrive\Desktop\80s Jazzercise")
+ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "js" / "config.js"
 OUTPUT = ROOT / "assets" / "qr-code.png"
-SITE_URL = "https://80s-jazzercise-party.vercel.app"
-DARK = "#3d0a2e"
-LIGHT = "#f5e6f0"
+SITE_URL = "https://cowboy-disco-party.vercel.app"
+DARK = "#4a2c1a"
+LIGHT = "#f5f0e8"
 SIZE = 512
 
 

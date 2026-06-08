@@ -8,9 +8,9 @@
   };
 
   function getSiteUrl() {
-    return global.JJP && global.JJP.SITE_URL
-      ? global.JJP.SITE_URL
-      : "https://80s-jazzercise-party.vercel.app";
+    return global.CDP && global.CDP.SITE_URL
+      ? global.CDP.SITE_URL
+      : "https://cowboy-disco-party.vercel.app";
   }
 
   function displayUrl(url) {
@@ -188,7 +188,7 @@
     document.querySelectorAll("[data-qr-block]").forEach(initBlock);
   }
 
-  global.JJP_QR = {
+  global.CDP_QR = {
     initAll: initAll,
     initBlock: initBlock,
     getSiteUrl: getSiteUrl,

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-ROOT = Path(r"c:\Users\kyle\OneDrive\Desktop\80s Jazzercise")
+ROOT = Path(__file__).resolve().parents[1]
 WORKBOOK = ROOT / "Project Plan for the 41st Birthday Party.xlsx"
 OUTPUT = ROOT / "js" / "plan-data.js"
 
@@ -121,7 +121,7 @@ def main() -> None:
     OUTPUT.write_text(
         "(function (global) {\n"
         '  "use strict";\n\n'
-        f"  global.JJP_PLAN = {payload};\n"
+        f"  global.CDP_PLAN = {payload};\n"
         "})(window);\n",
         encoding="utf-8",
     )

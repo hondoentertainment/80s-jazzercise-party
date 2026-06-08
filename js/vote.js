@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  var config = window.JJP || {};
+  var config = window.CDP || {};
   var dateTbd = Boolean(config.PARTY_DATE_TBD || !config.VOTE_CLOSE_TIME);
-  var VOTE_KEY = "jjp-best-outfit-vote";
+  var VOTE_KEY = "cdp-best-outfit-vote";
   var closeTime = config.VOTE_CLOSE_TIME;
   var maxNumber = config.VOTE_MAX_NUMBER ? config.VOTE_MAX_NUMBER : 99;
 

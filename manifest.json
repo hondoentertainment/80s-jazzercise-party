@@ -1,11 +1,11 @@
 {
-  "name": "80s Jazzercise Party",
-  "short_name": "Jazzercise",
-  "description": "80s Jazzercise Party — date TBD. Photos, ice breakers, and party info.",
+  "name": "Cowboy Disco Party",
+  "short_name": "Cowboy Disco",
+  "description": "Cowboy Disco Party — date TBD. Photos, ice breakers, and party info.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#120810",
-  "theme_color": "#ff1493",
+  "background_color": "#0d0d1a",
+  "theme_color": "#e8b923",
   "icons": [
     {
       "src": "/assets/app-icon.png",

@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "jjp-host-checklist";
-  var adminCode = sessionStorage.getItem("jjp-admin-code") || "";
+  var STORAGE_KEY = "cdp-host-checklist";
+  var adminCode = sessionStorage.getItem("cdp-admin-code") || "";
 
   var codeForm = document.getElementById("host-code-form");
   var codeInput = document.getElementById("host-code");
@@ -184,9 +184,9 @@
 
   if (shareMessage) {
     shareMessage.textContent =
-      window.JJP && window.JJP.SHARE_MESSAGE
-        ? window.JJP.SHARE_MESSAGE
-        : "80s Jazzercise Party: https://80s-jazzercise-party.vercel.app";
+      window.CDP && window.CDP.SHARE_MESSAGE
+        ? window.CDP.SHARE_MESSAGE
+        : "Cowboy Disco Party: https://cowboy-disco-party.vercel.app";
   }
 
   if (copyInviteBtn) {
@@ -230,7 +230,7 @@
           });
         })
         .then(function () {
-          sessionStorage.setItem("jjp-admin-code", adminCode);
+          sessionStorage.setItem("cdp-admin-code", adminCode);
           if (dashboard) {
             dashboard.classList.remove("is-hidden");
           }

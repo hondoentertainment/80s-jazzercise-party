@@ -1,7 +1,7 @@
 (function (global) {
   "use strict";
 
-  global.JJP_PLAN = {
+  global.CDP_PLAN = {
   "title": "Eighties Party TBD",
   "subtitle": "Project plan for the 41st birthday party",
   "sourceFile": "Project Plan for the 41st Birthday Party.xlsx",

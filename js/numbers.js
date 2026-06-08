@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var defaultCount = window.JJP && window.JJP.VOTE_TAG_COUNT ? window.JJP.VOTE_TAG_COUNT : 30;
-  var maxNumber = window.JJP && window.JJP.VOTE_MAX_NUMBER ? window.JJP.VOTE_MAX_NUMBER : 99;
+  var defaultCount = window.CDP && window.CDP.VOTE_TAG_COUNT ? window.CDP.VOTE_TAG_COUNT : 30;
+  var maxNumber = window.CDP && window.CDP.VOTE_MAX_NUMBER ? window.CDP.VOTE_MAX_NUMBER : 99;
   var grid = document.getElementById("numbers-grid");
   var countInput = document.getElementById("numbers-count");
   var regenerateBtn = document.getElementById("numbers-regenerate");

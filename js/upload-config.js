@@ -1,7 +1,7 @@
 (function (global) {
   "use strict";
 
-  global.JJP_UPLOAD = {
+  global.CDP_UPLOAD = {
     MAX_BYTES: 5 * 1024 * 1024 * 1024,
     MAX_LABEL: "5 GB",
     MULTIPART_BYTES: 100 * 1024 * 1024,

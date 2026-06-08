@@ -1,24 +1,24 @@
-/* 80s Jazzercise Party */
+/* Cowboy Disco Party */
 
 :root {
-  --denim-dark: #3d0a2e;
-  --denim: #ff1493;
-  --denim-light: #ff69b4;
-  --denim-fade: #da70d6;
-  --stitch: #9b30ff;
-  --stitch-light: #bf5fff;
-  --wood: #120810;
-  --wood-dark: #0a0408;
-  --wood-grain: #2a1020;
-  --cream: #1e0f1a;
-  --text: #f5e6f0;
-  --text-muted: #c9a8c0;
-  --white: #2a1530;
-  --shadow: rgba(255, 20, 147, 0.25);
+  --denim-dark: #4a2c1a;
+  --denim: #e8b923;
+  --denim-light: #f5d76e;
+  --denim-fade: #c4a882;
+  --stitch: #00bfff;
+  --stitch-light: #5cd4ff;
+  --wood: #0d0d1a;
+  --wood-dark: #080810;
+  --wood-grain: #1a1520;
+  --cream: #1e1828;
+  --text: #f5f0e8;
+  --text-muted: #c9b8a8;
+  --white: #2a2438;
+  --shadow: rgba(232, 185, 35, 0.25);
   --radius: 12px;
   --radius-lg: 20px;
   --font-display: "Bebas Neue", sans-serif;
-  --font-script: "Pacifico", cursive;
+  --font-script: "Rye", serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
   --max-width: 1100px;
   --header-height: 72px;
@@ -42,15 +42,15 @@ body {
   color: var(--text);
   background-color: var(--wood);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 20, 147, 0.25), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(155, 48, 255, 0.15), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(255, 105, 180, 0.12), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232, 185, 35, 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 191, 255, 0.14), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(196, 168, 130, 0.12), transparent 50%),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 98px,
-      rgba(255, 20, 147, 0.04) 98px,
-      rgba(255, 20, 147, 0.04) 100px
+      rgba(232, 185, 35, 0.04) 98px,
+      rgba(232, 185, 35, 0.04) 100px
     ),
     linear-gradient(180deg, var(--wood) 0%, var(--wood-dark) 100%);
   min-height: 100vh;
@@ -318,6 +318,7 @@ a:hover {
 }
 
 .hero__title-canadian,
+.hero__title-cowboy,
 .hero__title-80s {
   display: block;
   font-family: var(--font-display);
@@ -327,6 +328,7 @@ a:hover {
 }
 
 .hero__title-tuxedo,
+.hero__title-disco,
 .hero__title-jazzercise {
   display: block;
   font-family: var(--font-display);
@@ -336,7 +338,7 @@ a:hover {
   text-shadow:
     2px 2px 0 var(--stitch),
     -1px -1px 0 var(--stitch-light),
-    0 0 30px rgba(255, 20, 147, 0.4);
+    0 0 30px rgba(232, 185, 35, 0.45);
   position: relative;
 }
 
@@ -2056,6 +2058,7 @@ a:hover {
 }
 
 .denim-badge,
+.disco-badge,
 .aerobics-badge {
   position: relative;
   width: 200px;
@@ -2069,11 +2072,12 @@ a:hover {
   border-radius: 999px;
   box-shadow:
     0 12px 32px var(--shadow),
-    0 0 40px rgba(255, 20, 147, 0.35),
+    0 0 40px rgba(232, 185, 35, 0.35),
     inset 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .denim-badge p,
+.disco-badge p,
 .aerobics-badge p {
   margin: 0;
   font-family: var(--font-display);
@@ -2085,6 +2089,7 @@ a:hover {
 }
 
 .denim-badge__stitch,
+.disco-badge__glow,
 .aerobics-badge__glow {
   position: absolute;
   inset: 10px 20px;
@@ -2185,7 +2190,7 @@ a:hover {
 /* Menu & party assets */
 
 .section--menu {
-  background: linear-gradient(180deg, var(--white) 0%, rgba(255, 20, 147, 0.06) 100%);
+  background: linear-gradient(180deg, var(--white) 0%, rgba(232, 185, 35, 0.08) 100%);
 }
 
 .menu-grid {

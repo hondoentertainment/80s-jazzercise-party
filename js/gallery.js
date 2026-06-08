@@ -1,14 +1,14 @@
 (function () {
   "use strict";
 
-  var uploadConfig = window.JJP_UPLOAD || {
+  var uploadConfig = window.CDP_UPLOAD || {
     MAX_BYTES: 5 * 1024 * 1024 * 1024,
     MAX_LABEL: "5 GB",
     MULTIPART_BYTES: 100 * 1024 * 1024,
     COMPRESS_SKIP_BYTES: 50 * 1024 * 1024,
   };
 
-  var DB_NAME = "jjp-gallery";
+  var DB_NAME = "cdp-gallery";
   var DB_VERSION = 1;
   var STORE = "photos";
   var apiAvailable = null;
