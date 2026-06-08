@@ -17,12 +17,15 @@
 
   var defaultItems = [
     "Set GALLERY_ADMIN_CODE in Vercel for host tools (poll results)",
-    "Print QR sign and post at Woodlawn entrance",
-    "Print contestant number tags and hand out at the door",
+    "Print pack: QR, venue signs, food labels, number tags (/print-pack.html)",
+    "Post QR sign at Woodlawn entrance",
+    "Hang Cowboy Disco Saloon sign on 5th floor (Apt 327)",
+    "Copy and send guest invite text (below)",
     "Test gallery upload on phone over cellular",
     "Test Best Outfit vote by contestant number on phone",
-    "Open photo slideshow on the TV",
+    "Open photo slideshow on the TV (/slideshow.html)",
     "Open Ice Breakers full-screen for warm-ups",
+    "Review party-night run-of-show (/party-night.html)",
   ];
 
   function setStatus(message, type) {

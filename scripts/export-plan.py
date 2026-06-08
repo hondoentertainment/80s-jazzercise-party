@@ -106,13 +106,25 @@ def export_committee(ws) -> list[dict]:
 
 def normalize_plan(plan: dict) -> dict:
     title = plan.get("title", "")
-    if not title or "Eighties" in title or "Jazzercise" in title:
-        plan["title"] = "Cowboy Disco Party TBD"
+    if not title or "Eighties" in title or "Jazzercise" in title or title.endswith("TBD"):
+        plan["title"] = "Cowboy Disco Party — August 15, 2026"
     plan["subtitle"] = "Project plan for the 41st birthday party — Cowboy Disco theme"
+    auto_complete = {
+        "Pick Theme": ("Complete", "Cowboy Disco — boots, bling, fringe & sequins"),
+        "Design Party Website": ("Complete", "cowboy-disco-party.vercel.app"),
+        "Design Ice Breaker": ("Complete", "15-card deck at /ice-breaker.html"),
+        "Design Food Signs": ("Complete", "Saloon fuel labels in /signs.html"),
+        "Print Food Signs": ("Complete", "Print pack at /print-pack.html"),
+        "Design Team Game": ("Complete", "Game design finished"),
+        "Pick Date": ("Complete", "Saturday, August 15, 2026"),
+    }
     for task in plan.get("tasks", []):
-        if task.get("task") == "Pick Theme":
-            task["status"] = "Complete"
-            task["notes"] = "Cowboy Disco — boots, bling, fringe & sequins"
+        name = task.get("task", "")
+        if name in auto_complete:
+            task["status"], task["notes"] = auto_complete[name]
+    for sign in plan.get("signs", []):
+        if sign.get("name") == "Kyle's Apartment":
+            sign["name"] = "Cowboy Disco Saloon (Apt 327)"
     return plan
 
 

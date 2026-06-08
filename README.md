@@ -1,6 +1,6 @@
 # Cowboy Disco Party
 
-Event website for the **Cowboy Disco Party** — **date TBD** · **6:30 PM** · **6900 East Greenlake Way N, Seattle** (Woodlawn entrance).
+Event website for the **Cowboy Disco Party** — **Saturday, August 15, 2026** · **6:30 PM** · **6900 East Greenlake Way N, Seattle** (Woodlawn entrance).
 
 **Live site:** [cowboy-disco-party.vercel.app](https://cowboy-disco-party.vercel.app)
 
@@ -37,6 +37,17 @@ Run the full pre-party verification (smoke test + printable checklist):
 ```bash
 python scripts/pre-party-check.py
 ```
+
+Apply a different party date across config and HTML:
+
+```bash
+python scripts/apply-party-date.py 2026-08-15
+python scripts/generate-cowboy-disco-assets.py
+python scripts/optimize-assets.py
+python scripts/generate-qr.py
+```
+
+Host pages: [/party-night.html](https://cowboy-disco-party.vercel.app/party-night.html) (run-of-show) · [/print-pack.html](https://cowboy-disco-party.vercel.app/print-pack.html) (all prints)
 
 ## What's included
 

@@ -40,7 +40,7 @@
 
   function formatCloseTime() {
     if (!closeTime) {
-      return "party night (date TBD)";
+      return "party night";
     }
     return new Date(closeTime).toLocaleString("en-US", {
       weekday: "short",

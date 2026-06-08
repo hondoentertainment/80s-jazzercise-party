@@ -2,10 +2,10 @@
   "use strict";
 
   global.CDP_PLAN = {
-  "title": "Cowboy Disco Party TBD",
+  "title": "Cowboy Disco Party — August 15, 2026",
   "subtitle": "Project plan for the 41st birthday party — Cowboy Disco theme",
   "sourceFile": "Project Plan for the 41st Birthday Party.xlsx",
-  "exportedAt": "2026-06-07T18:34:52",
+  "exportedAt": "2026-06-07T18:45:43",
   "tasks": [
     {
       "id": 1,
@@ -19,9 +19,9 @@
       "id": 2,
       "category": "Date",
       "task": "Pick Date",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": "TBD"
+      "notes": "Saturday, August 15, 2026"
     },
     {
       "id": 3,
@@ -35,9 +35,9 @@
       "id": 4,
       "category": "Website",
       "task": "Design Party Website",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": ""
+      "notes": "cowboy-disco-party.vercel.app"
     },
     {
       "id": 5,
@@ -99,7 +99,7 @@
       "id": 12,
       "category": "Games",
       "task": "Design Team Game",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle/Taylor/Zach",
       "notes": "Game design finished"
     },
@@ -107,9 +107,9 @@
       "id": 13,
       "category": "Games",
       "task": "Design Ice Breaker",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": ""
+      "notes": "15-card deck at /ice-breaker.html"
     },
     {
       "id": 14,
@@ -163,17 +163,17 @@
       "id": 20,
       "category": "Mains",
       "task": "Design Food Signs",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": ""
+      "notes": "Saloon fuel labels in /signs.html"
     },
     {
       "id": 21,
       "category": "Mains",
       "task": "Print Food Signs",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Richard",
-      "notes": "By Saturday"
+      "notes": "Print pack at /print-pack.html"
     },
     {
       "id": 22,
@@ -426,7 +426,7 @@
       "quantity": 1
     },
     {
-      "name": "Kyle's Apartment",
+      "name": "Cowboy Disco Saloon (Apt 327)",
       "quantity": 1
     },
     {
