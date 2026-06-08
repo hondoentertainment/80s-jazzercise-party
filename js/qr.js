@@ -10,7 +10,7 @@
   function getSiteUrl() {
     return global.CDP && global.CDP.SITE_URL
       ? global.CDP.SITE_URL
-      : "https://80s-jazzercise-party.vercel.app";
+      : "https://cowboy-disco-party.vercel.app";
   }
 
   function displayUrl(url) {

@@ -186,7 +186,7 @@
     shareMessage.textContent =
       window.CDP && window.CDP.SHARE_MESSAGE
         ? window.CDP.SHARE_MESSAGE
-        : "Cowboy Disco Party: https://80s-jazzercise-party.vercel.app";
+        : "Cowboy Disco Party: https://cowboy-disco-party.vercel.app";
   }
 
   if (copyInviteBtn) {

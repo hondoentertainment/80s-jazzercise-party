@@ -2,7 +2,7 @@
 
 Event website for the **Cowboy Disco Party** — **date TBD** · **6:30 PM** · **6900 East Greenlake Way N, Seattle** (Woodlawn entrance).
 
-**Live site:** [cowboy-disco-party.vercel.app](https://80s-jazzercise-party.vercel.app)
+**Live site:** [cowboy-disco-party.vercel.app](https://cowboy-disco-party.vercel.app)
 
 ## Quick start
 
@@ -74,14 +74,14 @@ npx vercel env add GALLERY_ADMIN_CODE production
 
 | Page | URL |
 |------|-----|
-| Host dashboard | [/host.html](https://80s-jazzercise-party.vercel.app/host.html) |
-| Gallery admin | [/admin.html](https://80s-jazzercise-party.vercel.app/admin.html) |
-| Poll results | [/poll-results.html](https://80s-jazzercise-party.vercel.app/poll-results.html) |
-| Print QR sign | [/qr.html](https://80s-jazzercise-party.vercel.app/qr.html) |
-| Print number tags | [/numbers.html](https://80s-jazzercise-party.vercel.app/numbers.html) |
-| Photo slideshow (TV) | [/slideshow.html](https://80s-jazzercise-party.vercel.app/slideshow.html) |
-| Ice breakers | [/ice-breaker.html](https://80s-jazzercise-party.vercel.app/ice-breaker.html) |
-| Party planning (committee) | [/plan.html](https://80s-jazzercise-party.vercel.app/plan.html) |
+| Host dashboard | [/host.html](https://cowboy-disco-party.vercel.app/host.html) |
+| Gallery admin | [/admin.html](https://cowboy-disco-party.vercel.app/admin.html) |
+| Poll results | [/poll-results.html](https://cowboy-disco-party.vercel.app/poll-results.html) |
+| Print QR sign | [/qr.html](https://cowboy-disco-party.vercel.app/qr.html) |
+| Print number tags | [/numbers.html](https://cowboy-disco-party.vercel.app/numbers.html) |
+| Photo slideshow (TV) | [/slideshow.html](https://cowboy-disco-party.vercel.app/slideshow.html) |
+| Ice breakers | [/ice-breaker.html](https://cowboy-disco-party.vercel.app/ice-breaker.html) |
+| Party planning (committee) | [/plan.html](https://cowboy-disco-party.vercel.app/plan.html) |
 
 ## Party planning workbook
 
@@ -99,12 +99,12 @@ Task status changes on the planning page are saved in the browser only. Re-expor
 
 1. Set `GALLERY_ADMIN_CODE` in Vercel and redeploy
 2. Set party date in `js/config.js` (see below) and redeploy
-3. Print QR sign from [qr.html](https://80s-jazzercise-party.vercel.app/qr.html) → post at Woodlawn entrance
-4. Print number tags from [numbers.html](https://80s-jazzercise-party.vercel.app/numbers.html) → hand out at the door
+3. Print QR sign from [qr.html](https://cowboy-disco-party.vercel.app/qr.html) → post at Woodlawn entrance
+4. Print number tags from [numbers.html](https://cowboy-disco-party.vercel.app/numbers.html) → hand out at the door
 5. Test gallery upload + vote by number on a phone over **cellular**
-6. Open [slideshow.html](https://80s-jazzercise-party.vercel.app/slideshow.html) on the TV
-7. Open [ice-breaker.html](https://80s-jazzercise-party.vercel.app/ice-breaker.html) full-screen for warm-ups
-8. Use [host.html](https://80s-jazzercise-party.vercel.app/host.html) during the party
+6. Open [slideshow.html](https://cowboy-disco-party.vercel.app/slideshow.html) on the TV
+7. Open [ice-breaker.html](https://cowboy-disco-party.vercel.app/ice-breaker.html) full-screen for warm-ups
+8. Use [host.html](https://cowboy-disco-party.vercel.app/host.html) during the party
 
 ## Custom domain
 
