@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#e8b923">
+  <title>Mobile Test | Cowboy Disco Party</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤠</text></svg>">
+</head>
+<body>
+  <main id="main" class="section">
+    <div class="container">
+      <header class="section__header">
+        <h1>Mobile Test</h1>
+        <p>Run these checks on a phone over <strong>cellular</strong> (turn off Wi‑Fi).</p>
+      </header>
+
+      <p class="form-note" id="connection-hint" role="status" aria-live="polite"></p>
+
+      <section class="host-block">
+        <h2>1. Gallery upload</h2>
+        <ol class="location-tips">
+          <li>Disable Wi‑Fi on your phone</li>
+          <li>Open <a href="gallery.html">gallery.html</a></li>
+          <li>Upload a test photo with a short caption</li>
+          <li>Confirm it appears in the gallery grid</li>
+        </ol>
+        <a class="btn btn--primary" href="gallery.html">Open Gallery</a>
+      </section>
+
+      <section class="host-block">
+        <h2>2. Best outfit vote</h2>
+        <ol class="location-tips">
+          <li>Still on cellular</li>
+          <li>Open <a href="vote.html">vote.html</a></li>
+          <li>Enter a contestant number from a printed tag</li>
+          <li>Confirm vote submits successfully</li>
+        </ol>
+        <a class="btn btn--primary" href="vote.html">Open Vote</a>
+      </section>
+
+      <section class="host-block">
+        <h2>3. QR scan</h2>
+        <ol class="location-tips">
+          <li>Scan <a href="assets/qr-code.png">the QR code</a> with your camera</li>
+          <li>Confirm it opens the party site homepage</li>
+        </ol>
+      </section>
+
+      <p class="admin-back"><a href="host.html">← Host dashboard</a> · <a href="party-night.html">Party night setup</a></p>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var hint = document.getElementById("connection-hint");
+      if (!hint || !navigator.connection) {
+        return;
+      }
+      var type = navigator.connection.effectiveType || navigator.connection.type || "unknown";
+      hint.textContent = "Detected connection: " + type + " — use cellular/LTE for a real guest test.";
+    })();
+  </script>
+</body>
+</html>

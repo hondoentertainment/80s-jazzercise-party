@@ -5,7 +5,7 @@
   "title": "Cowboy Disco Party — August 15, 2026",
   "subtitle": "Project plan for the 41st birthday party — Cowboy Disco theme",
   "sourceFile": "Project Plan for the 41st Birthday Party.xlsx",
-  "exportedAt": "2026-06-07T18:45:43",
+  "exportedAt": "2026-06-07T18:59:45",
   "tasks": [
     {
       "id": 1,
@@ -59,17 +59,17 @@
       "id": 7,
       "category": "Invite",
       "task": "Design Partiful Invite",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": "No Maybe Next Time"
+      "notes": "Digital invite at /invite.html"
     },
     {
       "id": 8,
       "category": "Invite",
       "task": "Send Partiful Invite",
-      "status": "Not Started",
+      "status": "In Progress",
       "assigned": "Kyle",
-      "notes": ""
+      "notes": "Use /invite.html — copy, SMS, or email"
     },
     {
       "id": 9,
@@ -131,9 +131,9 @@
       "id": 16,
       "category": "Mains",
       "task": "Pick Out Menu",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle/Jeremy/Chris",
-      "notes": ""
+      "notes": "Menu PDF + drink list on site"
     },
     {
       "id": 17,
@@ -243,9 +243,9 @@
       "id": 30,
       "category": "Decorations",
       "task": "Design Signs",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": ""
+      "notes": "Woodlawn + Saloon signs in /signs.html"
     },
     {
       "id": 31,
@@ -259,9 +259,9 @@
       "id": 32,
       "category": "Decorations",
       "task": "Print Signs",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Richard",
-      "notes": "Day Of"
+      "notes": "/print-pack.html"
     },
     {
       "id": 33,
@@ -315,9 +315,9 @@
       "id": 39,
       "category": "Photos",
       "task": "Centralized Photo Share",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": "Part of central website"
+      "notes": "Gallery at /gallery.html"
     },
     {
       "id": 40,

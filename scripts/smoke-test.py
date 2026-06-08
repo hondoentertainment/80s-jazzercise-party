@@ -23,6 +23,8 @@ PAGES = [
     "/signs.html",
     "/print-pack.html",
     "/party-night.html",
+    "/invite.html",
+    "/mobile-test.html",
     "/manifest.json",
     "/assets/poster.webp",
     "/assets/poster-hero.jpg",

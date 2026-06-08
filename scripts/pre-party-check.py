@@ -12,15 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get("SITE_URL", "https://cowboy-disco-party.vercel.app")
 
 CHECKLIST = [
-    f"Print QR sign: {BASE}/qr.html",
-    f"Print venue signs: {BASE}/signs.html",
-    f"Print contestant tags: {BASE}/numbers.html",
+    f"Send invites: {BASE}/invite.html",
+    f"Print pack: {BASE}/print-pack.html",
+    f"Mobile test (cellular): {BASE}/mobile-test.html",
     "Post QR at Woodlawn entrance",
-    "Test gallery upload on a phone over cellular",
-    "Test best-outfit vote by contestant number",
+    "Hang Cowboy Disco Saloon sign — Apt 327",
+    f"Party night run-of-show: {BASE}/party-night.html",
     f"Open TV slideshow: {BASE}/slideshow.html",
-    f"Open ice breakers full screen: {BASE}/ice-breaker.html",
-    f"Host dashboard ready: {BASE}/host.html",
+    f"Host dashboard: {BASE}/host.html",
 ]
 
 

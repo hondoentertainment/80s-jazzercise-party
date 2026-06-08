@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#e8b923">
+  <title>Send Invites | Cowboy Disco Party</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤠</text></svg>">
+</head>
+<body>
+  <main id="main" class="section">
+    <div class="container">
+      <header class="section__header">
+        <h1>Guest Invite</h1>
+        <p>Copy, text, or email this to your guest list.</p>
+      </header>
+
+      <section class="host-block">
+        <h2>Invite Text</h2>
+        <p class="dress-lead" id="invite-body"></p>
+        <div class="menu-actions__buttons">
+          <button class="btn btn--primary" type="button" id="invite-copy">Copy invite</button>
+          <button class="btn btn--secondary" type="button" id="invite-share">Share…</button>
+          <a class="btn btn--secondary" id="invite-sms" href="#">Text (SMS)</a>
+          <a class="btn btn--secondary" id="invite-email" href="#">Email</a>
+        </div>
+        <p class="form-note" id="invite-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="host-block">
+        <h2>Details to mention</h2>
+        <ul class="location-tips">
+          <li><strong>When:</strong> Saturday, August 15, 2026 · 6:30 PM</li>
+          <li><strong>Where:</strong> 6900 East Greenlake Way N, Apt 327 — Woodlawn entrance</li>
+          <li><strong>Dress:</strong> Cowboy disco — boots, fringe, sequins, denim</li>
+          <li><strong>Site:</strong> Photos, ice breakers, vote, directions, menu</li>
+        </ul>
+      </section>
+
+      <p class="admin-back"><a href="host.html">← Host dashboard</a> · <a href="index.html">Party site</a></p>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script>
+    (function () {
+      var config = window.CDP || {};
+      var site = config.SITE_URL || "https://cowboy-disco-party.vercel.app";
+      var message =
+        config.SHARE_MESSAGE ||
+        ("Cowboy Disco Party — Aug 15, 2026! Boots and bling encouraged. " + site);
+
+      var body = document.getElementById("invite-body");
+      var status = document.getElementById("invite-status");
+      var copyBtn = document.getElementById("invite-copy");
+      var shareBtn = document.getElementById("invite-share");
+      var sms = document.getElementById("invite-sms");
+      var email = document.getElementById("invite-email");
+
+      if (body) {
+        body.textContent = message;
+      }
+
+      function setStatus(text, type) {
+        if (!status) return;
+        status.textContent = text;
+        status.className = "form-note" + (type ? " form-note--" + type : "");
+      }
+
+      if (sms) {
+        sms.href = "sms:?&body=" + encodeURIComponent(message);
+      }
+      if (email) {
+        email.href =
+          "mailto:?subject=" +
+          encodeURIComponent("You're invited: Cowboy Disco Party") +
+          "&body=" +
+          encodeURIComponent(message);
+      }
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          if (!navigator.clipboard) {
+            setStatus("Clipboard not available in this browser.", "error");
+            return;
+          }
+          navigator.clipboard.writeText(message).then(function () {
+            setStatus("Invite copied!", "success");
+          });
+        });
+      }
+
+      if (shareBtn) {
+        shareBtn.addEventListener("click", function () {
+          if (navigator.share) {
+            navigator.share({ title: "Cowboy Disco Party", text: message, url: site }).catch(function () {});
+            return;
+          }
+          setStatus("Use Copy invite or Text/Email buttons on this device.", "error");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

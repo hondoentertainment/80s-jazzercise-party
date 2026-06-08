@@ -47,7 +47,7 @@ python scripts/optimize-assets.py
 python scripts/generate-qr.py
 ```
 
-Host pages: [/party-night.html](https://cowboy-disco-party.vercel.app/party-night.html) (run-of-show) · [/print-pack.html](https://cowboy-disco-party.vercel.app/print-pack.html) (all prints)
+Host pages: [/invite.html](https://cowboy-disco-party.vercel.app/invite.html) (send invites) · [/mobile-test.html](https://cowboy-disco-party.vercel.app/mobile-test.html) (cellular test) · [/party-night.html](https://cowboy-disco-party.vercel.app/party-night.html) (run-of-show) · [/print-pack.html](https://cowboy-disco-party.vercel.app/print-pack.html) (all prints)
 
 ## What's included
 

@@ -10,7 +10,7 @@
     VOTE_MAX_NUMBER: 99,
     VOTE_TAG_COUNT: 30,
     SHARE_MESSAGE:
-      "Cowboy Disco Party — Aug 15, 2026! Boots and bling encouraged. Scan for photos, ice breakers, and best-outfit voting: https://cowboy-disco-party.vercel.app",
+      "You're invited to the Cowboy Disco Party — Saturday, Aug 15, 2026 at 6:30 PM! 6900 East Greenlake Way N, Apt 327 (Woodlawn entrance). Boots & bling encouraged. Photos, ice breakers, vote & directions: https://cowboy-disco-party.vercel.app",
     OG_IMAGE: "https://cowboy-disco-party.vercel.app/assets/poster-og.jpg",
   };
 })(window);

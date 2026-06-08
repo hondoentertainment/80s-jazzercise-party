@@ -117,6 +117,12 @@ def normalize_plan(plan: dict) -> dict:
         "Print Food Signs": ("Complete", "Print pack at /print-pack.html"),
         "Design Team Game": ("Complete", "Game design finished"),
         "Pick Date": ("Complete", "Saturday, August 15, 2026"),
+        "Pick Out Menu": ("Complete", "Menu PDF + drink list on site"),
+        "Design Signs": ("Complete", "Woodlawn + Saloon signs in /signs.html"),
+        "Print Signs": ("Complete", "/print-pack.html"),
+        "Centralized Photo Share": ("Complete", "Gallery at /gallery.html"),
+        "Design Partiful Invite": ("Complete", "Digital invite at /invite.html"),
+        "Send Partiful Invite": ("In Progress", "Use /invite.html — copy, SMS, or email"),
     }
     for task in plan.get("tasks", []):
         name = task.get("task", "")
