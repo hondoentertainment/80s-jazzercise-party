@@ -2,18 +2,18 @@
   "use strict";
 
   global.CDP_PLAN = {
-  "title": "Eighties Party TBD",
-  "subtitle": "Project plan for the 41st birthday party",
+  "title": "Cowboy Disco Party TBD",
+  "subtitle": "Project plan for the 41st birthday party — Cowboy Disco theme",
   "sourceFile": "Project Plan for the 41st Birthday Party.xlsx",
-  "exportedAt": "2026-05-31T11:30:36",
+  "exportedAt": "2026-06-07T18:34:52",
   "tasks": [
     {
       "id": 1,
       "category": "Theme",
       "task": "Pick Theme",
-      "status": "Not Started",
+      "status": "Complete",
       "assigned": "Kyle",
-      "notes": "Includes Name & Dress"
+      "notes": "Cowboy Disco — boots, bling, fringe & sequins"
     },
     {
       "id": 2,

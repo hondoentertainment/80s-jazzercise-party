@@ -13,9 +13,10 @@ npx serve .
 
 Visit `http://localhost:3000`. API routes require Vercel or `vercel dev` locally.
 
-Process hero image assets (after replacing the source JPG in project root):
+Generate or refresh Cowboy Disco PNG/PDF assets (poster, signs, drink list, food labels, menu):
 
 ```bash
+python scripts/generate-cowboy-disco-assets.py
 python scripts/optimize-assets.py
 ```
 
@@ -29,6 +30,12 @@ Smoke-test production:
 
 ```bash
 python scripts/smoke-test.py
+```
+
+Run the full pre-party verification (smoke test + printable checklist):
+
+```bash
+python scripts/pre-party-check.py
 ```
 
 ## What's included
@@ -51,7 +58,9 @@ git push origin main
 npx vercel deploy --prod --yes
 ```
 
-Create a **new** Vercel project for this repo (do not reuse the Canadian Tuxedo Party project). Connect Vercel Blob storage on first deploy.
+**GitHub:** [github.com/hondoentertainment/cowboy-disco-party](https://github.com/hondoentertainment/cowboy-disco-party)
+
+**Vercel project:** `cowboy-disco-party` at [cowboy-disco-party.vercel.app](https://cowboy-disco-party.vercel.app)
 
 ## Environment variables (Vercel)
 
@@ -97,14 +106,17 @@ Task status changes on the planning page are saved in the browser only. Re-expor
 
 ## Party-night checklist
 
+Run `python scripts/pre-party-check.py` for an automated smoke test plus this list:
+
 1. Set `GALLERY_ADMIN_CODE` in Vercel and redeploy
-2. Set party date in `js/config.js` (see below) and redeploy
+2. Set party date in `js/config.js` when confirmed (see below) and redeploy
 3. Print QR sign from [qr.html](https://cowboy-disco-party.vercel.app/qr.html) → post at Woodlawn entrance
-4. Print number tags from [numbers.html](https://cowboy-disco-party.vercel.app/numbers.html) → hand out at the door
-5. Test gallery upload + vote by number on a phone over **cellular**
-6. Open [slideshow.html](https://cowboy-disco-party.vercel.app/slideshow.html) on the TV
-7. Open [ice-breaker.html](https://cowboy-disco-party.vercel.app/ice-breaker.html) full-screen for warm-ups
-8. Use [host.html](https://cowboy-disco-party.vercel.app/host.html) during the party
+4. Print venue signs from [signs.html](https://cowboy-disco-party.vercel.app/signs.html)
+5. Print number tags from [numbers.html](https://cowboy-disco-party.vercel.app/numbers.html) → hand out at the door
+6. Test gallery upload + vote by number on a phone over **cellular**
+7. Open [slideshow.html](https://cowboy-disco-party.vercel.app/slideshow.html) on the TV
+8. Open [ice-breaker.html](https://cowboy-disco-party.vercel.app/ice-breaker.html) full-screen for warm-ups
+9. Use [host.html](https://cowboy-disco-party.vercel.app/host.html) during the party
 
 ## Custom domain
 

@@ -104,18 +104,32 @@ def export_committee(ws) -> list[dict]:
     return rows
 
 
+def normalize_plan(plan: dict) -> dict:
+    title = plan.get("title", "")
+    if not title or "Eighties" in title or "Jazzercise" in title:
+        plan["title"] = "Cowboy Disco Party TBD"
+    plan["subtitle"] = "Project plan for the 41st birthday party — Cowboy Disco theme"
+    for task in plan.get("tasks", []):
+        if task.get("task") == "Pick Theme":
+            task["status"] = "Complete"
+            task["notes"] = "Cowboy Disco — boots, bling, fringe & sequins"
+    return plan
+
+
 def main() -> None:
     wb = load_workbook(WORKBOOK, data_only=True)
-    plan = {
-        "title": clean(wb["Notes"].cell(1, 1).value) or "Eighties Party TBD",
-        "subtitle": "Project plan for the 41st birthday party",
-        "sourceFile": WORKBOOK.name,
-        "exportedAt": datetime.now().isoformat(timespec="seconds"),
-        "tasks": export_tasks(wb["Notes"]),
-        "schedule": export_schedule(wb["Schedule"]),
-        "signs": export_signs(wb["Signs"]),
-        "committee": export_committee(wb["Committe"]),
-    }
+    plan = normalize_plan(
+        {
+            "title": clean(wb["Notes"].cell(1, 1).value) or "Cowboy Disco Party TBD",
+            "subtitle": "Project plan for the 41st birthday party — Cowboy Disco theme",
+            "sourceFile": WORKBOOK.name,
+            "exportedAt": datetime.now().isoformat(timespec="seconds"),
+            "tasks": export_tasks(wb["Notes"]),
+            "schedule": export_schedule(wb["Schedule"]),
+            "signs": export_signs(wb["Signs"]),
+            "committee": export_committee(wb["Committe"]),
+        }
+    )
 
     payload = json.dumps(plan, indent=2, ensure_ascii=False)
     OUTPUT.write_text(
