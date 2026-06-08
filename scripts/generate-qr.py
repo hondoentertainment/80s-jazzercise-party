@@ -9,7 +9,7 @@ import qrcode
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "js" / "config.js"
 OUTPUT = ROOT / "assets" / "qr-code.png"
-SITE_URL = "https://cowboy-disco-party.vercel.app"
+SITE_URL = "https://80s-jazzercise-party.vercel.app"
 DARK = "#4a2c1a"
 LIGHT = "#f5f0e8"
 SIZE = 512
