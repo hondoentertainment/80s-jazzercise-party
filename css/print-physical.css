@@ -1,0 +1,413 @@
+/* Physical print formats — cardstock, photo prints, and pocket cards */
+
+@import url("brand.css");
+
+:root {
+  --phys-cream: #f5f0e8;
+  --phys-ink: #2a1f14;
+  --phys-brown: #4a2c1a;
+  --phys-gold: #b8860b;
+  --phys-gold-light: #d4a82a;
+  --phys-muted: #6b5a48;
+  --phys-rule: #c4a882;
+}
+
+.phys-page {
+  margin: 0;
+  font-family: "Source Sans 3", Georgia, serif;
+  color: var(--phys-ink);
+  background: #e8e4dc;
+}
+
+.phys-toolbar {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+}
+
+.phys-toolbar h1 {
+  margin: 0 0 0.35rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--phys-brown);
+}
+
+.phys-toolbar p {
+  margin: 0 0 1rem;
+  color: var(--phys-muted);
+  line-height: 1.5;
+}
+
+.phys-toolbar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.phys-toolbar__note {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--phys-muted);
+}
+
+.phys-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem 3rem;
+}
+
+/* 5×7 invitation card */
+
+.phys-invite {
+  width: 5in;
+  height: 7in;
+  padding: 0.45in 0.5in;
+  box-sizing: border-box;
+  background: var(--phys-cream);
+  border: 1px solid var(--phys-rule);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.phys-invite::before {
+  content: "";
+  position: absolute;
+  inset: 0.22in;
+  border: 2px solid var(--phys-gold);
+  pointer-events: none;
+}
+
+.phys-invite__inner {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.phys-invite__eyebrow {
+  margin: 0.35in 0 0.15in;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--phys-muted);
+}
+
+.phys-invite__title-line {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.35rem;
+  line-height: 0.92;
+  letter-spacing: 0.08em;
+  color: var(--phys-brown);
+}
+
+.phys-invite__title-line--accent {
+  color: var(--phys-gold);
+  font-size: 3rem;
+}
+
+.phys-invite__rule {
+  width: 2.2in;
+  height: 2px;
+  margin: 0.22in 0;
+  background: linear-gradient(90deg, transparent, var(--phys-gold), transparent);
+}
+
+.phys-invite__datetime {
+  margin: 0 0 0.12in;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  color: var(--phys-ink);
+}
+
+.phys-invite__tagline {
+  margin: 0 0 0.35in;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--phys-muted);
+  max-width: 3.4in;
+}
+
+.phys-invite__dress {
+  margin: auto 0 0;
+  padding-top: 0.2in;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--phys-muted);
+}
+
+.phys-invite__dress strong {
+  display: block;
+  margin-bottom: 0.08in;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--phys-brown);
+}
+
+.phys-invite--back .phys-invite__inner {
+  align-items: stretch;
+  text-align: left;
+}
+
+.phys-invite__heading {
+  margin: 0.28in 0 0.12in;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--phys-brown);
+}
+
+.phys-invite__heading:first-child {
+  margin-top: 0.15in;
+}
+
+.phys-invite__address {
+  margin: 0 0 0.1in;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.phys-invite__steps {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--phys-ink);
+}
+
+.phys-invite__steps li {
+  margin-bottom: 0.14in;
+}
+
+.phys-invite__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.25in;
+  padding-top: 0.2in;
+}
+
+.phys-invite__site {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--phys-brown);
+  word-break: break-all;
+}
+
+.phys-invite__site-note {
+  margin: 0.06in 0 0;
+  font-size: 0.68rem;
+  color: var(--phys-muted);
+}
+
+.phys-invite__qr {
+  width: 1.05in;
+  height: 1.05in;
+  flex-shrink: 0;
+  border: 1px solid var(--phys-rule);
+  padding: 0.06in;
+  background: #fff;
+}
+
+.phys-invite__qr img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 4×6 schedule pocket card */
+
+.phys-schedule {
+  width: 4in;
+  height: 6in;
+  padding: 0.35in 0.38in;
+  box-sizing: border-box;
+  background: var(--phys-cream);
+  border: 1px solid var(--phys-rule);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.phys-schedule__title {
+  margin: 0 0 0.04in;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  color: var(--phys-brown);
+  text-align: center;
+}
+
+.phys-schedule__date {
+  margin: 0 0 0.2in;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--phys-muted);
+}
+
+.phys-schedule__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.phys-schedule__table td {
+  padding: 0.1in 0;
+  border-bottom: 1px solid rgba(196, 168, 130, 0.45);
+  vertical-align: top;
+}
+
+.phys-schedule__table tr:last-child td {
+  border-bottom: none;
+}
+
+.phys-schedule__time {
+  width: 0.85in;
+  font-weight: 700;
+  color: var(--phys-gold);
+  white-space: nowrap;
+}
+
+.phys-schedule__foot {
+  margin-top: auto;
+  padding-top: 0.15in;
+  font-size: 0.68rem;
+  text-align: center;
+  color: var(--phys-muted);
+}
+
+/* Party kit guide */
+
+.phys-kit-grid {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.phys-kit-card {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--phys-rule);
+  border-radius: 8px;
+}
+
+.phys-kit-card h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  color: var(--phys-brown);
+}
+
+.phys-kit-card p {
+  margin: 0 0 0.65rem;
+  font-size: 0.92rem;
+  color: var(--phys-muted);
+  line-height: 1.45;
+}
+
+.phys-kit-card__meta {
+  margin: 0 0 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--phys-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.phys-kit-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.phys-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--phys-brown);
+  background: var(--phys-brown);
+  color: var(--phys-cream);
+  cursor: pointer;
+}
+
+.phys-btn--ghost {
+  background: transparent;
+  color: var(--phys-brown);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .phys-page {
+    background: #fff;
+  }
+
+  .phys-sheet {
+    padding: 0;
+    gap: 0;
+  }
+
+  .phys-invite,
+  .phys-schedule {
+    box-shadow: none;
+    border: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .phys-invite:last-child,
+  .phys-schedule:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+
+@page invite-sheet {
+  size: 5in 7in;
+  margin: 0;
+}
+
+@page schedule-sheet {
+  size: 4in 6in;
+  margin: 0;
+}
+
+@media print {
+  .phys-page--invite .phys-invite {
+    page: invite-sheet;
+  }
+
+  .phys-page--schedule .phys-schedule {
+    page: schedule-sheet;
+  }
+}

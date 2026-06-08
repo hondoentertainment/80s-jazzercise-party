@@ -100,7 +100,9 @@ def generate_poster() -> None:
     y = centered_text(draw, "DISCO", y, w, title_font, GOLD) + 10
     y = centered_text(draw, "PARTY!", y, w, sub_font, BLUE) + 40
     y = centered_text(draw, "Sat Aug 15, 2026  ·  6:30 PM", y, w, body_font, CREAM) + 20
-    centered_text(draw, "Boots. Bling. Line dance till dawn.", y, w, body_font, TAN)
+    centered_text(draw, "Cowboy Disco Saloon", y, w, load_font(32), TAN)
+    y += 44
+    centered_text(draw, "Boots, bling, and two-step under the mirror ball.", y, w, body_font, TAN)
 
     arrow_y = h - 180
     draw.polygon([(w // 2 + 220, arrow_y), (w // 2 + 320, arrow_y + 50), (w // 2 + 220, arrow_y + 100)], fill=GOLD)

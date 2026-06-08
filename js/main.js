@@ -101,7 +101,7 @@
 
     if (heroTagline) {
       heroTagline.textContent =
-        "Boots. Bling. Mirror ball till dawn — scan the QR for photos, ice breakers, and votes.";
+        "Boots, bling, and two-step under the mirror ball — scan the QR for photos, ice breakers, and votes.";
     }
 
     if (countdownEl) {

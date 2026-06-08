@@ -17,7 +17,7 @@
 
   var defaultItems = [
     "Set GALLERY_ADMIN_CODE in Vercel for host tools (poll results)",
-    "Print pack: QR, venue signs, food labels, number tags (/print-pack.html)",
+    "Print party kit: invitations, QR, signs, labels, number tags (/party-kit.html)",
     "Post QR sign at Woodlawn entrance",
     "Hang Cowboy Disco Saloon sign on 5th floor (Apt 327)",
     "Copy and send guest invite text (below)",

@@ -13,6 +13,7 @@ BASE = os.environ.get("SITE_URL", "https://cowboy-disco-party.vercel.app")
 
 CHECKLIST = [
     f"Send invites: {BASE}/invite.html",
+    f"Party kit: {BASE}/party-kit.html",
     f"Print pack: {BASE}/print-pack.html",
     f"Mobile test (cellular): {BASE}/mobile-test.html",
     "Post QR at Woodlawn entrance",

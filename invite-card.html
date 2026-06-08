@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Print Invitations | Cowboy Disco Party</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print-physical.css">
+</head>
+<body class="phys-page phys-page--invite">
+  <header class="phys-toolbar no-print">
+    <h1>Print Invitations</h1>
+    <p>
+      Real 5×7″ invitation cards for cardstock or photo paper. Print at <strong>100% scale</strong>
+      (no “Fit to page”). Run one sheet per guest, or mail the PDF from the party kit.
+    </p>
+    <div class="phys-toolbar__actions">
+      <button class="phys-btn" type="button" onclick="window.print()">Print cards</button>
+      <a class="phys-btn phys-btn--ghost" href="/assets/invite-card.png" download="cowboy-disco-invite-card.png">Download PNG</a>
+      <a class="phys-btn phys-btn--ghost" href="/assets/party-kit.pdf" download="cowboy-disco-party-kit.pdf">Party kit PDF</a>
+      <a class="phys-btn phys-btn--ghost" href="party-kit.html">Party kit guide</a>
+    </div>
+    <p class="phys-toolbar__note">Tip: Use cream or white cardstock. Front prints first; flip for directions on the back.</p>
+  </header>
+
+  <div class="phys-sheet">
+    <article class="phys-invite" aria-label="Invitation front">
+      <div class="phys-invite__inner">
+        <div class="brand-lockup brand-lockup--card phys-brand" style="margin-bottom: 0.2in;">
+          <img class="brand-lockup__mark" src="/assets/brand-mark.svg" width="44" height="44" alt="">
+          <span class="brand-lockup__text">
+            <span class="brand-lockup__name" style="color: var(--phys-brown);">Cowboy Disco Party</span>
+            <span class="brand-lockup__sub" style="color: var(--phys-muted);">Cowboy Disco Saloon</span>
+          </span>
+        </div>
+        <p class="phys-invite__eyebrow">You're invited</p>
+        <h1 class="phys-invite__title-line">Cowboy</h1>
+        <p class="phys-invite__title-line phys-invite__title-line--accent">Disco</p>
+        <h1 class="phys-invite__title-line">Party</h1>
+        <div class="phys-invite__rule" aria-hidden="true"></div>
+        <p class="phys-invite__datetime">Saturday, August 15, 2026</p>
+        <p class="phys-invite__datetime">6:30 PM</p>
+        <p class="phys-invite__tagline">Boots, bling, and two-step under the mirror ball.</p>
+        <p class="phys-invite__dress">
+          <strong>Dress code</strong>
+          Boots, fringe, sequins, denim — sparkle encouraged
+        </p>
+      </div>
+    </article>
+
+    <article class="phys-invite phys-invite--back" aria-label="Invitation back — directions">
+      <div class="phys-invite__inner">
+        <h2 class="phys-invite__heading">Where</h2>
+        <p class="phys-invite__address">
+          <strong>6900 East Greenlake Way N</strong><br>
+          Apartment 327 · Seattle, WA
+        </p>
+
+        <h2 class="phys-invite__heading">Enter on Woodlawn</h2>
+        <ol class="phys-invite__steps">
+          <li>Find <strong>K. Henderson</strong> in the building directory</li>
+          <li>Call — Kyle will buzz you in</li>
+          <li>Enter through the gate (door on the left)</li>
+          <li>Take stairs or elevator to the <strong>5th floor</strong></li>
+          <li>Look for <strong>Cowboy Disco Saloon, Apt 327</strong></li>
+        </ol>
+
+        <div class="phys-invite__footer">
+          <div>
+            <p class="phys-invite__site" id="invite-site-url">cowboy-disco-party.vercel.app</p>
+            <p class="phys-invite__site-note">Photos · Ice breakers · Vote · Menu</p>
+          </div>
+          <div class="phys-invite__qr">
+            <img src="/assets/qr-code.png" width="120" height="120" alt="QR code for party website">
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById("invite-site-url");
+      var site = (window.CDP && CDP.SITE_URL) || "https://cowboy-disco-party.vercel.app";
+      if (el) {
+        el.textContent = site.replace(/^https?:\/\//, "");
+      }
+    })();
+  </script>
+</body>
+</html>

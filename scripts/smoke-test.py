@@ -22,6 +22,9 @@ PAGES = [
     "/qr.html",
     "/signs.html",
     "/print-pack.html",
+    "/party-kit.html",
+    "/invite-card.html",
+    "/schedule-card.html",
     "/party-night.html",
     "/invite.html",
     "/mobile-test.html",
@@ -31,7 +34,12 @@ PAGES = [
     "/assets/drink-list.webp",
     "/assets/sign-woodlawn-entrance.webp",
     "/assets/menu.pdf",
+    "/assets/party-kit.pdf",
+    "/assets/invite-card.png",
+    "/assets/schedule-card.png",
     "/assets/app-icon.png",
+    "/assets/brand-mark.svg",
+    "/css/brand.css",
 ]
 
 APIS = ["/api/status", "/api/vote", "/api/photos"]

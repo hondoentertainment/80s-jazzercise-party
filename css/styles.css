@@ -1,12 +1,14 @@
 /* Cowboy Disco Party */
 
+@import url("brand.css");
+
 :root {
   --denim-dark: #4a2c1a;
   --denim: #e8b923;
   --denim-light: #f5d76e;
   --denim-fade: #c4a882;
-  --stitch: #00bfff;
-  --stitch-light: #5cd4ff;
+  --stitch: #7a9eb8;
+  --stitch-light: #a8c4d4;
   --wood: #0d0d1a;
   --wood-dark: #080810;
   --wood-grain: #1a1520;
@@ -14,17 +16,26 @@
   --text: #f5f0e8;
   --text-muted: #c9b8a8;
   --white: #2a2438;
-  --shadow: rgba(232, 185, 35, 0.25);
-  --glow-gold: rgba(245, 215, 110, 0.45);
-  --glow-blue: rgba(0, 191, 255, 0.35);
-  --glass: rgba(30, 24, 40, 0.72);
-  --glass-border: rgba(232, 185, 35, 0.35);
-  --mirror-light: #eef2f8;
-  --mirror-mid: #a8b2bc;
-  --mirror-dark: #5a646e;
-  --dance-a: rgba(232, 185, 35, 0.07);
-  --dance-b: rgba(0, 191, 255, 0.05);
-  --rope: #9a7b3c;
+  --shadow: rgba(0, 0, 0, 0.28);
+  --glow-gold: rgba(232, 185, 35, 0.16);
+  --glow-blue: rgba(122, 158, 184, 0.12);
+  --glass: rgba(24, 20, 32, 0.78);
+  --glass-border: rgba(232, 185, 35, 0.22);
+  --mirror-light: #e4eaef;
+  --mirror-mid: #9aa3ac;
+  --mirror-dark: #5c656e;
+  --mirror-sphere:
+    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.12) 14%, transparent 30%),
+    radial-gradient(circle at 72% 76%, rgba(0, 0, 0, 0.32) 0%, transparent 42%),
+    repeating-conic-gradient(
+      from -6deg at 50% 50%,
+      #6f7881 0deg 7deg,
+      #c2cad2 7deg 14deg,
+      #7d868f 14deg 21deg,
+      #e8edf2 21deg 28deg,
+      #8a939c 28deg 35deg
+    );
+  --rope: #8a7040;
   --radius: 12px;
   --radius-lg: 20px;
   --font-display: "Bebas Neue", sans-serif;
@@ -54,23 +65,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--wood);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232, 185, 35, 0.22), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 191, 255, 0.14), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(196, 168, 130, 0.12), transparent 50%),
-    repeating-linear-gradient(
-      90deg,
-      var(--dance-a) 0,
-      var(--dance-a) 52px,
-      var(--dance-b) 52px,
-      var(--dance-b) 104px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 98px,
-      rgba(232, 185, 35, 0.03) 98px,
-      rgba(232, 185, 35, 0.03) 100px
-    ),
+    radial-gradient(ellipse 70% 45% at 50% -5%, rgba(232, 185, 35, 0.1), transparent 58%),
+    radial-gradient(ellipse 45% 35% at 100% 40%, rgba(122, 158, 184, 0.06), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 0% 70%, rgba(196, 168, 130, 0.07), transparent 50%),
     linear-gradient(180deg, var(--wood) 0%, var(--wood-dark) 100%);
   min-height: 100vh;
 }
@@ -78,41 +75,13 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: -40%;
-  z-index: 0;
-  pointer-events: none;
-  background: conic-gradient(
-    from 0deg at 50% 50%,
-    transparent 0deg,
-    rgba(255, 60, 150, 0.035) 40deg,
-    transparent 80deg,
-    rgba(0, 191, 255, 0.04) 140deg,
-    transparent 180deg,
-    rgba(232, 185, 35, 0.045) 250deg,
-    transparent 300deg
-  );
-  animation: disco-sweep 24s linear infinite;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 140px;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(to top, rgba(8, 8, 16, 0.92), transparent),
-    repeating-conic-gradient(
-      from 45deg at 50% 100%,
-      var(--dance-a) 0deg 90deg,
-      var(--dance-b) 90deg 180deg
-    );
-  background-size: 100% 100%, 56px 56px;
-  opacity: 0.55;
-  mask-image: linear-gradient(to top, black 30%, transparent);
+    radial-gradient(ellipse 28% 18% at 18% 22%, rgba(232, 185, 35, 0.05), transparent),
+    radial-gradient(ellipse 22% 14% at 82% 28%, rgba(168, 196, 212, 0.04), transparent),
+    radial-gradient(ellipse 35% 20% at 50% 88%, rgba(232, 185, 35, 0.03), transparent);
 }
 
 .site-header,
@@ -168,9 +137,8 @@ a:hover {
   background: rgba(8, 8, 16, 0.88);
   backdrop-filter: blur(14px) saturate(1.2);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.35),
-    0 1px 0 var(--glow-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.32);
+  padding-bottom: 3px;
 }
 
 .nav {
@@ -185,49 +153,7 @@ a:hover {
 }
 
 .nav__brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  color: var(--denim-light);
-  text-decoration: none;
-  text-shadow: 0 0 20px var(--glow-gold);
   flex-shrink: 0;
-}
-
-.nav__brand-short {
-  display: none;
-}
-
-.nav__leaf {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 1.4rem;
-}
-
-.nav__leaf::before {
-  content: "";
-  display: block;
-  width: 1.15rem;
-  height: 1.15rem;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background:
-    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.95) 0%, transparent 28%),
-    repeating-conic-gradient(
-      from 8deg,
-      var(--mirror-mid) 0deg 14deg,
-      var(--mirror-light) 14deg 28deg,
-      var(--mirror-dark) 28deg 42deg,
-      var(--mirror-light) 42deg 56deg
-    );
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.35),
-    inset -2px -3px 6px rgba(0, 0, 0, 0.25);
-  animation: disco-ball-spin 10s linear infinite;
 }
 
 .nav__menu {
@@ -315,7 +241,7 @@ a:hover {
 }
 
 .nav__drop-menu a:hover {
-  background: rgba(45, 74, 122, 0.08);
+  background: rgba(232, 185, 35, 0.08);
   color: var(--denim);
 }
 
@@ -365,13 +291,12 @@ a:hover {
 .hero::before {
   content: "";
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
-  width: min(920px, 130%);
-  height: 420px;
+  width: min(720px, 100%);
+  height: 360px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse, var(--glow-gold) 0%, transparent 68%);
-  opacity: 0.28;
+  background: radial-gradient(ellipse, rgba(232, 185, 35, 0.07) 0%, transparent 72%);
   pointer-events: none;
   z-index: 0;
 }
@@ -389,17 +314,15 @@ a:hover {
 
 .hero__poster-wrap {
   position: relative;
-  border: 2px solid transparent;
+  border: 1px solid rgba(232, 185, 35, 0.28);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background:
-    linear-gradient(var(--wood-grain), var(--wood-grain)) padding-box,
-    linear-gradient(135deg, var(--denim-light), var(--denim), var(--stitch)) border-box;
+  background: var(--wood-grain);
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.45),
-    0 0 40px var(--glow-gold),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  transform: rotate(-1deg);
+    0 18px 42px rgba(0, 0, 0, 0.42),
+    0 2px 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform: rotate(-0.5deg);
 }
 
 .hero__shine {
@@ -409,14 +332,15 @@ a:hover {
   pointer-events: none;
   background: linear-gradient(
     105deg,
-    transparent 38%,
-    rgba(255, 255, 255, 0.12) 48%,
-    rgba(245, 215, 110, 0.18) 50%,
-    rgba(255, 255, 255, 0.12) 52%,
-    transparent 62%
+    transparent 42%,
+    rgba(255, 255, 255, 0.04) 49%,
+    rgba(255, 255, 255, 0.07) 50%,
+    rgba(255, 255, 255, 0.04) 51%,
+    transparent 58%
   );
-  background-size: 200% 100%;
-  animation: hero-shine 6s ease-in-out infinite;
+  background-size: 220% 100%;
+  animation: hero-shine 14s ease-in-out infinite;
+  opacity: 0.8;
 }
 
 .hero__poster {
@@ -441,14 +365,9 @@ a:hover {
 }
 
 .star {
-  color: var(--denim-light);
-  font-size: 0.9rem;
-  text-shadow: 0 0 8px var(--glow-gold);
-  animation: star-pulse 2.5s ease-in-out infinite;
-}
-
-.star:nth-child(2) {
-  animation-delay: 1.25s;
+  color: var(--denim-fade);
+  font-size: 0.75rem;
+  opacity: 0.85;
 }
 
 .hero__title {
@@ -464,7 +383,6 @@ a:hover {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.08em;
   color: var(--denim-fade);
-  text-shadow: 0 0 24px rgba(196, 168, 130, 0.35);
 }
 
 .hero__title-tuxedo,
@@ -474,34 +392,24 @@ a:hover {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 10vw, 6rem);
   letter-spacing: 0.06em;
-  background:
-    linear-gradient(180deg, var(--denim-light) 0%, var(--denim) 55%, #c99a10 100%);
+  background: linear-gradient(180deg, #f8e8a8 0%, var(--denim) 52%, #b8860b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(2px 2px 0 var(--stitch)) drop-shadow(0 0 28px var(--glow-gold));
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.35));
   position: relative;
 }
 
 .hero__title-disco {
-  background:
-    linear-gradient(110deg, var(--mirror-light) 0%, var(--denim-light) 18%, var(--denim) 42%, var(--stitch-light) 58%, var(--denim) 78%, var(--mirror-light) 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: disco-title-shimmer 5s ease-in-out infinite;
+  background: linear-gradient(180deg, var(--mirror-light) 0%, var(--denim-light) 38%, var(--denim) 100%);
 }
 
 .hero__title-party {
   display: block;
   font-family: var(--font-script);
   font-size: clamp(2.5rem, 7vw, 4rem);
-  background: linear-gradient(90deg, var(--denim-light), var(--stitch-light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--denim-light);
   margin-top: -0.25rem;
-  filter: drop-shadow(0 2px 8px var(--glow-blue));
 }
 
 .hero__date {
@@ -547,22 +455,21 @@ a:hover {
   align-items: center;
   min-width: 72px;
   padding: 1rem 0.75rem;
-  background: linear-gradient(160deg, rgba(232, 185, 35, 0.95), rgba(180, 130, 20, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35),
-    0 0 16px var(--glow-gold);
+    0 6px 18px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .countdown__value {
   font-family: var(--font-display);
   font-size: 2.25rem;
   line-height: 1;
-  color: var(--wood-dark);
+  color: var(--denim-light);
   letter-spacing: 0.04em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .countdown__label {
@@ -571,7 +478,7 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(13, 13, 26, 0.75);
+  color: var(--text-muted);
 }
 
 /* Buttons */
@@ -601,9 +508,8 @@ a:hover {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.3),
-    0 0 18px var(--glow-gold),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 8px 24px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
   min-width: 200px;
   min-height: 200px;
   display: flex;
@@ -743,21 +649,20 @@ a:hover {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--denim-light), var(--denim) 55%, #c99a10);
+  background: linear-gradient(180deg, #f0d878, var(--denim) 58%, #b8860b);
   color: var(--wood-dark);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.3),
-    0 0 20px var(--glow-gold),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 4px 14px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .btn--primary:hover {
-  background: linear-gradient(135deg, #fff0a8, var(--denim-light) 45%, var(--denim));
+  background: linear-gradient(180deg, #fff0a0, var(--denim-light) 50%, var(--denim));
   color: var(--wood-dark);
   box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.35),
-    0 0 28px var(--glow-gold);
+    0 8px 22px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn--secondary {
@@ -769,10 +674,9 @@ a:hover {
 }
 
 .btn--secondary:hover {
-  background: rgba(42, 36, 56, 0.9);
+  background: rgba(36, 30, 48, 0.92);
   color: var(--denim-light);
-  border-color: var(--stitch);
-  box-shadow: 0 0 18px var(--glow-blue);
+  border-color: rgba(232, 185, 35, 0.45);
 }
 
 .btn--full {
@@ -980,35 +884,10 @@ a:hover {
   padding-bottom: 1rem;
   background:
     radial-gradient(ellipse 45% 70% at 92% 18%, rgba(255, 255, 255, 0.07), transparent),
-    radial-gradient(ellipse 35% 55% at 8% 75%, rgba(0, 191, 255, 0.06), transparent),
+    radial-gradient(ellipse 35% 55% at 8% 75%, rgba(122, 158, 184, 0.05), transparent),
     linear-gradient(180deg, rgba(232, 185, 35, 0.07) 0%, transparent 65%),
     var(--cream);
   border-bottom: none;
-}
-
-.section--tab-hero::before,
-.section--poll-hero::before {
-  content: "";
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.95) 0%, transparent 28%),
-    repeating-conic-gradient(
-      from 8deg,
-      var(--mirror-mid) 0deg 14deg,
-      var(--mirror-light) 14deg 28deg,
-      var(--mirror-dark) 28deg 42deg,
-      var(--mirror-light) 42deg 56deg
-    );
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  animation: disco-ball-spin 14s linear infinite;
-  opacity: 0.9;
 }
 
 .section--tab-hero::after,
@@ -1035,7 +914,6 @@ a:hover {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
   letter-spacing: 0.06em;
   color: var(--denim-light);
-  text-shadow: 0 0 24px var(--glow-gold);
 }
 
 .section--poll {
@@ -1514,10 +1392,8 @@ a:hover {
 
 .party-night-card:hover {
   transform: translateY(-3px);
-  border-color: var(--stitch);
-  box-shadow:
-    0 14px 32px rgba(0, 0, 0, 0.35),
-    0 0 20px var(--glow-blue);
+  border-color: rgba(232, 185, 35, 0.45);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
   color: inherit;
 }
 
@@ -2219,10 +2095,9 @@ a:hover {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.06em;
   color: var(--denim-light);
-  text-shadow: 0 0 24px var(--glow-gold);
   display: inline-block;
   position: relative;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.45rem;
 }
 
 .section__header h2::after {
@@ -2230,12 +2105,12 @@ a:hover {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 55%;
-  height: 3px;
+  width: 48%;
+  height: 2px;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, var(--denim), var(--stitch), var(--denim), transparent);
+  background: linear-gradient(90deg, transparent, var(--denim), transparent);
   border-radius: 2px;
-  opacity: 0.85;
+  opacity: 0.7;
 }
 
 .section__header--left h2::after {
@@ -2285,10 +2160,10 @@ a:hover {
 }
 
 .detail-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.32),
-    0 0 22px var(--glow-gold);
+    0 14px 30px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .detail-card__icon {
@@ -2389,9 +2264,6 @@ a:hover {
   opacity: 0.6;
 }
 
-.disco-badge__glow {
-  animation: badge-glow 3.5s ease-in-out infinite;
-}
 
 .dress-note {
   margin: 0;
@@ -2421,22 +2293,20 @@ a:hover {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.35) 10%, transparent 30%),
-    radial-gradient(circle at 72% 78%, rgba(0, 0, 0, 0.4) 0%, transparent 38%),
-    repeating-conic-gradient(
-      from 12deg,
-      var(--mirror-dark) 0deg 11deg,
-      var(--mirror-light) 11deg 22deg,
-      var(--mirror-mid) 22deg 33deg,
-      #d8e0ea 33deg 44deg,
-      var(--mirror-mid) 44deg 55deg
-    );
+  background: var(--mirror-sphere);
   box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.45),
-    0 0 36px rgba(255, 255, 255, 0.12),
-    inset -5px -8px 14px rgba(0, 0, 0, 0.28);
-  animation: disco-ball-spin 16s linear infinite;
+    0 10px 28px rgba(0, 0, 0, 0.42),
+    inset -4px -7px 12px rgba(0, 0, 0, 0.26);
+  position: relative;
+}
+
+.disco-ball__sphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.28), transparent 42%);
+  pointer-events: none;
 }
 
 .disco-ball--sm {
@@ -2463,36 +2333,14 @@ a:hover {
   height: 36px;
 }
 
-.hero__disco-decor {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.disco-ball--hero-left {
-  position: absolute;
-  top: 12%;
-  left: 4%;
-  animation: disco-float 6s ease-in-out infinite;
-}
-
-.disco-ball--hero-right {
-  position: absolute;
-  top: 6%;
-  right: 6%;
-  animation: disco-float 5s ease-in-out infinite reverse;
-  animation-delay: -2s;
-}
-
 .dress-disco-scene {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.65rem;
-  padding: 1.5rem;
+  gap: 0.75rem;
+  padding: 2rem 1.75rem 1.5rem;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255, 255, 255, 0.06), transparent),
+    radial-gradient(ellipse 70% 55% at 50% 18%, rgba(255, 255, 255, 0.05), transparent),
     var(--glass);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
@@ -2501,31 +2349,19 @@ a:hover {
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.dress-disco-scene__hat {
-  font-size: 2.5rem;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
-  animation: hat-tilt 4s ease-in-out infinite;
-}
-
 .dress-disco-scene__label {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
   letter-spacing: 0.08em;
   color: var(--denim-light);
-  text-shadow: 0 0 16px var(--glow-gold);
 }
 
-.hero__poster-wrap::after {
-  content: "★";
-  position: absolute;
-  top: -0.65rem;
-  right: 1.25rem;
-  font-size: 1.5rem;
-  color: var(--denim-light);
-  text-shadow: 0 0 12px var(--glow-gold);
-  z-index: 3;
-  animation: star-pulse 2.5s ease-in-out infinite;
+.dress-disco-scene__hint {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  text-align: center;
 }
 
 /* Location */
@@ -2925,19 +2761,6 @@ a:hover {
     transform: none;
   }
 
-  .disco-ball--hero-left,
-  .disco-ball--hero-right {
-    opacity: 0.45;
-    transform: scale(0.75);
-  }
-
-  .section--tab-hero::before,
-  .section--poll-hero::before {
-    width: 40px;
-    height: 40px;
-    top: 0.75rem;
-    right: 0.75rem;
-  }
 
   .details-grid {
     grid-template-columns: 1fr;
@@ -2989,14 +2812,6 @@ a:hover {
 }
 
 @media (max-width: 960px) {
-  .nav__brand-full {
-    display: none;
-  }
-
-  .nav__brand-short {
-    display: inline;
-  }
-
   .nav__toggle {
     display: flex;
   }
@@ -3104,10 +2919,10 @@ a:hover {
   margin: 0 0 2rem;
   padding: 1.25rem 1.5rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(255, 20, 147, 0.15), rgba(155, 48, 255, 0.15));
-  border: 2px solid var(--denim);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 0 24px rgba(255, 20, 147, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .date-tbd__label {
@@ -3148,10 +2963,11 @@ a:hover {
   position: relative;
   margin: 0;
   padding: 1.25rem 1.25rem 1.25rem 3.5rem;
-  background: var(--white);
-  border: 2px solid rgba(255, 20, 147, 0.35);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 24px var(--shadow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -3284,8 +3100,8 @@ a:hover {
   display: inline-block;
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
-  background: rgba(155, 48, 255, 0.18);
-  color: var(--stitch-light);
+  background: rgba(232, 185, 35, 0.14);
+  color: var(--denim-light);
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -3369,96 +3185,3 @@ a:hover {
     opacity: 0;
   }
 }
-
-@keyframes star-pulse {
-  0%,
-  100% {
-    opacity: 0.65;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
-  }
-}
-
-@keyframes badge-glow {
-  0%,
-  100% {
-    opacity: 0.45;
-  }
-
-  50% {
-    opacity: 0.9;
-  }
-}
-
-@keyframes disco-ball-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes disco-sweep {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes disco-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-4deg);
-  }
-
-  50% {
-    transform: translateY(-14px) rotate(4deg);
-  }
-}
-
-@keyframes disco-title-shimmer {
-  0%,
-  100% {
-    background-position: 0% center;
-  }
-
-  50% {
-    background-position: 100% center;
-  }
-}
-
-@keyframes hat-tilt {
-  0%,
-  100% {
-    transform: rotate(-6deg);
-  }
-
-  50% {
-    transform: rotate(6deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body::before,
-  .hero__shine,
-  .star,
-  .disco-badge__glow,
-  .nav__leaf::before,
-  .disco-ball__sphere,
-  .section--tab-hero::before,
-  .section--poll-hero::before,
-  .hero__title-disco,
-  .disco-ball--hero-left,
-  .disco-ball--hero-right,
-  .dress-disco-scene__hat {
-    animation: none;
-  }
-
-  .btn,
-  .detail-card,
-  .party-night-card {
-    transition: none;
-  }
-}
-

@@ -1,8 +1,10 @@
-const CACHE = "cdp-v6";
+const CACHE = "cdp-v9";
 const ASSETS = [
   "/",
   "/index.html",
   "/css/styles.css",
+  "/css/brand.css",
+  "/assets/brand-mark.svg",
   "/js/config.js",
   "/js/main.js",
   "/js/qr.js",
@@ -33,6 +35,13 @@ const ASSETS = [
   "/qr.html",
   "/signs.html",
   "/print-pack.html",
+  "/party-kit.html",
+  "/invite-card.html",
+  "/schedule-card.html",
+  "/css/print-physical.css",
+  "/assets/party-kit.pdf",
+  "/assets/invite-card.png",
+  "/assets/schedule-card.png",
   "/party-night.html",
   "/invite.html",
   "/mobile-test.html",
