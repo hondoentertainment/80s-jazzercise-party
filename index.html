@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cowboy Disco Party — official Hollywood-style premiere invite. Aug 15, 2026 · Cowboy Disco Saloon, Seattle.">
-  <meta name="theme-color" content="#09090d">
+  <meta name="theme-color" content="#121212">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cowboy Disco Party | Aug 15, 2026">
   <meta property="og:description" content="Official premiere invitation — country, disco, and rhinestone under the mirror ball. Aug 15, 2026 at the Cowboy Disco Saloon.">
@@ -18,7 +18,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rye&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml">
 </head>
@@ -41,10 +41,10 @@
         <span></span>
       </button>
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="vote.html">Vote</a></li>
-        <li><a href="ice-breaker.html">Ice Breakers</a></li>
+        <li><a href="#welcome">About</a></li>
+        <li><a href="#party-night">Features</a></li>
+        <li><a href="#schedule">Line-up</a></li>
+        <li><a href="#location">Contact</a></li>
         <li class="nav__group">
           <details class="nav__drop">
             <summary>Info</summary>
@@ -63,42 +63,49 @@
             </ul>
           </details>
         </li>
+        <li class="nav__social" aria-label="Share">
+          <a href="gallery.html" aria-label="Photo gallery">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#qr" aria-label="Scan QR code">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zM14 13h2v2h-2v-2zm2 2h2v2h-2v-2zm-2 2h2v2h-2v-2zm2 2h2v2h-2v-2zm2-2h3v2h-3v-2zm0-4h3v2h-3v-2zm2 2h2v2h-2v-2zM14 17h2v2h-2v-2z"/></svg>
+          </a>
+          <a href="poll.html" aria-label="Next party poll">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero hero--premiere" id="top">
-      <div class="hero__cinema" aria-hidden="true">
-        <div class="hero__cinema-spotlight"></div>
-        <div class="hero__cinema-grain"></div>
+    <section class="hero hero--festival" id="top">
+      <div class="hero__backdrop" aria-hidden="true">
+        <picture>
+          <source srcset="/assets/poster.webp" type="image/webp">
+          <img
+            class="hero__backdrop-img"
+            src="/assets/poster-hero.jpg"
+            alt=""
+            width="1200"
+            height="800"
+            fetchpriority="high"
+          >
+        </picture>
+        <div class="hero__backdrop-shade"></div>
       </div>
-      <div class="hero__inner">
-        <div class="hero__poster-wrap">
-          <span class="hero__shine" aria-hidden="true"></span>
-          <picture>
-            <source srcset="/assets/poster.webp" type="image/webp">
-            <img
-              class="hero__poster"
-              src="/assets/poster-hero.jpg"
-              alt="Cowboy Disco Party poster — enter on Woodlawn arrow"
-              width="1200"
-              height="800"
-              fetchpriority="high"
-            >
-          </picture>
-        </div>
+      <div class="hero__monogram" aria-hidden="true">D</div>
+      <div class="hero__inner hero__inner--festival">
         <div class="hero__content">
-          <p class="brand-badge">Official Premiere · Cowboy Disco Saloon</p>
-          <p class="hero__eyebrow" id="hero-eyebrow">You're Invited</p>
-          <h1 class="hero__title">
-            <span class="hero__title-cowboy">Cowboy</span>
-            <span class="hero__title-disco">Disco</span>
-            <span class="hero__title-party">Party</span>
-          </h1>
-          <p class="hero__date">Saturday, August 15, 2026 · 6:30 PM</p>
-          <p class="hero__dj">An evening of <strong>country &amp; disco</strong> on the dance floor</p>
-          <p class="hero__tagline" id="hero-tagline">A premiere night of rhinestone, mirror-ball light, and two-step under the Seattle skyline.</p>
+          <p class="hero__eyebrow" id="hero-eyebrow">Unforgettable Event</p>
+          <h1 class="hero__title hero__title--serif">Cowboy Disco Party</h1>
+          <p class="hero__lede">Saturday, August 15, 2026 · Doors at 6:30 PM at the Cowboy Disco Saloon, Seattle.</p>
+          <p class="hero__tagline" id="hero-tagline">A premiere night of rhinestone, mirror-ball light, and two-step under the Seattle skyline — country, disco, and space-cowgirl sparkle from open to close.</p>
+          <span class="hero__title-cowboy" hidden>Cowboy</span>
+          <span class="hero__title-disco" hidden>Disco</span>
+          <span class="hero__title-party" hidden>Party</span>
+          <p class="hero__date" hidden>Saturday, August 15, 2026 · 6:30 PM</p>
+          <p class="hero__dj" hidden>An evening of <strong>country &amp; disco</strong> on the dance floor</p>
 
           <div class="post-party is-hidden" id="post-party">
             <p class="post-party__message">What a night! Relive the party in the photo gallery — upload any shots you still have on your phone.</p>
@@ -134,11 +141,62 @@
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="ice-breaker.html">Ice Breakers</a>
-            <a class="btn btn--secondary" href="gallery.html">Photo Gallery</a>
-            <a class="btn btn--secondary" href="vote.html">Best Outfit Vote</a>
+            <a class="btn btn--ghost" href="#welcome">Learn more <span class="btn__arrow" aria-hidden="true">→</span></a>
             <a class="btn btn--secondary" href="#location">Get Directions</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-bar" id="about" aria-label="Party highlights">
+      <div class="container features-bar__inner">
+        <article class="feature-pill">
+          <div class="feature-pill__icon feature-pill__icon--teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Two-Step</h3>
+          <p>Country and disco on the speakers from doors open — hustle, glide, and mirror-ball energy all night.</p>
+        </article>
+        <article class="feature-pill">
+          <div class="feature-pill__icon feature-pill__icon--purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3L3 20h18L12 3z"/></svg>
+          </div>
+          <h3>Sparkle</h3>
+          <p>Space-cowgirl dress code — hot pink, white boots, black denim, and silver sequins under the lights.</p>
+        </article>
+        <article class="feature-pill">
+          <div class="feature-pill__icon feature-pill__icon--magenta" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="9" height="9" rx="1"/><rect x="11" y="11" width="9" height="9" rx="1"/></svg>
+          </div>
+          <h3>Connect</h3>
+          <p>Ice breakers, photo gallery, and best-outfit voting — everything runs from your phone, no app needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--welcome" id="welcome">
+      <div class="container welcome-split">
+        <figure class="welcome-split__media">
+          <picture>
+            <source srcset="/assets/drink-list.webp" type="image/webp">
+            <img
+              src="/assets/drink-list.jpg"
+              alt="Cowboy Disco Party cocktails and neon saloon atmosphere"
+              width="1000"
+              height="750"
+              loading="lazy"
+            >
+          </picture>
+        </figure>
+        <div class="welcome-split__copy">
+          <h2>Welcome!</h2>
+          <p class="welcome-split__lead">An intimate premiere for friends — cocktails, contests, and cowboy-disco looks under one mirror ball.</p>
+          <p>
+            The Cowboy Disco Saloon opens Saturday, August 15 at 6:30 PM with themed drinks, ice breakers at 7:30,
+            an outfit contest at 8:30, and sunset on the terrace at 8:58. Upload photos live, vote by contestant number,
+            and relive the night in the gallery after last call.
+          </p>
+          <a class="btn btn--ghost" href="#details">Show more <span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
