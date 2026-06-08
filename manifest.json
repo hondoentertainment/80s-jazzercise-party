@@ -4,8 +4,8 @@
   "description": "Cowboy Disco Party at the Cowboy Disco Saloon — Aug 15, 2026. Official party site.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0d0d1a",
-  "theme_color": "#e8b923",
+  "background_color": "#09090d",
+  "theme_color": "#09090d",
   "icons": [
     {
       "src": "/assets/app-icon.png",

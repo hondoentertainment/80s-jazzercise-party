@@ -101,7 +101,7 @@
 
     if (heroTagline) {
       heroTagline.textContent =
-        "Boots, bling, and two-step under the mirror ball — scan the QR for photos, ice breakers, and votes.";
+        "You're invited to the Cowboy Disco Party premiere — Aug 15, 2026 at 6:30 PM. Scan the QR for photos, ice breakers, and votes.";
     }
 
     if (countdownEl) {

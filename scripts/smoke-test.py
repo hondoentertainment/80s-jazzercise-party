@@ -39,7 +39,9 @@ PAGES = [
     "/assets/schedule-card.png",
     "/assets/app-icon.png",
     "/assets/brand-mark.svg",
+    "/assets/space-cowgirl-vibe.png",
     "/css/brand.css",
+    "/css/hollywood.css",
 ]
 
 APIS = ["/api/status", "/api/vote", "/api/photos"]

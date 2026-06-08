@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cowboy Disco Party">
-  <rect width="64" height="64" rx="14" fill="#0d0d1a"/>
-  <circle cx="32" cy="28" r="17" fill="#8a939c" stroke="#e8b923" stroke-width="2"/>
-  <ellipse cx="25" cy="22" rx="5.5" ry="3.5" fill="#fff" opacity="0.55"/>
-  <path d="M16 40h32" stroke="#4a2c1a" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M22 40v-7c0-6 6-10 10-10s10 4 10 10v7" fill="#4a2c1a"/>
-  <path d="M18 40h28" stroke="#e8b923" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+  <rect width="64" height="64" rx="6" fill="#09090d"/>
+  <rect x="3" y="3" width="58" height="58" rx="4" fill="none" stroke="#c9a86c" stroke-width="1"/>
+  <circle cx="32" cy="28" r="17" fill="#2a2a34" stroke="#e91e8c" stroke-width="1.5"/>
+  <ellipse cx="25" cy="22" rx="5.5" ry="3.5" fill="#fff" opacity="0.45"/>
+  <path d="M16 40h32" stroke="#d4b896" stroke-width="2" stroke-linecap="round"/>
+  <path d="M22 40v-7c0-6 6-10 10-10s10 4 10 10v7" fill="#1a1a1a"/>
 </svg>

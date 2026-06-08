@@ -1,0 +1,379 @@
+/* Hollywood premiere — cinematic party branding */
+
+:root {
+  --wood: #09090d;
+  --wood-dark: #050508;
+  --wood-grain: #12121a;
+  --cream: #101018;
+  --text: #f4f2f6;
+  --text-muted: #9d95a3;
+  --white: #181820;
+  --glass: rgba(16, 16, 22, 0.82);
+  --glass-border: rgba(233, 30, 140, 0.22);
+  --champagne: #d4b896;
+  --hollywood-gold: #c9a86c;
+  --radius: 4px;
+  --radius-lg: 8px;
+}
+
+body {
+  background-color: var(--wood);
+  background-image:
+    radial-gradient(ellipse 80% 55% at 50% -15%, rgba(233, 30, 140, 0.14), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 100% 20%, rgba(212, 184, 150, 0.06), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 0% 80%, rgba(192, 192, 208, 0.05), transparent 50%),
+    linear-gradient(180deg, var(--wood) 0%, var(--wood-dark) 100%);
+}
+
+body::before {
+  background:
+    radial-gradient(ellipse 50% 35% at 50% 0%, rgba(233, 30, 140, 0.08), transparent),
+    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(0, 0, 0, 0.55), transparent);
+  opacity: 1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Header */
+
+.site-header {
+  background: rgba(5, 5, 8, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.nav__menu > li > a,
+.nav__drop > summary {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.nav__menu > li > a:hover,
+.nav__drop > summary:hover,
+.nav__menu a[aria-current="page"] {
+  color: var(--denim-light);
+}
+
+.brand-lockup__name {
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.brand-lockup__sub {
+  color: var(--champagne);
+  letter-spacing: 0.18em;
+}
+
+.brand-badge {
+  color: var(--champagne);
+  background: rgba(212, 184, 150, 0.08);
+  border-color: rgba(212, 184, 150, 0.25);
+  letter-spacing: 0.2em;
+}
+
+.brand-stripe {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--hollywood-gold) 15%,
+    var(--denim) 50%,
+    var(--hollywood-gold) 85%,
+    transparent
+  );
+}
+
+/* Premiere hero */
+
+.hero--premiere {
+  padding: 4rem 1rem 5rem;
+  min-height: min(92vh, 920px);
+  display: flex;
+  align-items: center;
+}
+
+.hero--premiere::before {
+  display: none;
+}
+
+.hero__cinema {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__cinema-spotlight {
+  position: absolute;
+  inset: -20%;
+  background:
+    conic-gradient(from 200deg at 70% 30%, transparent 0deg, rgba(233, 30, 140, 0.07) 40deg, transparent 80deg),
+    radial-gradient(ellipse 60% 50% at 25% 40%, rgba(233, 30, 140, 0.12), transparent),
+    radial-gradient(ellipse 40% 30% at 80% 60%, rgba(212, 184, 150, 0.06), transparent);
+}
+
+.hero__cinema-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero--premiere .hero__inner {
+  gap: 4rem;
+}
+
+.hero--premiere .hero__poster-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(233, 30, 140, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: none;
+}
+
+.hero--premiere .hero__shine {
+  display: none;
+}
+
+.hero--premiere .hero__content {
+  text-align: left;
+}
+
+.hero--premiere .hero__eyebrow {
+  justify-content: flex-start;
+  color: var(--champagne);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.hero--premiere .hero__title-cowboy {
+  color: var(--champagne);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.28em;
+}
+
+.hero--premiere .hero__title-disco {
+  font-size: clamp(4rem, 11vw, 7rem);
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, #fff 5%, var(--denim-light) 45%, var(--denim) 100%);
+  filter: drop-shadow(0 4px 24px rgba(233, 30, 140, 0.35));
+}
+
+.hero--premiere .hero__title-party {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: 0.35em;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.hero--premiere .hero__date {
+  color: #fff;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  margin-top: 1rem;
+}
+
+.hero--premiere .hero__dj {
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero--premiere .hero__dj strong {
+  color: var(--denim-light);
+}
+
+.hero--premiere .hero__tagline {
+  max-width: 28rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.hero--premiere .countdown {
+  justify-content: flex-start;
+}
+
+.hero--premiere .hero__actions {
+  justify-content: flex-start;
+}
+
+.hero--premiere .countdown__unit {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  min-width: 68px;
+}
+
+.hero--premiere .countdown__value {
+  color: #fff;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--denim-light);
+  color: #fff;
+}
+
+/* Sections */
+
+.section {
+  padding: 5rem 0;
+}
+
+.section__header h2 {
+  color: #fff;
+  letter-spacing: 0.12em;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+}
+
+.section__header h2::after {
+  width: 3.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--denim), var(--hollywood-gold));
+  opacity: 1;
+  left: 50%;
+}
+
+.section__header--left h2::after {
+  width: 3.5rem;
+}
+
+.section__header p {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.section__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+}
+
+.detail-card::before {
+  background: linear-gradient(90deg, var(--denim), var(--hollywood-gold));
+  opacity: 0.9;
+}
+
+.detail-card h3 {
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.detail-card__num {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  color: var(--denim);
+  line-height: 1;
+}
+
+.detail-card__icon {
+  display: none;
+}
+
+.schedule-table {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table thead {
+  background: linear-gradient(90deg, rgba(233, 30, 140, 0.35), rgba(201, 168, 108, 0.2));
+  color: #fff;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.schedule-table td:nth-child(2) {
+  color: var(--denim-light);
+}
+
+.dress-vibe {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.dress-vibe figcaption {
+  background: linear-gradient(90deg, #0a0a0d, var(--denim-dark));
+  letter-spacing: 0.14em;
+}
+
+.dress-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.party-night-card,
+.faq-item,
+.detail-card:hover {
+  border-color: rgba(233, 30, 140, 0.35);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050508;
+}
+
+@media (max-width: 900px) {
+  .hero--premiere .hero__content {
+    text-align: center;
+  }
+
+  .hero--premiere .hero__eyebrow,
+  .hero--premiere .countdown,
+  .hero--premiere .hero__actions {
+    justify-content: center;
+  }
+
+  .hero--premiere .hero__tagline {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero--premiere {
+    min-height: auto;
+    padding-top: 2.5rem;
+  }
+}

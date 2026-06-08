@@ -1,26 +1,27 @@
 /* Cowboy Disco Party */
 
 @import url("brand.css");
+@import url("hollywood.css");
 
 :root {
-  --denim-dark: #4a2c1a;
-  --denim: #e8b923;
-  --denim-light: #f5d76e;
-  --denim-fade: #c4a882;
-  --stitch: #7a9eb8;
-  --stitch-light: #a8c4d4;
-  --wood: #0d0d1a;
-  --wood-dark: #080810;
-  --wood-grain: #1a1520;
-  --cream: #1e1828;
-  --text: #f5f0e8;
-  --text-muted: #c9b8a8;
-  --white: #2a2438;
-  --shadow: rgba(0, 0, 0, 0.28);
-  --glow-gold: rgba(232, 185, 35, 0.16);
-  --glow-blue: rgba(122, 158, 184, 0.12);
-  --glass: rgba(24, 20, 32, 0.78);
-  --glass-border: rgba(232, 185, 35, 0.22);
+  --denim-dark: #1a1a1a;
+  --denim: #e91e8c;
+  --denim-light: #ff4da6;
+  --denim-fade: #9a6b82;
+  --stitch: #a8a8b8;
+  --stitch-light: #d8d8e4;
+  --wood: #fff5f9;
+  --wood-dark: #ffe8f2;
+  --wood-grain: #ffffff;
+  --cream: #fff0f6;
+  --text: #1a1a1a;
+  --text-muted: #5c4a52;
+  --white: #ffffff;
+  --shadow: rgba(233, 30, 140, 0.14);
+  --glow-gold: rgba(233, 30, 140, 0.18);
+  --glow-blue: rgba(192, 192, 208, 0.2);
+  --glass: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(233, 30, 140, 0.28);
   --mirror-light: #e4eaef;
   --mirror-mid: #9aa3ac;
   --mirror-dark: #5c656e;
@@ -35,7 +36,10 @@
       #e8edf2 21deg 28deg,
       #8a939c 28deg 35deg
     );
-  --rope: #8a7040;
+  --rope: #1a1a1a;
+  --pink-soft: #ffc0d9;
+  --pink-baby: #ffe4f0;
+  --champagne: #c9a0a8;
   --radius: 12px;
   --radius-lg: 20px;
   --font-display: "Bebas Neue", sans-serif;
@@ -65,9 +69,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--wood);
   background-image:
-    radial-gradient(ellipse 70% 45% at 50% -5%, rgba(232, 185, 35, 0.1), transparent 58%),
-    radial-gradient(ellipse 45% 35% at 100% 40%, rgba(122, 158, 184, 0.06), transparent 55%),
-    radial-gradient(ellipse 40% 30% at 0% 70%, rgba(196, 168, 130, 0.07), transparent 50%),
+    radial-gradient(ellipse 65% 40% at 50% -5%, rgba(233, 30, 140, 0.09), transparent 58%),
+    radial-gradient(ellipse 40% 30% at 100% 35%, rgba(255, 192, 217, 0.35), transparent 55%),
+    radial-gradient(ellipse 35% 25% at 0% 75%, rgba(216, 216, 228, 0.25), transparent 50%),
     linear-gradient(180deg, var(--wood) 0%, var(--wood-dark) 100%);
   min-height: 100vh;
 }
@@ -79,9 +83,10 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 28% 18% at 18% 22%, rgba(232, 185, 35, 0.05), transparent),
-    radial-gradient(ellipse 22% 14% at 82% 28%, rgba(168, 196, 212, 0.04), transparent),
-    radial-gradient(ellipse 35% 20% at 50% 88%, rgba(232, 185, 35, 0.03), transparent);
+    radial-gradient(ellipse 24% 16% at 15% 20%, rgba(255, 77, 166, 0.06), transparent),
+    radial-gradient(ellipse 20% 12% at 85% 25%, rgba(192, 192, 208, 0.08), transparent),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent 70%);
+  opacity: 0.85;
 }
 
 .site-header,
@@ -114,7 +119,7 @@ a:hover {
   z-index: 200;
   padding: 0.75rem 1rem;
   background: var(--denim);
-  color: var(--white);
+  color: #fff;
   border-radius: var(--radius);
   text-decoration: none;
 }
@@ -134,10 +139,10 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8, 8, 16, 0.88);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px) saturate(1.2);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 4px 20px rgba(233, 30, 140, 0.08);
   padding-bottom: 3px;
 }
 
@@ -241,7 +246,7 @@ a:hover {
 }
 
 .nav__drop-menu a:hover {
-  background: rgba(232, 185, 35, 0.08);
+  background: rgba(233, 30, 140, 0.08);
   color: var(--denim);
 }
 
@@ -296,7 +301,7 @@ a:hover {
   width: min(720px, 100%);
   height: 360px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse, rgba(232, 185, 35, 0.07) 0%, transparent 72%);
+  background: radial-gradient(ellipse, rgba(233, 30, 140, 0.07) 0%, transparent 72%);
   pointer-events: none;
   z-index: 0;
 }
@@ -314,7 +319,7 @@ a:hover {
 
 .hero__poster-wrap {
   position: relative;
-  border: 1px solid rgba(232, 185, 35, 0.28);
+  border: 1px solid rgba(233, 30, 140, 0.28);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--wood-grain);
@@ -392,23 +397,23 @@ a:hover {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 10vw, 6rem);
   letter-spacing: 0.06em;
-  background: linear-gradient(180deg, #f8e8a8 0%, var(--denim) 52%, #b8860b 100%);
+  background: linear-gradient(180deg, var(--denim-light) 0%, var(--denim) 55%, #c2186e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 2px 10px rgba(233, 30, 140, 0.2));
   position: relative;
 }
 
 .hero__title-disco {
-  background: linear-gradient(180deg, var(--mirror-light) 0%, var(--denim-light) 38%, var(--denim) 100%);
+  background: linear-gradient(180deg, #fff 0%, var(--stitch-light) 30%, var(--denim-light) 65%, var(--denim) 100%);
 }
 
 .hero__title-party {
   display: block;
   font-family: var(--font-script);
   font-size: clamp(2.5rem, 7vw, 4rem);
-  color: var(--denim-light);
+  color: var(--denim);
   margin-top: -0.25rem;
 }
 
@@ -649,34 +654,34 @@ a:hover {
 }
 
 .btn--primary {
-  background: linear-gradient(180deg, #f0d878, var(--denim) 58%, #b8860b);
-  color: var(--wood-dark);
-  border-color: rgba(255, 255, 255, 0.22);
+  background: linear-gradient(180deg, var(--denim-light), var(--denim) 58%, #c2186e);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
   box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.28),
+    0 4px 14px rgba(233, 30, 140, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .btn--primary:hover {
-  background: linear-gradient(180deg, #fff0a0, var(--denim-light) 50%, var(--denim));
-  color: var(--wood-dark);
+  background: linear-gradient(180deg, #ff80c0, var(--denim-light) 50%, var(--denim));
+  color: #fff;
   box-shadow:
-    0 8px 22px rgba(0, 0, 0, 0.32),
+    0 8px 22px rgba(233, 30, 140, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn--secondary {
-  background: var(--glass);
-  color: var(--denim-light);
+  background: var(--white);
+  color: var(--denim);
   border-color: var(--glass-border);
   backdrop-filter: blur(8px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 8px rgba(233, 30, 140, 0.08);
 }
 
 .btn--secondary:hover {
-  background: rgba(36, 30, 48, 0.92);
-  color: var(--denim-light);
-  border-color: rgba(232, 185, 35, 0.45);
+  background: var(--pink-baby);
+  color: var(--denim-dark);
+  border-color: var(--denim);
 }
 
 .btn--full {
@@ -691,7 +696,7 @@ a:hover {
 
 .section--details {
   background:
-    linear-gradient(180deg, rgba(232, 185, 35, 0.06) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(233, 30, 140, 0.06) 0%, transparent 40%),
     var(--cream);
   border-block: 1px solid var(--glass-border);
   box-shadow:
@@ -701,7 +706,7 @@ a:hover {
 
 .section--schedule {
   background:
-    linear-gradient(180deg, rgba(0, 191, 255, 0.06) 0%, transparent 100%),
+    linear-gradient(180deg, rgba(192, 192, 208, 0.06) 0%, transparent 100%),
     var(--wood);
 }
 
@@ -738,7 +743,7 @@ a:hover {
 .schedule-table td {
   padding: 0.85rem 1rem;
   text-align: left;
-  border-bottom: 1px solid rgba(45, 74, 122, 0.12);
+  border-bottom: 1px solid rgba(233, 30, 140, 0.12);
 }
 
 .schedule-table th {
@@ -784,12 +789,12 @@ a:hover {
 }
 
 .schedule-table__end td {
-  background: rgba(45, 74, 122, 0.06);
+  background: rgba(233, 30, 140, 0.06);
 }
 
 .section--dress {
   background:
-    linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, rgba(232, 185, 35, 0.04) 50%, transparent 100%),
+    linear-gradient(135deg, rgba(192, 192, 208, 0.05) 0%, rgba(233, 30, 140, 0.04) 50%, transparent 100%),
     var(--wood);
 }
 
@@ -799,7 +804,7 @@ a:hover {
 
 .section--faq {
   background:
-    linear-gradient(135deg, rgba(232, 185, 35, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(233, 30, 140, 0.05) 0%, transparent 50%),
     var(--wood);
 }
 
@@ -885,7 +890,7 @@ a:hover {
   background:
     radial-gradient(ellipse 45% 70% at 92% 18%, rgba(255, 255, 255, 0.07), transparent),
     radial-gradient(ellipse 35% 55% at 8% 75%, rgba(122, 158, 184, 0.05), transparent),
-    linear-gradient(180deg, rgba(232, 185, 35, 0.07) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(233, 30, 140, 0.07) 0%, transparent 65%),
     var(--cream);
   border-bottom: none;
 }
@@ -918,7 +923,7 @@ a:hover {
 
 .section--poll {
   background:
-    linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, rgba(232, 185, 35, 0.04) 50%, transparent 100%),
+    linear-gradient(135deg, rgba(192, 192, 208, 0.05) 0%, rgba(233, 30, 140, 0.04) 50%, transparent 100%),
     var(--wood);
 }
 
@@ -998,7 +1003,7 @@ a:hover {
   gap: 0.15rem;
   padding: 0.85rem 0.5rem;
   background: var(--cream);
-  border: 2px solid rgba(45, 74, 122, 0.25);
+  border: 2px solid rgba(233, 30, 140, 0.25);
   border-radius: var(--radius);
   text-align: center;
   transition: border-color 0.15s, background 0.15s, transform 0.15s;
@@ -1073,7 +1078,7 @@ a:hover {
 
 .section--gallery {
   background:
-    linear-gradient(135deg, rgba(45, 74, 122, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(233, 30, 140, 0.06) 0%, transparent 50%),
     var(--wood);
 }
 
@@ -1094,7 +1099,7 @@ a:hover {
 
 .gallery-drop {
   position: relative;
-  border: 2px dashed rgba(45, 74, 122, 0.35);
+  border: 2px dashed rgba(233, 30, 140, 0.35);
   border-radius: var(--radius-lg);
   background: var(--cream);
   transition: border-color 0.2s, background 0.2s;
@@ -1167,7 +1172,7 @@ a:hover {
   font-weight: 600;
   color: var(--denim);
   background: transparent;
-  border: 2px solid rgba(45, 74, 122, 0.35);
+  border: 2px solid rgba(233, 30, 140, 0.35);
   border-radius: var(--radius);
   cursor: pointer;
 }
@@ -1363,7 +1368,7 @@ a:hover {
 
 .section--party-night {
   background:
-    linear-gradient(180deg, rgba(0, 191, 255, 0.07) 0%, rgba(232, 185, 35, 0.04) 50%, transparent 100%),
+    linear-gradient(180deg, rgba(192, 192, 208, 0.07) 0%, rgba(233, 30, 140, 0.04) 50%, transparent 100%),
     var(--cream);
 }
 
@@ -1392,7 +1397,7 @@ a:hover {
 
 .party-night-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(232, 185, 35, 0.45);
+  border-color: rgba(233, 30, 140, 0.45);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
   color: inherit;
 }
@@ -1447,7 +1452,7 @@ a:hover {
 
 .section--vote {
   background:
-    linear-gradient(135deg, rgba(45, 74, 122, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(233, 30, 140, 0.06) 0%, transparent 50%),
     var(--wood);
 }
 
@@ -1491,7 +1496,7 @@ a:hover {
   gap: 0.75rem;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(45, 74, 122, 0.12);
+  border-bottom: 1px solid rgba(233, 30, 140, 0.12);
 }
 
 .vote-result:last-child {
@@ -1664,7 +1669,7 @@ a:hover {
   gap: 0.75rem;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(45, 74, 122, 0.12);
+  border-bottom: 1px solid rgba(233, 30, 140, 0.12);
 }
 
 .poll-results-date__rank {
@@ -1692,7 +1697,7 @@ a:hover {
   padding: 1rem;
   background: var(--cream);
   border-radius: var(--radius);
-  border: 1px solid rgba(45, 74, 122, 0.15);
+  border: 1px solid rgba(233, 30, 140, 0.15);
 }
 
 .poll-results-entry h3 {
@@ -1721,8 +1726,7 @@ a:hover {
 }
 
 .site-footer__hosts a {
-  color: var(--stitch-light);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* Gallery admin */
@@ -2238,7 +2242,7 @@ a:hover {
   border-radius: 999px;
   box-shadow:
     0 12px 32px var(--shadow),
-    0 0 40px rgba(232, 185, 35, 0.35),
+    0 0 40px rgba(233, 30, 140, 0.35),
     inset 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -2271,6 +2275,35 @@ a:hover {
   font-size: 1.25rem;
   color: var(--denim);
   text-align: center;
+}
+
+.dress-vibe {
+  margin: 0;
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 3px solid var(--denim);
+  box-shadow:
+    0 12px 32px rgba(233, 30, 140, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.dress-vibe img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.dress-vibe figcaption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(90deg, var(--denim-dark), var(--denim));
 }
 
 /* Disco ball + cowboy scene */
@@ -2385,7 +2418,7 @@ a:hover {
   align-items: center;
   padding: 1.25rem 3rem 1.25rem 2rem;
   background: linear-gradient(135deg, var(--denim-light), var(--denim));
-  color: var(--white);
+  color: #fff;
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   letter-spacing: 0.08em;
@@ -2448,7 +2481,7 @@ a:hover {
 /* Menu & party assets */
 
 .section--menu {
-  background: linear-gradient(180deg, var(--white) 0%, rgba(232, 185, 35, 0.08) 100%);
+  background: linear-gradient(180deg, var(--white) 0%, rgba(233, 30, 140, 0.08) 100%);
 }
 
 .menu-grid {
@@ -2679,11 +2712,28 @@ a:hover {
 
 .site-footer {
   padding: 2.5rem 1rem;
-  background: linear-gradient(180deg, var(--wood-grain) 0%, var(--denim-dark) 100%);
-  color: var(--text);
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  color: #fff;
   text-align: center;
-  border-top: 1px solid var(--glass-border);
-  box-shadow: inset 0 1px 0 rgba(245, 215, 110, 0.15);
+  border-top: 3px solid var(--denim);
+  box-shadow: inset 0 1px 0 rgba(255, 77, 166, 0.2);
+}
+
+.site-footer .brand-lockup__name {
+  color: var(--denim-light);
+}
+
+.site-footer .brand-lockup__sub,
+.site-footer__tagline {
+  color: var(--pink-soft);
+}
+
+.site-footer__date {
+  color: var(--denim-light);
+}
+
+.site-footer__hosts a {
+  color: var(--pink-soft);
 }
 
 .site-footer__inner {
@@ -2737,7 +2787,6 @@ a:hover {
 
 .site-footer__date {
   margin: 0;
-  color: var(--stitch-light);
   font-weight: 600;
 }
 
@@ -2841,7 +2890,7 @@ a:hover {
   }
 
   .nav__menu > li {
-    border-bottom: 1px solid rgba(45, 74, 122, 0.12);
+    border-bottom: 1px solid rgba(233, 30, 140, 0.12);
   }
 
   .nav__menu > li > a,
@@ -3100,7 +3149,7 @@ a:hover {
   display: inline-block;
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
-  background: rgba(232, 185, 35, 0.14);
+  background: rgba(233, 30, 140, 0.14);
   color: var(--denim-light);
   font-size: 0.85rem;
   font-weight: 700;
@@ -3135,7 +3184,7 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(232, 185, 35, 0.15);
+  border-bottom: 1px solid rgba(233, 30, 140, 0.15);
 }
 
 .plan-sign-list li:last-child,

@@ -3,13 +3,13 @@
 @import url("brand.css");
 
 :root {
-  --phys-cream: #f5f0e8;
-  --phys-ink: #2a1f14;
-  --phys-brown: #4a2c1a;
-  --phys-gold: #b8860b;
-  --phys-gold-light: #d4a82a;
-  --phys-muted: #6b5a48;
-  --phys-rule: #c4a882;
+  --phys-cream: #fff5f9;
+  --phys-ink: #1a1a1a;
+  --phys-brown: #1a1a1a;
+  --phys-gold: #e91e8c;
+  --phys-gold-light: #ff4da6;
+  --phys-muted: #5c4a52;
+  --phys-rule: #ffc0d9;
 }
 
 .phys-page {
