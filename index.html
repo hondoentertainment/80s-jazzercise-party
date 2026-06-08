@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cowboy Disco Party — Aug 15, 2026 · 6:30 PM. 6900 East Greenlake Way N, Seattle. Enter on the Woodlawn side.">
+  <meta name="description" content="Cowboy Disco Party — mirror ball meets the saloon. Aug 15, 2026 · 6:30 PM. Enter on the Woodlawn side.">
   <meta name="theme-color" content="#e8b923">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cowboy Disco Party | Aug 15, 2026">
-  <meta property="og:description" content="Boots. Bling. Line dance till dawn. Games, photo gallery, and party info — enter on the Woodlawn side.">
+  <meta property="og:description" content="Boots. Bling. Mirror ball till dawn. Games, photo gallery, and party info — enter on the Woodlawn side.">
   <meta property="og:url" content="https://cowboy-disco-party.vercel.app/">
   <meta property="og:image" content="https://cowboy-disco-party.vercel.app/assets/poster-og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cowboy Disco Party | Aug 15, 2026">
-  <meta name="twitter:description" content="Boots. Bling. Line dance till dawn. Games, photo gallery, and party info.">
+  <meta name="twitter:description" content="Boots. Bling. Mirror ball till dawn. Games, photo gallery, and party info.">
   <meta name="twitter:image" content="https://cowboy-disco-party.vercel.app/assets/poster-og.jpg">
   <title>Cowboy Disco Party | Aug 15, 2026</title>
   <link rel="manifest" href="manifest.json">
@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rye&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d0d1a' width='100' height='100' rx='16'/><circle cx='50' cy='36' r='22' fill='%23a8b2bc' stroke='%23e8b923' stroke-width='2'/><circle cx='42' cy='30' r='5' fill='%23fff' opacity='.75'/><text y='84' x='50' text-anchor='middle' font-size='24'>🤠</text></svg>">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,8 +65,19 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <div class="hero__disco-decor" aria-hidden="true">
+        <div class="disco-ball disco-ball--sm disco-ball--hero-left">
+          <span class="disco-ball__cord"></span>
+          <span class="disco-ball__sphere"></span>
+        </div>
+        <div class="disco-ball disco-ball--md disco-ball--hero-right">
+          <span class="disco-ball__cord"></span>
+          <span class="disco-ball__sphere"></span>
+        </div>
+      </div>
       <div class="hero__inner">
         <div class="hero__poster-wrap">
+          <span class="hero__shine" aria-hidden="true"></span>
           <picture>
             <source srcset="/assets/poster.webp" type="image/webp">
             <img
@@ -92,7 +103,7 @@
           </h1>
           <p class="hero__date">Aug 15, 2026 · 6:30 PM</p>
           <p class="hero__dj">Sounds by <strong>country &amp; disco</strong> all night long</p>
-          <p class="hero__tagline" id="hero-tagline">Boots. Bling. Line dance till dawn.</p>
+          <p class="hero__tagline" id="hero-tagline">Boots. Bling. Mirror ball till dawn.</p>
 
           <div class="post-party is-hidden" id="post-party">
             <p class="post-party__message">What a night! Relive the party in the photo gallery — upload any shots you still have on your phone.</p>
@@ -284,9 +295,13 @@
           </ul>
         </div>
         <aside class="dress-aside" aria-label="Dress code examples">
-          <div class="disco-badge">
-            <span class="disco-badge__glow" aria-hidden="true"></span>
-            <p>Boots<br>&amp;<br>Bling</p>
+          <div class="dress-disco-scene">
+            <div class="disco-ball disco-ball--lg" aria-hidden="true">
+              <span class="disco-ball__cord"></span>
+              <span class="disco-ball__sphere"></span>
+            </div>
+            <span class="dress-disco-scene__hat" aria-hidden="true">🤠</span>
+            <p class="dress-disco-scene__label">Boots &amp; Bling</p>
           </div>
           <p class="dress-note">When in doubt, add more sparkle.</p>
         </aside>
@@ -529,7 +544,7 @@
       </div>
       <p class="site-footer__title">Cowboy Disco Party</p>
       <p class="site-footer__date">Aug 15, 2026 · 6:30 PM</p>
-      <p class="site-footer__tagline">Boots. Bling. Line dance till dawn. 🤠</p>
+      <p class="site-footer__tagline">Boots. Bling. Mirror ball till dawn. 🤠</p>
       <p class="site-footer__hosts"><a href="host.html">Party hosts</a> · <a href="party-night.html">Party night</a> · <a href="plan.html">Planning</a> · <a href="print-pack.html">Print pack</a> · <a href="qr.html">Print QR</a></p>
     </div>
   </footer>
