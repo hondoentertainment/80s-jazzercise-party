@@ -14,7 +14,7 @@
     VOTE_MAX_NUMBER: 99,
     VOTE_TAG_COUNT: 30,
     SHARE_MESSAGE:
-      "You're invited to the Cowboy Disco Party at the Cowboy Disco Saloon — Saturday, Aug 15, 2026 at 6:30 PM! 6900 East Greenlake Way N, Apt 327 (Woodlawn entrance). Boots & bling encouraged. Official party site for photos, ice breakers, vote & directions: https://cowboy-disco-party.vercel.app",
+      "You're invited to Cowboy Disco — where Studio 54 meets the Wild West. Saturday, Aug 15, 2026 at 6:30 PM · Cowboy Disco Saloon, 6900 East Greenlake Way N, Apt 327 (Woodlawn entrance). RSVP, calendar, photos & votes: https://cowboy-disco-party.vercel.app",
     OG_IMAGE: "https://cowboy-disco-party.vercel.app/assets/poster-og.jpg",
   };
 })(window);

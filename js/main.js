@@ -13,6 +13,7 @@
   const countdownEl = document.querySelector(".countdown");
   const dateTbdEl = document.getElementById("date-tbd");
   const postPartyEl = document.getElementById("post-party");
+  const heroStatus = document.getElementById("hero-status");
   const heroEyebrow = document.getElementById("hero-eyebrow");
   const heroTagline = document.getElementById("hero-tagline");
   const partyNightEl = document.getElementById("party-night");
@@ -59,13 +60,9 @@
 
     document.body.classList.add("is-post-party");
 
-    if (heroEyebrow) {
-      heroEyebrow.innerHTML =
-        '<span class="star" aria-hidden="true">★</span> Thanks for Dancing <span class="star" aria-hidden="true">★</span>';
-    }
-
-    if (heroTagline) {
-      heroTagline.textContent = "Relive the two-step, share photos, and help us plan the next one.";
+    if (heroStatus) {
+      heroStatus.textContent = "Thanks for dancing — relive the night in the gallery.";
+      heroStatus.classList.remove("is-hidden");
     }
 
     if (countdownEl) {
@@ -94,14 +91,9 @@
 
     document.body.classList.add("is-party-live");
 
-    if (heroEyebrow) {
-      heroEyebrow.innerHTML =
-        '<span class="star" aria-hidden="true">★</span> Party Night <span class="star" aria-hidden="true">★</span>';
-    }
-
-    if (heroTagline) {
-      heroTagline.textContent =
-        "You're invited to the Cowboy Disco Party premiere — Aug 15, 2026 at 6:30 PM. Scan the QR for photos, ice breakers, and votes.";
+    if (heroStatus) {
+      heroStatus.textContent = "Party night is live — scan the QR for photos, ice breakers, and votes.";
+      heroStatus.classList.remove("is-hidden");
     }
 
     if (countdownEl) {

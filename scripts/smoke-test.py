@@ -39,12 +39,12 @@ PAGES = [
     "/assets/schedule-card.png",
     "/assets/app-icon.png",
     "/assets/brand-mark.svg",
-    "/assets/space-cowgirl-vibe.png",
+    "/assets/editorial-atmosphere.jpg",
+    "/assets/editorial-wardrobe.jpg",
+    "/assets/editorial-cocktails.jpg",
+    "/assets/cowboy-disco-party.ics",
     "/css/brand.css",
-    "/css/hollywood.css",
-    "/css/cosmic.css",
     "/css/premium.css",
-    "/assets/cosmic-collage.png",
 ]
 
 APIS = ["/api/status", "/api/vote", "/api/photos"]

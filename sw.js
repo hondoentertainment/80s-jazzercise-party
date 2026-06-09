@@ -1,16 +1,18 @@
-const CACHE = "cdp-v14";
+const CACHE = "cdp-v17";
 const ASSETS = [
   "/",
   "/index.html",
   "/css/styles.css",
   "/css/brand.css",
-  "/css/hollywood.css",
-  "/css/cosmic.css",
   "/css/premium.css",
+  "/assets/cowboy-disco-party.ics",
   "/js/premium.js",
   "/assets/brand-mark.svg",
-  "/assets/cosmic-collage.png",
-  "/assets/space-cowgirl-vibe.png",
+  "/assets/editorial-atmosphere.jpg",
+  "/assets/editorial-atmosphere.webp",
+  "/assets/editorial-wardrobe.jpg",
+  "/assets/editorial-wardrobe.webp",
+  "/assets/editorial-cocktails.jpg",
   "/js/config.js",
   "/js/main.js",
   "/js/qr.js",

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Vote on August and September dates for the next Cowboy Disco Party and share feedback on the last one.">
-  <meta name="theme-color" content="#e8b923">
+  <meta name="theme-color" content="#0D0D0D">
   <title>Next Party Poll | Cowboy Disco Party</title>
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rye&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d0d1a' width='100' height='100' rx='16'/><circle cx='50' cy='36' r='22' fill='%23a8b2bc' stroke='%23e8b923' stroke-width='2'/><circle cx='42' cy='30' r='5' fill='%23fff' opacity='.75'/><text y='84' x='50' text-anchor='middle' font-size='24'>🤠</text></svg>">
+  <link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -56,7 +56,7 @@
   <main id="main">
     <section class="section section--poll-hero">
       <div class="container">
-        <div class="brand-banner brand-lockup brand-lockup--card">
+        <div class="brand-banner brand-lockup brand-lockup--card is-hidden" hidden>
           <img class="brand-lockup__mark" src="/assets/brand-mark.svg" width="44" height="44" alt="">
           <span class="brand-lockup__text">
             <span class="brand-lockup__name">Cowboy Disco Party</span>
@@ -198,21 +198,29 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--premium">
     <div class="container site-footer__inner">
-      <div class="site-footer__brand brand-lockup brand-lockup--footer">
-        <img class="brand-lockup__mark" src="/assets/brand-mark.svg" width="44" height="44" alt="">
-        <span class="brand-lockup__text">
-          <span class="brand-lockup__name">Cowboy Disco Party</span>
-          <span class="brand-lockup__sub">Cowboy Disco Saloon · Aug 15, 2026</span>
-        </span>
+      <div class="footer-premium__brand">
+        <img class="footer-premium__mark" src="/assets/brand-mark.svg" width="56" height="56" alt="">
+        <span class="footer-premium__name">Cowboy Disco</span>
+        <p class="footer-premium__tagline">Where Studio 54 meets the Wild West.</p>
       </div>
-      <p class="site-footer__date">Aug 15, 2026 · 6:30 PM</p>
-      <p class="site-footer__tagline">Boots, bling, and two-step under the mirror ball. 🤠</p>
+      <nav class="footer-premium__nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="index.html#location">RSVP</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="poll.html">Next Party</a>
+      </nav>
+      <div class="footer-premium__credits">
+        <span>Aug 15, 2026 · Cowboy Disco Saloon</span>
+        <span>© Cowboy Disco Party</span>
+      </div>
     </div>
   </footer>
 
   <script src="js/nav.js"></script>
   <script src="js/poll.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

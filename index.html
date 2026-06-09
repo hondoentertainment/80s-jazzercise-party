@@ -18,7 +18,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml">
 </head>
@@ -98,17 +98,9 @@
           <h1 class="hero__headline">Cowboy Disco</h1>
           <p class="hero__subhead">Where Studio 54 meets the Wild West.</p>
           <p class="hero__meta">Saturday, August 15, 2026 · Doors 6:30 PM</p>
-          <h2 class="cosmic-title" hidden aria-hidden="true"><span>Cowboy Disco</span><span>Party</span></h2>
-          <p class="cosmic-sub" hidden>A Cosmic Space Cowboy Affair</p>
-          <p class="hero__eyebrow" id="hero-eyebrow" hidden>Unforgettable Event</p>
-          <h2 class="hero__title hero__title--serif" hidden>Cowboy Disco Party</h2>
-          <p class="hero__lede" hidden>Saturday, August 15, 2026 · Doors at 6:30 PM at the Cowboy Disco Saloon, Seattle.</p>
-          <p class="hero__tagline" id="hero-tagline" hidden>A premiere night of rhinestone, mirror-ball light, and two-step under the Seattle skyline.</p>
-          <span class="hero__title-cowboy" hidden>Cowboy</span>
-          <span class="hero__title-disco" hidden>Disco</span>
-          <span class="hero__title-party" hidden>Party</span>
-          <p class="hero__date" hidden>Saturday, August 15, 2026 · 6:30 PM</p>
-          <p class="hero__dj" hidden>An evening of <strong>country &amp; disco</strong> on the dance floor</p>
+          <p class="hero__status is-hidden" id="hero-status" aria-live="polite"></p>
+          <p class="hero__tagline is-hidden" id="hero-tagline" hidden aria-hidden="true"></p>
+          <p class="hero__eyebrow is-hidden" id="hero-eyebrow" hidden aria-hidden="true"></p>
 
           <div class="post-party is-hidden" id="post-party">
             <p class="post-party__message">What a night! Relive the party in the photo gallery — upload any shots you still have on your phone.</p>
@@ -145,6 +137,7 @@
 
           <div class="hero__actions">
             <a class="btn btn--rsvp" href="#location">RSVP &amp; Directions</a>
+            <a class="btn btn--ghost" href="/assets/cowboy-disco-party.ics" download="cowboy-disco-party.ics">Add to Calendar</a>
             <a class="btn btn--ghost" href="#welcome">Learn More</a>
           </div>
           <div class="hero__disco-orb" aria-hidden="true">
@@ -156,24 +149,26 @@
 
     <section class="cosmic-intro premium-intro reveal" id="welcome">
       <div class="cosmic-intro__layout">
-        <figure class="cosmic-intro__visual">
-          <img
-            class="cosmic-intro__img"
-            src="/assets/cosmic-collage.png"
-            alt="Cosmic disco ball over starfield and desert dunes"
-            width="640"
-            height="960"
-            loading="lazy"
-          >
-          <div class="cosmic-intro__grain" aria-hidden="true"></div>
+        <figure class="cosmic-intro__visual editorial-frame">
+          <picture>
+            <source srcset="/assets/editorial-atmosphere.webp" type="image/webp">
+            <img
+              class="cosmic-intro__img editorial-img"
+              src="/assets/editorial-atmosphere.jpg"
+              alt="Golden-hour mirror ball and western silhouettes at Cowboy Disco"
+              width="900"
+              height="1200"
+              loading="lazy"
+            >
+          </picture>
         </figure>
         <div class="cosmic-intro__copy">
           <h2 class="cosmic-intro__headline">
-            Where the <span class="grad-cosmos">cosmos</span> meets the <span class="grad-frontier">frontier</span>.
+            Where the <span class="grad-cosmos">saloon</span> meets the <span class="grad-frontier">mirror ball</span>.
           </h2>
           <p class="cosmic-intro__body">
             Saturday, August 15, 2026 at the Cowboy Disco Saloon — an evening where country two-step and disco hustle
-            share the same mirror ball. Rhinestone, hot pink, and silver sparkle under the Seattle skyline from
+            share the same dance floor. Champagne gold, rhinestone, and chrome sparkle under the Seattle skyline from
             6:30 PM to last call.
           </p>
           <ul class="cosmic-features">
@@ -213,9 +208,6 @@
       </div>
     </section>
 
-    <section class="features-bar" id="about" aria-hidden="true" hidden></section>
-    <section class="section section--welcome" aria-hidden="true" hidden></section>
-
     <section class="section section--details section--ivory reveal" id="details">
       <div class="container">
         <header class="section__header">
@@ -229,6 +221,7 @@
             <h3>When</h3>
             <p><strong>August 15, 2026</strong></p>
             <p>Doors open <strong>6:30 PM</strong> · last call on the dance floor by 10:00 PM</p>
+            <p><a class="btn btn--ghost btn--compact" href="/assets/cowboy-disco-party.ics" download="cowboy-disco-party.ics">Add to Calendar</a></p>
           </article>
           <article class="detail-card">
             <p class="detail-card__num" aria-hidden="true">02</p>
@@ -355,16 +348,19 @@
         </header>
         <div class="moments-grid">
           <a class="moment-card" href="#dress-code">
-            <img class="moment-card__img" src="/assets/space-cowgirl-vibe.png" alt="Space cowgirl outfit inspiration" width="640" height="800" loading="lazy">
+            <picture>
+              <source srcset="/assets/editorial-wardrobe.webp" type="image/webp">
+              <img class="moment-card__img editorial-img" src="/assets/editorial-wardrobe.jpg" alt="Editorial wardrobe mood board — rhinestone, leather, and chrome" width="800" height="1000" loading="lazy">
+            </picture>
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Wardrobe</span>
               <h3 class="moment-card__title">Outfit Inspiration</h3>
-              <p class="moment-card__desc">Rhinestone cowboy hats, white boots, and silver sparkle.</p>
+              <p class="moment-card__desc">Rhinestone, champagne gold, white boots, and chrome.</p>
             </div>
           </a>
           <a class="moment-card" href="#menu">
-            <img class="moment-card__img" src="/assets/drink-list.jpg" alt="Signature cocktails" width="1000" height="750" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/editorial-cocktails.jpg" alt="Signature cocktails in golden salon light" width="1000" height="750" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Cocktails</span>
@@ -373,7 +369,7 @@
             </div>
           </a>
           <a class="moment-card" href="gallery.html">
-            <img class="moment-card__img" src="/assets/poster-hero.jpg" alt="Dance floor energy" width="1200" height="800" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/poster-hero.jpg" alt="Dance floor energy" width="1200" height="800" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Dance Floor</span>
@@ -382,7 +378,7 @@
             </div>
           </a>
           <a class="moment-card" href="gallery.html">
-            <img class="moment-card__img" src="/assets/poster-party.png" alt="Photo booth experiences" width="800" height="600" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/poster-party.png" alt="Photo booth experiences" width="800" height="600" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Photos</span>
@@ -391,7 +387,10 @@
             </div>
           </a>
           <a class="moment-card" href="#schedule">
-            <img class="moment-card__img" src="/assets/cosmic-collage.png" alt="Music and atmosphere" width="640" height="960" loading="lazy">
+            <picture>
+              <source srcset="/assets/editorial-atmosphere.webp" type="image/webp">
+              <img class="moment-card__img editorial-img" src="/assets/editorial-atmosphere.jpg" alt="Music and atmosphere under the mirror ball" width="900" height="1200" loading="lazy">
+            </picture>
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Soundtrack</span>
@@ -400,7 +399,7 @@
             </div>
           </a>
           <a class="moment-card" href="#party-night">
-            <img class="moment-card__img" src="/assets/sign-kyles-apartment.jpg" alt="Party highlights" width="1200" height="900" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/sign-kyles-apartment.jpg" alt="Party highlights" width="1200" height="900" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Experience</span>
@@ -418,31 +417,35 @@
           <header class="section__header section__header--left">
             <p class="section__eyebrow">Wardrobe</p>
             <h2>The Dress Code</h2>
-            <p>Space cowgirl meets Hollywood premiere — dress for the lights.</p>
+            <p>Western glamour meets Studio 54 — dress for the lights.</p>
           </header>
           <p class="dress-lead">
-            Think space cowgirl — hot pink, white boots, black denim, and silver sparkle.
+            Think elevated western glamour — champagne gold, ivory, saddle leather, and mirror-ball chrome.
             Cowboy hats, fringe, and rhinestones are all on-theme. If it catches the light, you're dressed right.
           </p>
           <ul class="dress-list">
-            <li>Hot pink and fuchsia — hats, boots, fringe, the works</li>
-            <li>White cowboy boots and crisp tops for contrast</li>
-            <li>Silver metallics, sequins, and cow-print accents</li>
-            <li>Black denim and bold belts welcome</li>
+            <li>Champagne gold and warm metallics — hats, belts, jewelry</li>
+            <li>White cowboy boots and crisp ivory tops for contrast</li>
+            <li>Chrome sequins, rhinestones, and subtle cow-print accents</li>
+            <li>Black denim, leather, and bold western silhouettes welcome</li>
           </ul>
         </div>
         <aside class="dress-aside" aria-label="Dress code examples">
-          <figure class="dress-vibe">
-            <img
-              src="/assets/space-cowgirl-vibe.png"
-              alt="Space cowgirl party look — hot pink hats, white boots, and sparkle"
-              width="640"
-              height="800"
-              loading="lazy"
-            >
-            <figcaption>Hot pink · White · Sparkle</figcaption>
+          <figure class="dress-vibe editorial-frame">
+            <picture>
+              <source srcset="/assets/editorial-wardrobe.webp" type="image/webp">
+              <img
+                class="editorial-img"
+                src="/assets/editorial-wardrobe.jpg"
+                alt="Editorial dress code — rhinestone, champagne gold, white boots, and chrome"
+                width="800"
+                height="1000"
+                loading="lazy"
+              >
+            </picture>
+            <figcaption>Champagne · Ivory · Chrome</figcaption>
           </figure>
-          <p class="dress-note">When in doubt, add one more layer of pink.</p>
+          <p class="dress-note">When in doubt, add one more layer of sparkle.</p>
         </aside>
       </div>
     </section>
@@ -454,18 +457,15 @@
           <p>Saloon fuel and disco cocktails for the dance floor ahead.</p>
         </header>
         <div class="menu-grid">
-          <figure class="menu-card">
-            <picture>
-              <source srcset="/assets/drink-list.webp" type="image/webp">
-              <img
-                class="menu-card__img"
-                src="/assets/drink-list.jpg"
-                alt="Cowboy Disco Party drink menu — Rusty Spur Fizz, Mirror Ball Mule, and more"
-                width="1000"
-                height="750"
-                loading="lazy"
-              >
-            </picture>
+          <figure class="menu-card editorial-frame">
+            <img
+              class="menu-card__img editorial-img"
+              src="/assets/editorial-cocktails.jpg"
+              alt="Cowboy Disco Party signature cocktails — Rusty Spur Fizz, Mirror Ball Mule, and more"
+              width="1000"
+              height="750"
+              loading="lazy"
+            >
             <figcaption class="menu-card__caption">Themed cocktails for the night</figcaption>
           </figure>
           <div class="menu-actions">
@@ -692,7 +692,7 @@
       </div>
       <nav class="footer-premium__nav" aria-label="Footer">
         <a href="gallery.html">Gallery</a>
-        <a href="#schedule">Playlist</a>
+        <a href="#schedule">Schedule</a>
         <a href="#location">RSVP</a>
         <a href="#qr">QR Code</a>
         <a href="poll.html">Next Party</a>
@@ -702,35 +702,6 @@
         <span>Aug 15, 2026 · 6:30 PM · Cowboy Disco Saloon</span>
         <span>© Cowboy Disco Party</span>
       </div>
-      <p class="site-footer__meta">Aug 15, 2026 · 6:30 PM · Cowboy Disco Saloon</p>
-      <div class="site-footer__social" aria-label="Party links">
-        <a href="gallery.html">Gallery</a>
-        <a href="#qr">QR</a>
-        <a href="poll.html">Poll</a>
-      </div>
-      <p class="site-footer__legal">© Cowboy Disco Party</p>
-      <div class="footer-qr qr-block" data-qr-block hidden>
-        <div class="footer-qr__frame qr-block__frame">
-          <img
-            class="qr-block__img"
-            src="/assets/qr-code.png"
-            width="120"
-            height="120"
-            alt="QR code for the Cowboy Disco Party website"
-          >
-          <canvas class="qr-block__canvas is-hidden" data-size="120" width="120" height="120" aria-hidden="true"></canvas>
-        </div>
-        <p class="footer-qr__label"><a href="#qr">Scan for photos, ice breakers &amp; votes</a></p>
-      </div>
-      <div class="site-footer__brand brand-lockup brand-lockup--footer">
-        <img class="brand-lockup__mark" src="/assets/brand-mark.svg" width="44" height="44" alt="">
-        <span class="brand-lockup__text">
-          <span class="brand-lockup__name">Cowboy Disco Party</span>
-          <span class="brand-lockup__sub">Cowboy Disco Saloon · Aug 15, 2026</span>
-        </span>
-      </div>
-      <p class="site-footer__date">Aug 15, 2026 · 6:30 PM</p>
-      <p class="site-footer__tagline">Official Cowboy Disco Party · Cowboy Disco Saloon</p>
       <p class="site-footer__hosts"><a href="host.html">Party hosts</a> · <a href="party-night.html">Party night</a> · <a href="plan.html">Planning</a> · <a href="print-pack.html">Print pack</a> · <a href="qr.html">Print QR</a></p>
     </div>
   </footer>
