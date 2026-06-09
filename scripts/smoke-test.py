@@ -42,6 +42,8 @@ PAGES = [
     "/assets/space-cowgirl-vibe.png",
     "/css/brand.css",
     "/css/hollywood.css",
+    "/css/cosmic.css",
+    "/assets/cosmic-collage.png",
 ]
 
 APIS = ["/api/status", "/api/vote", "/api/photos"]
