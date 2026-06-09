@@ -1,4 +1,4 @@
-const CACHE = "cdp-v13";
+const CACHE = "cdp-v14";
 const ASSETS = [
   "/",
   "/index.html",
@@ -6,6 +6,8 @@ const ASSETS = [
   "/css/brand.css",
   "/css/hollywood.css",
   "/css/cosmic.css",
+  "/css/premium.css",
+  "/js/premium.js",
   "/assets/brand-mark.svg",
   "/assets/cosmic-collage.png",
   "/assets/space-cowgirl-vibe.png",

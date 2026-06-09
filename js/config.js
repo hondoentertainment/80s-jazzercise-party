@@ -4,7 +4,7 @@
   global.CDP = {
     BRAND_NAME: "Cowboy Disco Party",
     BRAND_VENUE: "Cowboy Disco Saloon",
-    BRAND_TAGLINE: "A cosmic space cowboy affair — rhinestone, mirror-ball light, and two-step under the Seattle skyline.",
+    BRAND_TAGLINE: "Where Studio 54 meets the Wild West — rhinestone, mirror-ball light, and two-step under the Seattle skyline.",
     BRAND_DATE_LABEL: "Aug 15, 2026 · 6:30 PM",
     SITE_URL: "https://cowboy-disco-party.vercel.app",
     PARTY_DATE_TBD: false,

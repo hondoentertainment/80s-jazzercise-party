@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cowboy Disco Party — a cosmic space cowboy affair. Aug 15, 2026 · Cowboy Disco Saloon, Seattle.">
-  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Cowboy Disco Party — where Studio 54 meets the Wild West. Aug 15, 2026 · Cowboy Disco Saloon, Seattle.">
+  <meta name="theme-color" content="#0D0D0D">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cowboy Disco Party | Aug 15, 2026">
   <meta property="og:description" content="Official premiere invitation — country, disco, and rhinestone under the mirror ball. Aug 15, 2026 at the Cowboy Disco Saloon.">
@@ -18,7 +18,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml">
 </head>
@@ -42,7 +42,7 @@
       </button>
       <ul class="nav__menu" id="nav-menu">
         <li><a href="#welcome">About</a></li>
-        <li><a href="#party-night">Features</a></li>
+        <li><a href="#moments">Features</a></li>
         <li><a href="#schedule">Line-up</a></li>
         <li><a href="#location">Contact</a></li>
         <li class="nav__group">
@@ -79,15 +79,27 @@
   </header>
 
   <main id="main">
-    <section class="hero hero--cosmic" id="top">
-      <div class="cosmic-stars" aria-hidden="true"></div>
-      <div class="hero__inner hero__inner--cosmic">
-        <div class="hero__content hero__content--cosmic">
-          <h1 class="cosmic-title" aria-label="Cowboy Disco Party">
-            <span class="cosmic-title__line cosmic-title__line--silver">Cowboy Disco</span>
-            <span class="cosmic-title__line cosmic-title__line--party">Party</span>
-          </h1>
-          <p class="cosmic-sub">A Cosmic Space Cowboy Affair</p>
+    <section class="hero hero--premium" id="top">
+      <div class="hero__visual" aria-hidden="true">
+        <picture>
+          <source srcset="/assets/poster.webp" type="image/webp">
+          <img class="hero__visual-img" src="/assets/poster-hero.jpg" alt="" width="1200" height="800" fetchpriority="high">
+        </picture>
+        <div class="hero__shade"></div>
+        <div class="hero__disco-reflections">
+          <span class="disco-reflection disco-reflection--1"></span>
+          <span class="disco-reflection disco-reflection--2"></span>
+          <span class="disco-reflection disco-reflection--3"></span>
+        </div>
+      </div>
+      <div class="hero__inner hero__inner--premium">
+        <div class="hero__content hero__content--premium">
+          <p class="hero__eyebrow-premium">Cowboy Disco Saloon · Seattle</p>
+          <h1 class="hero__headline">Cowboy Disco</h1>
+          <p class="hero__subhead">Where Studio 54 meets the Wild West.</p>
+          <p class="hero__meta">Saturday, August 15, 2026 · Doors 6:30 PM</p>
+          <h2 class="cosmic-title" hidden aria-hidden="true"><span>Cowboy Disco</span><span>Party</span></h2>
+          <p class="cosmic-sub" hidden>A Cosmic Space Cowboy Affair</p>
           <p class="hero__eyebrow" id="hero-eyebrow" hidden>Unforgettable Event</p>
           <h2 class="hero__title hero__title--serif" hidden>Cowboy Disco Party</h2>
           <p class="hero__lede" hidden>Saturday, August 15, 2026 · Doors at 6:30 PM at the Cowboy Disco Saloon, Seattle.</p>
@@ -132,17 +144,17 @@
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--cosmic" href="#location">RSVP &amp; Directions</a>
+            <a class="btn btn--rsvp" href="#location">RSVP &amp; Directions</a>
             <a class="btn btn--ghost" href="#welcome">Learn More</a>
           </div>
-          <div class="cosmic-orb" aria-hidden="true">
-            <img class="cosmic-orb__img" src="/assets/brand-mark.svg" width="44" height="44" alt="">
+          <div class="hero__disco-orb" aria-hidden="true">
+            <img src="/assets/brand-mark.svg" width="48" height="48" alt="">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cosmic-intro" id="welcome">
+    <section class="cosmic-intro premium-intro reveal" id="welcome">
       <div class="cosmic-intro__layout">
         <figure class="cosmic-intro__visual">
           <img
@@ -204,7 +216,7 @@
     <section class="features-bar" id="about" aria-hidden="true" hidden></section>
     <section class="section section--welcome" aria-hidden="true" hidden></section>
 
-    <section class="section section--details" id="details">
+    <section class="section section--details section--ivory reveal" id="details">
       <div class="container">
         <header class="section__header">
           <p class="section__eyebrow">The Event</p>
@@ -234,7 +246,7 @@
       </div>
     </section>
 
-    <section class="section section--schedule" id="schedule">
+    <section class="section section--schedule reveal" id="schedule">
       <div class="container">
         <header class="section__header">
           <p class="section__eyebrow">Run of Show</p>
@@ -303,7 +315,7 @@
       </div>
     </section>
 
-    <section class="section section--party-night" id="party-night">
+    <section class="section section--party-night section--ivory reveal" id="party-night">
       <div class="container">
         <header class="section__header">
           <h2 class="party-night__heading">At the Party</h2>
@@ -334,7 +346,73 @@
       </div>
     </section>
 
-    <section class="section section--dress" id="dress-code">
+    <section class="section section--moments reveal" id="moments">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Social Moments</p>
+          <h2>Capture the Night</h2>
+          <p>Editorial-worthy moments from wardrobe to last call — every detail designed for the dance floor.</p>
+        </header>
+        <div class="moments-grid">
+          <a class="moment-card" href="#dress-code">
+            <img class="moment-card__img" src="/assets/space-cowgirl-vibe.png" alt="Space cowgirl outfit inspiration" width="640" height="800" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Wardrobe</span>
+              <h3 class="moment-card__title">Outfit Inspiration</h3>
+              <p class="moment-card__desc">Rhinestone cowboy hats, white boots, and silver sparkle.</p>
+            </div>
+          </a>
+          <a class="moment-card" href="#menu">
+            <img class="moment-card__img" src="/assets/drink-list.jpg" alt="Signature cocktails" width="1000" height="750" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Cocktails</span>
+              <h3 class="moment-card__title">Signature Drinks</h3>
+              <p class="moment-card__desc">Saloon classics with disco-era glamour.</p>
+            </div>
+          </a>
+          <a class="moment-card" href="gallery.html">
+            <img class="moment-card__img" src="/assets/poster-hero.jpg" alt="Dance floor energy" width="1200" height="800" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Dance Floor</span>
+              <h3 class="moment-card__title">Dance Floor Moments</h3>
+              <p class="moment-card__desc">Two-step, hustle, and mirror-ball light.</p>
+            </div>
+          </a>
+          <a class="moment-card" href="gallery.html">
+            <img class="moment-card__img" src="/assets/poster-party.png" alt="Photo booth experiences" width="800" height="600" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Photos</span>
+              <h3 class="moment-card__title">Photo Booth</h3>
+              <p class="moment-card__desc">Upload live — relive every rhinestone look.</p>
+            </div>
+          </a>
+          <a class="moment-card" href="#schedule">
+            <img class="moment-card__img" src="/assets/cosmic-collage.png" alt="Music and atmosphere" width="640" height="960" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Soundtrack</span>
+              <h3 class="moment-card__title">Music &amp; Vibe</h3>
+              <p class="moment-card__desc">Country and disco from doors to final bow.</p>
+            </div>
+          </a>
+          <a class="moment-card" href="#party-night">
+            <img class="moment-card__img" src="/assets/sign-kyles-apartment.jpg" alt="Party highlights" width="1200" height="900" loading="lazy">
+            <div class="moment-card__shade"></div>
+            <div class="moment-card__content">
+              <span class="moment-card__tag">Experience</span>
+              <h3 class="moment-card__title">Party Highlights</h3>
+              <p class="moment-card__desc">Ice breakers, voting, slideshow, and more.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dress reveal" id="dress-code">
       <div class="container dress-layout">
         <div class="dress-copy">
           <header class="section__header section__header--left">
@@ -369,7 +447,7 @@
       </div>
     </section>
 
-    <section class="section section--menu" id="menu">
+    <section class="section section--menu reveal" id="menu">
       <div class="container">
         <header class="section__header">
           <h2>Menu &amp; Drinks</h2>
@@ -402,10 +480,27 @@
             </div>
           </div>
         </div>
+        <div class="cocktail-showcase" aria-label="Signature cocktails">
+          <article class="cocktail-card cocktail-card--signature">
+            <span class="cocktail-card__badge">Signature</span>
+            <h4>Rusty Spur Fizz</h4>
+            <p>Bourbon, ginger beer, lime, and cherry — western warmth with a sparkling finish.</p>
+          </article>
+          <article class="cocktail-card cocktail-card--signature">
+            <span class="cocktail-card__badge">Signature</span>
+            <h4>Mirror Ball Mule</h4>
+            <p>Vodka, ginger beer, mint, and lime — Studio 54 energy in a copper mug.</p>
+          </article>
+          <article class="cocktail-card">
+            <span class="cocktail-card__badge">House</span>
+            <h4>Full Saloon Menu</h4>
+            <p>Appetizers, mains, dessert, and themed cocktails — see the official party menu PDF.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section--location" id="location">
+    <section class="section section--location reveal" id="location">
       <div class="container">
         <header class="section__header">
           <h2>Location</h2>
@@ -521,7 +616,7 @@
       </div>
     </section>
 
-    <section class="section section--faq" id="faq">
+    <section class="section section--faq reveal" id="faq">
       <div class="container">
         <header class="section__header">
           <h2>FAQ</h2>
@@ -588,8 +683,25 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--premium">
     <div class="container site-footer__inner">
+      <div class="footer-premium__brand">
+        <img class="footer-premium__mark" src="/assets/brand-mark.svg" width="56" height="56" alt="">
+        <span class="footer-premium__name">Cowboy Disco</span>
+        <p class="footer-premium__tagline">Where Studio 54 meets the Wild West.</p>
+      </div>
+      <nav class="footer-premium__nav" aria-label="Footer">
+        <a href="gallery.html">Gallery</a>
+        <a href="#schedule">Playlist</a>
+        <a href="#location">RSVP</a>
+        <a href="#qr">QR Code</a>
+        <a href="poll.html">Next Party</a>
+        <a href="ice-breaker.html">Ice Breakers</a>
+      </nav>
+      <div class="footer-premium__credits">
+        <span>Aug 15, 2026 · 6:30 PM · Cowboy Disco Saloon</span>
+        <span>© Cowboy Disco Party</span>
+      </div>
       <p class="site-footer__meta">Aug 15, 2026 · 6:30 PM · Cowboy Disco Saloon</p>
       <div class="site-footer__social" aria-label="Party links">
         <a href="gallery.html">Gallery</a>
@@ -627,5 +739,6 @@
   <script src="js/config.js"></script>
   <script src="js/qr.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

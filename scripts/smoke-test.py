@@ -43,6 +43,7 @@ PAGES = [
     "/css/brand.css",
     "/css/hollywood.css",
     "/css/cosmic.css",
+    "/css/premium.css",
     "/assets/cosmic-collage.png",
 ]
 
