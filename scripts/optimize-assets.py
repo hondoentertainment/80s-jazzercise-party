@@ -14,7 +14,7 @@ ICON = ASSETS / "app-icon.png"
 TARGET_OG_KB = 500
 
 DISPLAY_ASSETS: list[tuple[str, int]] = [
-    ("sign-woodlawn-entrance.png", 1200),
+    ("sign-entrance.png", 1200),
     ("sign-kyles-apartment.png", 1200),
     ("drink-list.png", 1000),
     ("food-labels-sheet.png", 1200),

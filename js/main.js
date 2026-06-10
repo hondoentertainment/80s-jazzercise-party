@@ -154,6 +154,21 @@
     secondsEl.textContent = pad(seconds);
   }
 
+  const partifulUrl = String(config.PARTIFUL_URL || "").trim();
+  if (partifulUrl) {
+    document.querySelectorAll("[data-partiful]").forEach(function (link) {
+      link.href = partifulUrl;
+      link.classList.remove("is-hidden");
+    });
+
+    const rsvpDirections = document.getElementById("rsvp-directions");
+    if (rsvpDirections) {
+      rsvpDirections.textContent = "Directions";
+      rsvpDirections.classList.remove("btn--rsvp");
+      rsvpDirections.classList.add("btn--ghost");
+    }
+  }
+
   updateCountdown();
   setInterval(updateCountdown, 1000);
   applyPostPartyMode();

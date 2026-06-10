@@ -1,4 +1,4 @@
-const CACHE = "cdp-v18";
+const CACHE = "cdp-v19";
 const ASSETS = [
   "/",
   "/index.html",
@@ -22,8 +22,8 @@ const ASSETS = [
   "/assets/poster-hero.jpg",
   "/assets/drink-list.webp",
   "/assets/drink-list.jpg",
-  "/assets/sign-woodlawn-entrance.webp",
-  "/assets/sign-woodlawn-entrance.jpg",
+  "/assets/sign-entrance.webp",
+  "/assets/sign-entrance.jpg",
   "/assets/sign-kyles-apartment.webp",
   "/assets/sign-kyles-apartment.jpg",
   "/assets/food-labels-sheet.webp",

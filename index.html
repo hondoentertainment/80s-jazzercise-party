@@ -41,7 +41,7 @@
       "name": "Cowboy Disco Saloon",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "6900 East Greenlake Way N",
+        "streetAddress": "420 NE 72nd St",
         "addressLocality": "Seattle",
         "addressRegion": "WA",
         "postalCode": "98115",
@@ -166,7 +166,8 @@
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--rsvp" href="#location">RSVP &amp; Directions</a>
+            <a class="btn btn--rsvp is-hidden" data-partiful href="#" target="_blank" rel="noopener noreferrer">RSVP on Partiful</a>
+            <a class="btn btn--rsvp" id="rsvp-directions" href="#location">RSVP &amp; Directions</a>
             <a class="btn btn--ghost" href="/assets/cowboy-disco-party.ics" download="cowboy-disco-party.ics">Add to Calendar</a>
             <a class="btn btn--ghost" href="#welcome">Learn More</a>
           </div>
@@ -542,7 +543,7 @@
       <div class="container">
         <header class="section__header">
           <h2>Location</h2>
-          <p>Enter on the Woodlawn side — apartment 327 on the 5th floor.</p>
+          <p>Cowboy Disco Saloon · 420 NE 72nd St, Seattle</p>
         </header>
         <div class="location-banner">
           <picture>
@@ -550,7 +551,7 @@
             <img
               class="location-banner__poster"
               src="/assets/poster-hero.jpg"
-              alt="Cowboy Disco Party poster with enter on Woodlawn arrow"
+              alt="Cowboy Disco Party poster"
               width="1200"
               height="800"
               loading="lazy"
@@ -561,22 +562,16 @@
           <div class="location-info">
             <h3>Getting There</h3>
             <p>
-              <strong>6900 East Greenlake Way N</strong><br>
-              Seattle, WA 98115 · Apt <strong>327</strong>
+              <strong>420 NE 72nd St</strong><br>
+              Seattle, WA 98115
             </p>
             <p>
-              Use the <strong>Woodlawn entrance</strong> — find <strong>K. Henderson</strong> in the directory,
-              call to get buzzed in, then take the stairs or elevator to the <strong>5th floor</strong>.
+              Look for the <strong>Cowboy Disco</strong> signs and follow the music to the dance floor.
             </p>
-            <ul class="location-tips">
-              <li>Enter through the gate — door on the left</li>
-              <li>Buzz <strong>Kyle</strong> (apartment <strong>327</strong>) at the Woodlawn entrance</li>
-              <li>Look for the <strong>Cowboy Disco Saloon</strong> sign on the 5th floor</li>
-              <li>Rideshare drop-off on Woodlawn recommended</li>
-            </ul>
+            <a class="btn btn--primary location-directions is-hidden" data-partiful href="#" target="_blank" rel="noopener noreferrer">RSVP on Partiful</a>
             <a
               class="btn btn--secondary location-directions"
-              href="https://www.google.com/maps/dir/?api=1&destination=6900+East+Greenlake+Way+N,+Seattle,+WA+98115"
+              href="https://www.google.com/maps/dir/?api=1&destination=420+NE+72nd+St,+Seattle,+WA+98115"
               target="_blank"
               rel="noopener noreferrer"
             >Open in Google Maps</a>
@@ -584,8 +579,8 @@
           </div>
           <div class="location-map">
             <iframe
-              title="Map to 6900 East Greenlake Way N, Seattle"
-              src="https://maps.google.com/maps?q=6900+East+Greenlake+Way+N,+Seattle,+WA+98115&output=embed"
+              title="Map to 420 NE 72nd St, Seattle"
+              src="https://maps.google.com/maps?q=420+NE+72nd+St,+Seattle,+WA+98115&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen
@@ -596,17 +591,17 @@
         <div class="signage-grid" aria-label="Venue signage">
           <figure class="signage-card">
             <picture>
-              <source srcset="/assets/sign-woodlawn-entrance.webp" type="image/webp">
+              <source srcset="/assets/sign-entrance.webp" type="image/webp">
               <img
                 class="signage-card__img"
-                src="/assets/sign-woodlawn-entrance.jpg"
-                alt="Woodlawn entrance sign — find K. Henderson in the directory and call to be buzzed in"
+                src="/assets/sign-entrance.jpg"
+                alt="Cowboy Disco Party entrance sign — 420 NE 72nd St, Seattle"
                 width="1200"
                 height="900"
                 loading="lazy"
               >
             </picture>
-            <figcaption>Woodlawn entrance — buzz in at the directory</figcaption>
+            <figcaption>Entrance — look for this sign at the door</figcaption>
           </figure>
           <figure class="signage-card">
             <picture>
@@ -614,13 +609,13 @@
               <img
                 class="signage-card__img"
                 src="/assets/sign-kyles-apartment.jpg"
-                alt="Cowboy Disco Saloon sign for apartment 327 on the 5th floor"
+                alt="Cowboy Disco Saloon door sign"
                 width="1200"
                 height="900"
                 loading="lazy"
               >
             </picture>
-            <figcaption>5th floor — Cowboy Disco Saloon, Apt 327</figcaption>
+            <figcaption>Cowboy Disco Saloon — this way to the dance floor</figcaption>
           </figure>
         </div>
 
@@ -662,19 +657,18 @@
         </header>
         <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-item__question">How do I invite someone up?</summary>
+            <summary class="faq-item__question">Where do I go?</summary>
             <div class="faq-item__answer">
               <p>
-                At the <strong>Woodlawn entrance</strong>, find <strong>K. Henderson</strong> in the directory and call —
-                Kyle will buzz them in. Enter through the gate (door on the left), then take the stairs or elevator to the
-                <strong>5th floor</strong> and look for apartment <strong>327</strong> / <strong>Cowboy Disco Saloon</strong>.
+                Head to <strong>420 NE 72nd St, Seattle</strong> — look for the <strong>Cowboy Disco</strong> signs
+                and follow the music to the dance floor.
               </p>
             </div>
           </details>
           <details class="faq-item">
             <summary class="faq-item__question">Where are the bathrooms?</summary>
             <div class="faq-item__answer">
-              <p>Bathrooms are located in the <strong>lobby</strong> and in <strong>apartment 327</strong>.</p>
+              <p>Just ask a host — they'll point you to the nearest one.</p>
             </div>
           </details>
           <details class="faq-item">
