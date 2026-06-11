@@ -10,6 +10,9 @@
     // Partiful event page — set to the full event URL (e.g. "https://partiful.com/e/XXXX")
     // to reveal "RSVP on Partiful" buttons sitewide. Leave empty to keep them hidden.
     PARTIFUL_URL: "",
+    // Spotify party playlist — set to the playlist URL to reveal the
+    // "Hear the Party Playlist" button in the schedule section.
+    SPOTIFY_PLAYLIST_URL: "",
     PARTY_DATE_TBD: false,
     PARTY_DATE: "2026-08-15T18:30:00-07:00",
     PARTY_END: "2026-08-15T22:00:00-07:00",
@@ -18,6 +21,6 @@
     VOTE_TAG_COUNT: 30,
     SHARE_MESSAGE:
       "You're invited to Cowboy Disco — where Studio 54 meets the Wild West. Saturday, Aug 15, 2026 at 6:30 PM · Cowboy Disco Saloon, 420 NE 72nd St, Seattle. RSVP, calendar, photos & votes: https://cowboy-disco-party.vercel.app",
-    OG_IMAGE: "https://cowboy-disco-party.vercel.app/assets/poster-og.jpg",
+    OG_IMAGE: "https://cowboy-disco-party.vercel.app/assets/og-card.jpg",
   };
 })(window);

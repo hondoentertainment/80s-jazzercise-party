@@ -144,6 +144,8 @@ Run `python scripts/pre-party-check.py` for an automated smoke test plus this li
 - Site URL / QR / Open Graph: `js/config.js` → `SITE_URL`
 - Guest invite text: `js/config.js` → `SHARE_MESSAGE`
 - Partiful RSVP: `js/config.js` → `PARTIFUL_URL` — set the Partiful event URL to reveal "RSVP on Partiful" buttons sitewide (hidden while empty)
+- Party playlist: `js/config.js` → `SPOTIFY_PLAYLIST_URL` — set to reveal the "Hear the Party Playlist" button in the schedule section
+- Webfonts are self-hosted in `assets/fonts/` — refresh with `python scripts/fetch-fonts.py`
 
 When the date is set:
 

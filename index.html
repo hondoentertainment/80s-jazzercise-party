@@ -9,17 +9,17 @@
   <meta property="og:title" content="Cowboy Disco Party | Aug 15, 2026">
   <meta property="og:description" content="You're invited — country, disco, and rhinestone under the mirror ball. Aug 15, 2026 at the Cowboy Disco Saloon, Seattle.">
   <meta property="og:url" content="https://cowboy-disco-party.vercel.app/">
-  <meta property="og:image" content="https://cowboy-disco-party.vercel.app/assets/poster-og.jpg">
+  <meta property="og:image" content="https://cowboy-disco-party.vercel.app/assets/og-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cowboy Disco Party | Aug 15, 2026">
   <meta name="twitter:description" content="Boots, bling, and two-step under the mirror ball. Games, photo gallery, and party info.">
-  <meta name="twitter:image" content="https://cowboy-disco-party.vercel.app/assets/poster-og.jpg">
+  <meta name="twitter:image" content="https://cowboy-disco-party.vercel.app/assets/og-card.jpg">
   <title>Cowboy Disco Party | Aug 15, 2026</title>
   <link rel="canonical" href="https://cowboy-disco-party.vercel.app/">
   <link rel="manifest" href="manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-garamond-500.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dm-sans-400.woff2" crossorigin>
   <link rel="preload" as="image" href="/assets/poster.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/premium.css">
@@ -35,7 +35,7 @@
     "endDate": "2026-08-15T22:00:00-07:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "image": ["https://cowboy-disco-party.vercel.app/assets/poster-og.jpg"],
+    "image": ["https://cowboy-disco-party.vercel.app/assets/og-card.jpg"],
     "location": {
       "@type": "Place",
       "name": "Cowboy Disco Saloon",
@@ -336,6 +336,13 @@
             </tbody>
           </table>
         </div>
+        <div class="playlist-cta is-hidden" data-spotify-wrap>
+          <p class="playlist-cta__lead">Hear the night before the night.</p>
+          <a class="btn btn--secondary" data-spotify href="#" target="_blank" rel="noopener noreferrer">
+            <svg class="playlist-cta__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18.5V6.2l10-2v10.05a3.25 3.25 0 1 0 2 3V2L7 4.4v11.35A3.25 3.25 0 1 0 9 18.5z"/></svg>
+            Hear the Party Playlist
+          </a>
+        </div>
       </div>
     </section>
 
@@ -375,6 +382,11 @@
             <p>Full-screen gallery rotation for the TV — updates as photos come in.</p>
           </a>
         </div>
+        <div class="live-moments is-hidden" id="live-moments" aria-label="Latest party photos">
+          <h3 class="live-moments__title">Fresh from the Dance Floor</h3>
+          <div class="live-moments__grid" id="live-moments-grid"></div>
+          <p class="live-moments__more"><a class="btn btn--ghost" href="gallery.html">See the Full Gallery</a></p>
+        </div>
       </div>
     </section>
 
@@ -408,7 +420,7 @@
             </div>
           </a>
           <a class="moment-card" href="gallery.html">
-            <img class="moment-card__img editorial-img" src="/assets/poster-hero.jpg" alt="Dance floor energy" width="1200" height="800" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/editorial-dancefloor.jpg" alt="Checkerboard dance floor under champagne spotlights" width="1200" height="800" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Dance Floor</span>
@@ -417,7 +429,7 @@
             </div>
           </a>
           <a class="moment-card" href="gallery.html">
-            <img class="moment-card__img editorial-img" src="/assets/poster-party.png" alt="Photo booth experiences" width="800" height="600" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/editorial-photobooth.jpg" alt="Instant photos from the party photo booth" width="1000" height="750" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Photos</span>
@@ -438,7 +450,7 @@
             </div>
           </a>
           <a class="moment-card" href="#party-night">
-            <img class="moment-card__img editorial-img" src="/assets/sign-kyles-apartment.jpg" alt="Party highlights" width="1200" height="900" loading="lazy">
+            <img class="moment-card__img editorial-img" src="/assets/editorial-highlights.jpg" alt="Art-deco star and sunburst — the night's highlights" width="1200" height="900" loading="lazy">
             <div class="moment-card__shade"></div>
             <div class="moment-card__content">
               <span class="moment-card__tag">Experience</span>

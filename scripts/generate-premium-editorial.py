@@ -298,11 +298,186 @@ def editorial_cocktails() -> None:
     img.save(ASSETS / "editorial-cocktails.jpg", quality=92, optimize=True)
 
 
+def editorial_dancefloor() -> None:
+    """Perspective dance floor under mirror-ball light."""
+    w, h = 1200, 800
+    img = golden_gradient((w, h))
+    draw = ImageDraw.Draw(img)
+
+    horizon = int(h * 0.42)
+    cx = w // 2
+    rows = 9
+
+    def depth_y(t: float) -> int:
+        return horizon + int((h - horizon) * (t**1.7))
+
+    for i in range(rows):
+        t0, t1 = i / rows, (i + 1) / rows
+        y0, y1 = depth_y(t0), depth_y(t1)
+        s0, s1 = 0.18 + t0 * 1.1, 0.18 + t1 * 1.1
+        for j in range(-6, 6):
+            x00 = cx + int(j * 130 * s0)
+            x01 = cx + int((j + 1) * 130 * s0)
+            x10 = cx + int(j * 130 * s1)
+            x11 = cx + int((j + 1) * 130 * s1)
+            lit = (i + j) % 2 == 0
+            glow = max(0.0, 1 - (abs(j) / 6 + t0) / 1.6)
+            if lit:
+                tile = (
+                    lerp(46, CHAMPAGNE[0], glow * 0.55),
+                    lerp(38, CHAMPAGNE[1], glow * 0.5),
+                    lerp(28, CHAMPAGNE[2], glow * 0.4),
+                )
+            else:
+                tile = (lerp(20, 36, glow), lerp(17, 30, glow), lerp(14, 24, glow))
+            draw.polygon([(x00, y0), (x01, y0), (x11, y1), (x10, y1)], fill=tile)
+
+    # Mirror-ball specks scattered across the floor
+    for fx, fy, r in ((0.3, 0.55, 5), (0.46, 0.62, 6), (0.62, 0.5, 4), (0.7, 0.7, 7), (0.38, 0.8, 8), (0.55, 0.9, 6), (0.25, 0.7, 5), (0.78, 0.85, 5)):
+        x, y = int(w * fx), int(h * fy)
+        draw.ellipse((x - r, y - r, x + r, y + r), fill=(*CHAMPAGNE_LIGHT, ))
+
+    # Beams sweeping in from above
+    beams = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    bdraw = ImageDraw.Draw(beams)
+    for sx, dx, spread, alpha in ((int(w * 0.2), 300, 170, 50), (int(w * 0.55), -150, 150, 56), (int(w * 0.85), -380, 190, 44)):
+        bdraw.polygon([(sx, -40), (sx + dx - spread // 2, h), (sx + dx + spread // 2, h)], fill=(*CHAMPAGNE_LIGHT, alpha))
+    beams = beams.filter(ImageFilter.GaussianBlur(22))
+    img = Image.alpha_composite(img.convert("RGBA"), beams).convert("RGB")
+
+    img = add_bokeh(img, [(0.1, 0.15, 6, 100), (0.88, 0.2, 7, 90), (0.5, 0.1, 5, 80), (0.94, 0.6, 4, 70), (0.06, 0.55, 5, 70)])
+    img = add_grain_and_vignette(img)
+    img.save(ASSETS / "editorial-dancefloor.jpg", quality=92, optimize=True)
+
+
+def _polaroid(size: int, motif: str) -> Image.Image:
+    """Small instant-photo card with a brand motif inside."""
+    pad = size // 12
+    photo_h = int(size * 0.78)
+    card = Image.new("RGBA", (size, size + size // 5), (*IVORY, 255))
+    inner = golden_gradient((size - pad * 2, photo_h - pad))
+    idraw = ImageDraw.Draw(inner)
+    iw, ih = inner.size
+    if motif == "ball":
+        draw_mirror_ball(idraw, iw // 2, ih // 2, iw // 4)
+    elif motif == "star":
+        cxs, cys, r = iw // 2, ih // 2, iw // 4
+        pts = []
+        import math
+        for k in range(10):
+            ang = math.pi / 2 + k * math.pi / 5
+            rr = r if k % 2 == 0 else r * 0.4
+            pts.append((cxs + rr * math.cos(ang), cys - rr * math.sin(ang)))
+        idraw.polygon(pts, fill=CHAMPAGNE)
+    else:  # numbered contestant tag
+        idraw.rounded_rectangle((iw // 4, ih // 5, iw * 3 // 4, ih * 4 // 5), radius=10, fill=IVORY, outline=CHAMPAGNE, width=3)
+        f = load_font(ih // 3, bold=True)
+        idraw.text((iw // 2, ih // 2), "07", font=f, fill=(58, 48, 38), anchor="mm")
+    card.paste(inner, (pad, pad))
+    return card
+
+
+def editorial_photobooth() -> None:
+    """Instant photos scattered on a leather table."""
+    w, h = 1000, 750
+    img = golden_gradient((w, h), warm_top=False)
+
+    for motif, x, y, angle in (("ball", 110, 170, -8), ("star", 420, 240, 6), ("tag", 700, 150, -4)):
+        card = _polaroid(230, motif).rotate(angle, expand=True, resample=Image.Resampling.BICUBIC)
+        shadow = Image.new("RGBA", card.size, (0, 0, 0, 0))
+        ImageDraw.Draw(shadow).rounded_rectangle((6, 10, card.size[0] - 2, card.size[1] - 2), radius=8, fill=(0, 0, 0, 110))
+        shadow = shadow.filter(ImageFilter.GaussianBlur(8))
+        img.paste(shadow, (x, y), shadow)
+        img.paste(card, (x, y), card)
+
+    img = add_bokeh(img, [(0.12, 0.8, 6, 90), (0.5, 0.88, 5, 80), (0.85, 0.78, 7, 70), (0.92, 0.12, 5, 80)])
+    img = add_grain_and_vignette(img)
+    img.save(ASSETS / "editorial-photobooth.jpg", quality=92, optimize=True)
+
+
+def editorial_highlights() -> None:
+    """Art-deco sunburst — the night's highlights."""
+    w, h = 1200, 900
+    img = golden_gradient((w, h))
+    draw = ImageDraw.Draw(img)
+    import math
+
+    cx, cy = w // 2, int(h * 0.46)
+    rays = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    rdraw = ImageDraw.Draw(rays)
+    for k in range(24):
+        ang = k * math.pi / 12
+        x2 = cx + int(math.cos(ang) * w)
+        y2 = cy + int(math.sin(ang) * w)
+        alpha = 34 if k % 2 == 0 else 18
+        rdraw.line((cx, cy, x2, y2), fill=(*CHAMPAGNE, alpha), width=26 if k % 2 == 0 else 12)
+    rays = rays.filter(ImageFilter.GaussianBlur(10))
+    img = Image.alpha_composite(img.convert("RGBA"), rays).convert("RGB")
+
+    draw = ImageDraw.Draw(img)
+    r = 110
+    pts = []
+    for k in range(10):
+        ang = math.pi / 2 + k * math.pi / 5
+        rr = r if k % 2 == 0 else r * 0.42
+        pts.append((cx + rr * math.cos(ang), cy - rr * math.sin(ang)))
+    draw.polygon(pts, fill=CHAMPAGNE_LIGHT, outline=CHAMPAGNE)
+    for ring_r, width_px in ((170, 2), (210, 1)):
+        draw.ellipse((cx - ring_r, cy - ring_r, cx + ring_r, cy + ring_r), outline=(*CHAMPAGNE, ), width=width_px)
+
+    img = add_bokeh(img, [(0.15, 0.2, 6, 100), (0.85, 0.25, 7, 90), (0.2, 0.78, 5, 80), (0.8, 0.8, 6, 80), (0.5, 0.9, 4, 70)])
+    img = add_grain_and_vignette(img)
+    img.save(ASSETS / "editorial-highlights.jpg", quality=92, optimize=True)
+
+
+def og_card() -> None:
+    """Bespoke 1200x630 social share card."""
+    w, h = 1200, 630
+    img = golden_gradient((w, h))
+
+    # Soft beams from the top-right ball
+    beams = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    bdraw = ImageDraw.Draw(beams)
+    for dx, spread, alpha in ((-560, 200, 36), (-260, 160, 46), (40, 170, 40)):
+        bdraw.polygon([(990, 130), (990 + dx - spread // 2, h), (990 + dx + spread // 2, h)], fill=(*CHAMPAGNE_LIGHT, alpha))
+    beams = beams.filter(ImageFilter.GaussianBlur(16))
+    img = Image.alpha_composite(img.convert("RGBA"), beams).convert("RGB")
+
+    draw = ImageDraw.Draw(img)
+    draw_mirror_ball(draw, 990, 130, 95)
+    draw.line((990, 0, 990, 35), fill=(70, 64, 56), width=4)
+
+    eyebrow = load_font(26)
+    title = load_font(118, bold=True)
+    sub = load_font(38)
+    meta = load_font(30, bold=True)
+
+    x = 80
+    draw.text((x, 130), "C O W B O Y   D I S C O   S A L O O N   ·   S E A T T L E", font=eyebrow, fill=CHAMPAGNE)
+    draw.text((x, 185), "COWBOY", font=title, fill=IVORY)
+    draw.text((x, 305), "DISCO", font=title, fill=CHAMPAGNE_LIGHT)
+    draw.text((x, 448), "Where Studio 54 meets the Wild West.", font=sub, fill=(214, 206, 194))
+
+    draw.line((x, 526, x + 560, 526), fill=(*CHAMPAGNE, 255), width=2)
+    draw.text((x, 546), "SAT AUG 15, 2026  ·  6:30 PM  ·  420 NE 72ND ST", font=meta, fill=CHAMPAGNE)
+
+    img = add_bokeh(img, [(0.62, 0.18, 6, 110), (0.55, 0.55, 5, 80), (0.72, 0.75, 7, 70), (0.92, 0.6, 5, 90)])
+    img = add_grain_and_vignette(img, vignette=0.7)
+
+    draw = ImageDraw.Draw(img)
+    draw.rectangle((24, 24, w - 24, h - 24), outline=CHAMPAGNE, width=2)
+    img.save(ASSETS / "og-card.jpg", quality=90, optimize=True)
+
+
 def main() -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
     editorial_atmosphere()
     editorial_wardrobe()
     editorial_cocktails()
+    editorial_dancefloor()
+    editorial_photobooth()
+    editorial_highlights()
+    og_card()
     print("Premium editorial assets written to assets/")
 
 
