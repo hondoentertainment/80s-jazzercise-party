@@ -1,4 +1,4 @@
-const CACHE = "cdp-v17";
+const CACHE = "cdp-v19";
 const ASSETS = [
   "/",
   "/index.html",
@@ -7,12 +7,18 @@ const ASSETS = [
   "/css/premium.css",
   "/assets/cowboy-disco-party.ics",
   "/js/premium.js",
+  "/js/pwa.js",
+  "/js/nav.js",
+  "/js/poll.js",
   "/assets/brand-mark.svg",
   "/assets/editorial-atmosphere.jpg",
   "/assets/editorial-atmosphere.webp",
   "/assets/editorial-wardrobe.jpg",
   "/assets/editorial-wardrobe.webp",
   "/assets/editorial-cocktails.jpg",
+  "/assets/editorial-cocktails.webp",
+  "/assets/editorial-dance.jpg",
+  "/assets/editorial-dance.webp",
   "/js/config.js",
   "/js/main.js",
   "/js/qr.js",
@@ -31,6 +37,7 @@ const ASSETS = [
   "/assets/menu.pdf",
   "/assets/qr-code.png",
   "/assets/app-icon.png",
+  "/assets/app-icon-192.png",
   "/gallery.html",
   "/js/gallery.js",
   "/js/slideshow.js",

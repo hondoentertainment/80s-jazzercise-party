@@ -3,26 +3,15 @@
 @import url("brand.css");
 @import url("premium.css");
 
+/* Core palette: premium.css — supplemental tokens for shared components */
 :root {
-  --denim-dark: #1a1a1a;
-  --denim: #e91e8c;
-  --denim-light: #ff4da6;
-  --denim-fade: #9a6b82;
-  --stitch: #a8a8b8;
-  --stitch-light: #d8d8e4;
-  --wood: #fff5f9;
-  --wood-dark: #ffe8f2;
-  --wood-grain: #ffffff;
-  --cream: #fff0f6;
-  --text: #1a1a1a;
-  --text-muted: #5c4a52;
-  --white: #ffffff;
-  --shadow: rgba(233, 30, 140, 0.14);
-  --glow-gold: rgba(233, 30, 140, 0.18);
-  --glow-blue: rgba(192, 192, 208, 0.2);
-  --glass: rgba(255, 255, 255, 0.9);
-  --glass-border: rgba(233, 30, 140, 0.28);
-  --mirror-light: #e4eaef;
+  --stitch: rgba(199, 167, 106, 0.35);
+  --stitch-light: rgba(247, 243, 237, 0.2);
+  --wood-grain: #0d0d0d;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --glow-gold: var(--warm-glow, rgba(199, 167, 106, 0.18));
+  --glow-blue: rgba(192, 200, 212, 0.15);
+  --mirror-light: #e8ecf2;
   --mirror-mid: #9aa3ac;
   --mirror-dark: #5c656e;
   --mirror-sphere:
@@ -36,16 +25,10 @@
       #e8edf2 21deg 28deg,
       #8a939c 28deg 35deg
     );
-  --rope: #1a1a1a;
-  --pink-soft: #ffc0d9;
-  --pink-baby: #ffe4f0;
-  --champagne: #c9a0a8;
-  --radius: 12px;
-  --radius-lg: 20px;
-  --font-display: "Bebas Neue", sans-serif;
-  --font-script: "Rye", serif;
-  --font-body: "Source Sans 3", system-ui, sans-serif;
-  --max-width: 1100px;
+  --rope: var(--leather, #7a5a3a);
+  --pink-soft: rgba(199, 167, 106, 0.25);
+  --pink-baby: rgba(199, 167, 106, 0.12);
+  --font-script: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   --header-height: 72px;
 }
 
@@ -61,32 +44,11 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--wood);
-  background-image:
-    radial-gradient(ellipse 65% 40% at 50% -5%, rgba(233, 30, 140, 0.09), transparent 58%),
-    radial-gradient(ellipse 40% 30% at 100% 35%, rgba(255, 192, 217, 0.35), transparent 55%),
-    radial-gradient(ellipse 35% 25% at 0% 75%, rgba(216, 216, 228, 0.25), transparent 50%),
-    linear-gradient(180deg, var(--wood) 0%, var(--wood-dark) 100%);
   min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 24% 16% at 15% 20%, rgba(255, 77, 166, 0.06), transparent),
-    radial-gradient(ellipse 20% 12% at 85% 25%, rgba(192, 192, 208, 0.08), transparent),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent 70%);
-  opacity: 0.85;
 }
 
 .site-header,
